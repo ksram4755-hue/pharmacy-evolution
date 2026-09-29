@@ -1,508 +1,2622 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PHARMACY∞ — The Evolution of Pharmacy. تجربة رقمية تفاعلية سينمائية تستعرض تطور علم الصيدلة والمعرفة العلاجية عبر التاريخ وحتى المستقبل بمناسبة اليوم العالمي للصيدلي 2026 في جامعة لوتس - كلية الصيدلة.">
-<meta name="keywords" content="Pharmacy, Evolution of Pharmacy, Lotus University, World Pharmacists Day 2026, Ebers Papyrus, Al-Saydalah, Clinical Pharmacy, Pharmacogenomics">
-<meta name="author" content="Lotus University - Faculty of Pharmacy">
-<meta name="theme-color" content="#020617">
-<meta property="og:title" content="PHARMACY∞ | The Evolution of Pharmacy — Lotus University">
-<meta property="og:description" content="رحلة عبر آلاف السنين من المعرفة العلاجية وتحضير الأدوية وتطور مهنة الصيدلة حتى عصر الرعاية الدوائية والتقنيات الحديثة.">
-<meta property="og:image" content="assets/lotus-university-logo.png">
-<meta property="og:type" content="website">
-​<title>PHARMACY∞ | The Evolution of Pharmacy — Lotus University</title>
-​<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet">
-​<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-navy: {
-950: '#020617',
-900: '#030712',
-800: '#0b1329',
-700: '#111e38',
-600: '#1e293b'
-},
-cyan: {
-glow: '#00f2fe',
-electric: '#06b6d4',
-deep: '#0284c7'
-},
-gold: {
-warm: '#d4af37',
-light: '#f59e0b',
-bright: '#fbbf24'
-}
-},
-fontFamily: {
-sans: ['Cairo', 'Inter', 'sans-serif'],
-cinzel: ['Cinzel', 'serif'],
-kufi: ['Reem Kufi', 'sans-serif']
-}
-}
-}
-}
-</script>
-​<!-- Custom CSS Styles -->
-<style>
-:root {
---bg-dark: #020617;
---cyan-glow: rgba(6, 182, 212, 0.4);
---gold-glow: rgba(212, 175, 55, 0.3);
-}
-​body {
-background-color: var(--bg-dark);
-color: #f8fafc;
-font-family: 'Cairo', 'Inter', sans-serif;
-overflow-x: hidden;
-}
-​/* Custom Scrollbar */
-::-webkit-scrollbar {
-width: 8px;
-}
-::-webkit-scrollbar-track {
-background: #030712;
-}
-::-webkit-scrollbar-thumb {
-background: #1e293b;
-border-radius: 4px;
-border: 1px solid rgba(6, 182, 212, 0.3);
-}
-::-webkit-scrollbar-thumb:hover {
-background: #06b6d4;
-}
-​/* Glassmorphism Styles */
-.glass-panel {
-background: rgba(11, 19, 41, 0.85);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(255, 255, 255, 0.1);
-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-}
-​.glass-panel-gold {
-background: rgba(22, 19, 12, 0.85);
-backdrop-filter: blur(18px);
--webkit-backdrop-filter: blur(18px);
-border: 1px solid rgba(212, 175, 55, 0.35);
-box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.15);
-}
-​.glass-card {
-background: rgba(15, 23, 42, 0.75);
-backdrop-filter: blur(14px);
-border: 1px solid rgba(255, 255, 255, 0.08);
-transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-​.glass-card:hover {
-border-color: rgba(6, 182, 212, 0.5);
-transform: translateY(-5px);
-box-shadow: 0 14px 35px -10px rgba(6, 182, 212, 0.35);
-}
-​/* Glow Effects */
-.glow-text-cyan {
-text-shadow: 0 0 15px rgba(6, 182, 212, 0.6), 0 0 30px rgba(0, 242, 254, 0.35);
-}
-​.glow-text-gold {
-text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(245, 158, 11, 0.35);
-}
-​/* Particle Canvas */
-#particle-canvas {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;
-z-index: 0;
-}
-​/* Scroll Reveal Effect */
-.reveal-node {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-​.reveal-node.revealed {
-opacity: 1;
-transform: translateY(0);
-}
-​/* Timeline Gradient Line */
-.timeline-line {
-background: linear-gradient(180deg, rgba(6,182,212,0) 0%, rgba(6,182,212,0.85) 12%, rgba(212,175,55,0.85) 88%, rgba(6,182,212,0) 100%);
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PHARMACY∞ | The Evolution of Pharmacy — Lotus University</title>
+
+  <meta name="description" content="رحلة تطور علم الصيدلة من الحضارات القديمة إلى الصيدلة المستقبلية — Lotus University">
+  <meta name="theme-color" content="#020617">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            cinzel: ['Cinzel', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+            kufi: ['Reem Kufi', 'sans-serif']
+          },
+          colors: {
+            cyan: {
+              glow: '#22d3ee',
+              electric: '#06b6d4',
+              deep: '#083344'
+            },
+            gold: {
+              warm: '#f59e0b',
+              light: '#fbbf24',
+              bright: '#fde68a'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 30px rgba(34,211,238,.25)',
+            'gold-glow': '0 0 30px rgba(245,158,11,.20)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg2: #06111f;
+      --card: rgba(8, 20, 35, .72);
+      --card2: rgba(15, 35, 52, .62);
+      --cyan: #22d3ee;
+      --cyan2: #06b6d4;
+      --gold: #f59e0b;
+      --gold2: #fbbf24;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(34, 211, 238, .15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(6,182,212,.08), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(245,158,11,.05), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #030b15 45%, #020617 100%);
+      color: var(--text);
+      font-family: Cairo, sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: rgba(34,211,238,.25);
+      color: white;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--cyan), var(--gold));
+      border-radius: 20px;
+    }
+
+    .font-cinzel {
+      font-family: Cinzel, serif;
+    }
+
+    .font-inter {
+      font-family: Inter, sans-serif;
+    }
+
+    .font-kufi {
+      font-family: "Reem Kufi", sans-serif;
+    }
+
+    .glass {
+      background: linear-gradient(
+        135deg,
+        rgba(15, 35, 52, .72),
+        rgba(3, 15, 27, .58)
+      );
+      border: 1px solid rgba(148,163,184,.12);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 20px 70px rgba(0,0,0,.22);
+    }
+
+    .glass:hover {
+      border-color: rgba(34,211,238,.25);
+    }
+
+    .glow-text-cyan {
+      text-shadow:
+        0 0 8px rgba(34,211,238,.65),
+        0 0 28px rgba(34,211,238,.22);
+    }
+
+    .glow-text-gold {
+      text-shadow:
+        0 0 8px rgba(245,158,11,.55),
+        0 0 28px rgba(245,158,11,.18);
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #67e8f9,
+        #22d3ee,
+        #fbbf24,
+        #67e8f9
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: gradientMove 8s linear infinite;
+    }
+
+    @keyframes gradientMove {
+      to {
+        background-position: 300% center;
+      }
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(34,211,238,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,211,238,.035) 1px, transparent 1px);
+      background-size: 45px 45px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: .025;
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+    }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 3px;
+      width: 0;
+      z-index: 10000;
+      background: linear-gradient(90deg, var(--gold), var(--cyan));
+      box-shadow: 0 0 15px rgba(34,211,238,.65);
+    }
+
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle, rgba(6,182,212,.08), transparent 35%),
+        #020617;
+      transition: opacity .7s ease, visibility .7s ease;
+    }
+
+    .loader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-ring {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid rgba(34,211,238,.12);
+      border-top-color: var(--cyan);
+      border-right-color: var(--gold);
+      animation: spin 1.2s linear infinite;
+    }
+
+    .loader-core {
+      position: absolute;
+      font-family: Cinzel, serif;
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: white;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay: .1s;
+    }
+
+    .delay-2 {
+      transition-delay: .2s;
+    }
+
+    .delay-3 {
+      transition-delay: .3s;
+    }
+
+    .delay-4 {
+      transition-delay: .4s;
+    }
+
+    .nav-link {
+      position: relative;
+      color: #94a3b8;
+      transition: .3s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      right: 50%;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      transform: translateX(50%);
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      transition: .3s ease;
+    }
+
+    .nav-link:hover {
+      color: white;
+    }
+
+    .nav-link:hover::after {
+      width: 70%;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    .orb-1 {
+      width: 430px;
+      height: 430px;
+      top: -180px;
+      right: -150px;
+      background: radial-gradient(
+        circle,
+        rgba(34,211,238,.16),
+        rgba(34,211,238,0) 70%
+      );
+    }
+
+    .orb-2 {
+      width: 360px;
+      height: 360px;
+      bottom: -120px;
+      left: -130px;
+      background: radial-gradient(
+        circle,
+        rgba(245,158,11,.12),
+        rgba(245,158,11,0) 70%
+      );
+    }
+
+    .section-line {
+      width: 90px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      box-shadow: 0 0 12px rgba(34,211,238,.45);
+    }
+
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      width: 1px;
+      transform: translateX(50%);
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(34,211,238,.65) 8%,
+        rgba(245,158,11,.4) 50%,
+        rgba(34,211,238,.65) 92%,
+        transparent
+      );
+      box-shadow: 0 0 18px rgba(34,211,238,.18);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 0 35px 65px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      margin-left: 50%;
+    }
+
+    .timeline-item:nth-child(even) {
+      margin-right: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 22px;
+      right: -7px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #020617;
+      border: 2px solid var(--cyan);
+      box-shadow:
+        0 0 0 5px rgba(34,211,238,.08),
+        0 0 22px rgba(34,211,238,.75);
+      z-index: 2;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -7px;
+      right: auto;
+    }
+
+    .timeline-card {
+      cursor: pointer;
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(34,211,238,.42);
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 35px rgba(34,211,238,.08);
+    }
+
+    .era-number {
+      font-family: Cinzel, serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--cyan);
+    }
+
+    .icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,211,238,.14),
+          rgba(245,158,11,.06)
+        );
+      border: 1px solid rgba(34,211,238,.2);
+      font-size: 25px;
+      flex-shrink: 0;
+    }
+
+    .stat-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(34,211,238,.06);
+      top: -70px;
+      left: -70px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(34,211,238,.07);
+      border: 1px solid rgba(34,211,238,.15);
+      color: #a5f3fc;
+    }
+
+    .future-card {
+      min-height: 240px;
+      transition: .35s ease;
+    }
+
+    .future-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(245,158,11,.35);
+      box-shadow: 0 25px 70px rgba(0,0,0,.3);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(34,211,238,.35);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,211,238,.16),
+          rgba(34,211,238,.04)
+        );
+      color: #cffafe;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      border-color: rgba(34,211,238,.65);
+      box-shadow: 0 0 30px rgba(34,211,238,.16);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34,211,238,.25),
+          rgba(34,211,238,.07)
+        );
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(245,158,11,.35);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(245,158,11,.15),
+          rgba(245,158,11,.035)
+        );
+      color: #fef3c7;
+      transition: .3s ease;
+      cursor: pointer;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      border-color: rgba(245,158,11,.65);
+      box-shadow: 0 0 30px rgba(245,158,11,.14);
+    }
+
+    .section-number {
+      font-family: Cinzel, serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: rgba(148,163,184,.65);
+    }
+
+    .history-highlight {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .history-highlight::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      left: -120px;
+      bottom: -170px;
+      background: radial-gradient(
+        circle,
+        rgba(245,158,11,.09),
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0,0,0,.76);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s ease;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      width: min(850px, 100%);
+      max-height: 88vh;
+      overflow-y: auto;
+      transform: translateY(25px) scale(.97);
+      transition: .35s ease;
+    }
+
+    .modal-backdrop.open .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,.15);
+      background: rgba(255,255,255,.04);
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .modal-close:hover {
+      color: white;
+      border-color: rgba(34,211,238,.35);
+      background: rgba(34,211,238,.08);
+    }
+
+    #presentation {
+      position: fixed;
+      inset: 0;
+      z-index: 9500;
+      background:
+        radial-gradient(
+          circle at 50% 30%,
+          rgba(6,182,212,.10),
+          transparent 40%
+        ),
+        #020617;
+      display: none;
+      overflow: hidden;
+    }
+
+    #presentation.open {
+      display: block;
+    }
+
+    .presentation-slide {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 90px 7vw 110px;
+    }
+
+    .presentation-slide.active {
+      display: flex;
+      animation: slideIn .55s ease both;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .presentation-controls {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 22px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .presentation-top {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      left: 25px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .slide-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      border: 1px solid rgba(34,211,238,.18);
+      background: rgba(8,20,35,.72);
+      color: #cffafe;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .slide-btn:hover {
+      border-color: rgba(34,211,238,.5);
+      background: rgba(34,211,238,.08);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .timeline::before {
+        right: 20px;
+        transform: none;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        width: 100%;
+        margin: 0;
+        padding-right: 60px;
+        padding-left: 0;
+      }
+
+      .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        right: 13px;
+        left: auto;
+      }
+
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 15px;
+        left: 15px;
+        padding: 14px;
+        border-radius: 20px;
+        z-index: 50;
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 10px;
+        border-radius: 10px;
+        color: #cbd5e1;
+      }
+
+      .mobile-menu a:hover {
+        background: rgba(34,211,238,.07);
+        color: white;
+      }
+
+      .hero-title {
+        font-size: clamp(42px, 12vw, 80px) !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-right: 45px;
+      }
+
+      .timeline::before {
+        right: 12px;
+      }
+
+      .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        right: 5px;
+      }
+
+      .presentation-slide {
+        padding: 80px 22px 110px;
+      }
+
+      .presentation-top {
+        right: 15px;
+        left: 15px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
-<body class="bg-navy-950 text-slate-100 selection:bg-cyan-electric selection:text-navy-950 relative">
-​<!-- Canvas Background Particles -->
-<canvas id="particle-canvas" aria-hidden="true"></canvas>
-​<!-- LOADING SCREEN -->
-<div id="loading-screen" class="fixed inset-0 z-[1000] bg-navy-950 flex flex-col items-center justify-center transition-opacity duration-700 p-6">
-<div class="flex flex-col items-center max-w-md w-full text-center space-y-6">
-<div class="w-28 h-28 relative flex items-center justify-center mb-2">
-<div class="absolute inset-0 rounded-full bg-cyan-electric/20 blur-xl animate-pulse"></div>
-<img src="assets/lotus-university-logo.png" alt="Lotus University Logo" class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)]" onerror="this.src='https://via.placeholder.com/120?text=Lotus+Pharmacy'">
-</div>
-<div class="space-y-1.5">
-<h1 class="font-cinzel text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-cyan-electric">
-PHARMACY<span class="text-cyan-electric">∞</span>
-</h1>
-<p class="text-xs text-cyan-electric/90 font-mono uppercase tracking-widest">Faculty of Pharmacy • World Pharmacists Day 2026</p>
-</div>
-<div class="w-full bg-slate-800/80 h-2 rounded-full overflow-hidden border border-slate-700/60 p-0.5">
-<div id="loader-progress-bar" class="h-full bg-gradient-to-r from-cyan-electric via-cyan-glow to-gold-warm rounded-full w-0 transition-all duration-200 ease-out"></div>
-</div>
-<div class="flex justify-between items-center w-full text-xs font-mono text-slate-400 pt-1">
-<span>LOADING THE JOURNEY...</span>
-<span id="loader-percentage" class="text-cyan-electric font-bold">0%</span>
-</div>
-</div>
-</div>
-​<!-- GLOBAL SCROLL PROGRESS BAR -->
-<div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-1 bg-transparent z-[90]">
-<div id="scroll-progress-bar" class="h-full bg-gradient-to-r from-cyan-electric via-cyan-400 to-gold-warm w-0"></div>
-</div>
-​<!-- NAVIGATION HEADER -->
-<header id="main-header" class="fixed top-0 right-0 left-0 z-50 transition-all duration-300 py-4 px-4 sm:px-8">
-<div class="max-w-7xl mx-auto">
-<nav class="glass-panel rounded-2xl px-4 py-3 sm:px-6 flex items-center justify-between border border-white/10 shadow-2xl">
-<a href="#hero" class="flex items-center space-x-3 space-x-reverse group">
-<img src="assets/lotus-university-logo.png" alt="Lotus University Logo" class="h-9 w-auto object-contain" onerror="this.style.display='none'">
-<div class="flex flex-col">
-<span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-white flex items-center gap-1">
-PHARMACY<span class="text-cyan-electric">∞</span>
-</span>
-<span class="text-[9px] text-slate-400 uppercase tracking-widest font-mono hidden sm:inline-block">Lotus University</span>
-</div>
-</a>
-​<div class="hidden lg:flex items-center space-x-1 space-x-reverse text-xs xl:text-sm font-medium text-slate-300">
-<a href="#hero" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">الرئيسية</a>
-<a href="#timeline" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">الخط الزمني</a>
-<a href="#egypt" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">مصر القديمة</a>
-<a href="#islamic-age" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">العصر الإسلامي</a>
-<a href="#modern" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">الصيدلة الحديثة</a>
-<a href="#future" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">المستقبل</a>
-<a href="#sources" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">المصادر</a>
-</div>
-​<div class="flex items-center space-x-3 space-x-reverse">
-<button id="btn-open-presentation" onclick="startPresentationMode()" class="relative group overflow-hidden rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-electric/20 to-blue-600/20 border border-cyan-electric/50 text-cyan-glow hover:text-white transition-all duration-300">
-<span class="relative z-10 text-xs sm:text-sm font-semibold tracking-wider flex items-center gap-2">
-<span>📽️</span> PRESENTATION MODE
-</span>
-</button>
-</div>
-</nav>
-</div>
-</header>
-​<!-- HERO SECTION -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
-<div class="max-w-5xl mx-auto text-center z-10 relative space-y-8">
-<div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-panel border border-cyan-electric/30">
-<img src="assets/lotus-university-logo.png" alt="Lotus Logo" class="h-7 w-auto object-contain" onerror="this.style.display='none'">
-<span class="text-xs sm:text-sm font-semibold tracking-wider text-cyan-electric uppercase">Lotus University • Faculty of Pharmacy</span>
-</div>
-​<div class="space-y-4">
-<h1 class="font-cinzel text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white leading-tight">
-PHARMACY<span class="text-cyan-electric glow-text-cyan">∞</span>
-</h1>
-<p class="font-cinzel text-lg sm:text-2xl text-slate-300 font-semibold tracking-widest uppercase">
-THE EVOLUTION OF PHARMACY
-</p>
-<h2 class="font-kufi text-3xl sm:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-gold-warm to-amber-400 py-2">
-من الطبيعة إلى المستقبل
-</h2>
-</div>
-​<div class="max-w-2xl mx-auto p-5 rounded-2xl glass-panel-gold border border-gold-warm/30 space-y-2">
-<span class="text-xs font-mono text-gold-warm uppercase tracking-widest font-bold">WORLD PHARMACISTS DAY 2026</span>
-<p class="font-kufi text-xl sm:text-3xl font-bold text-white">
-"صيدلي اليوم ... لصحة أفضل غداً"
-</p>
-<p class="text-xs text-amber-300/80 font-kufi">شكراً لكل صيدلي يسهم في رعاية وصحة المجتمع</p>
-</div>
-​<p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg leading-relaxed font-light">
-رحلة عبر آلاف السنين من المعرفة العلاجية وتحضير الأدوية وتطور مهنة الصيدلة حتى عصر الرعاية الدوائية والتقنيات الحديثة.
-</p>
-​<div class="pt-4 flex justify-center">
-<a href="#timeline" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-electric to-blue-600 text-navy-950 font-bold text-base shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:scale-105 transition-all duration-300">
-EXPLORE THE JOURNEY
-</a>
-</div>
-</div>
-</section>
-​<!-- HISTORICAL TIMELINE SECTION -->
-<section id="timeline" class="py-24 px-4 relative max-w-7xl mx-auto">
-<div class="text-center space-y-4 mb-16 reveal-node">
-<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">CHRONOLOGICAL EVOLUTION</span>
-<h2 class="text-3xl sm:text-5xl font-black font-cinzel text-white">THE HISTORICAL JOURNEY</h2>
-<p class="text-slate-400 text-sm max-w-xl mx-auto">اضغط على أي حقبة تاريخية لاستعراض التفاصيل الكاملة والدراسة التاريخية.</p>
-</div>
-​<div class="relative">
-<div class="absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 timeline-line hidden md:block"></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative" id="timeline-cards-container"></div>
-</div>
-</section>
-​<!-- ANCIENT EGYPT SECTION -->
-<section id="egypt" class="py-24 px-4 relative border-t border-slate-800/80 bg-gradient-to-b from-navy-950 via-slate-900/80 to-navy-950">
-<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-7 space-y-6 reveal-node">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
-1550 BCE • EGYPTIAN HERITAGE
-</div>
-<h2 class="text-3xl sm:text-5xl font-black font-kufi text-gold-warm">
-ANCIENT EGYPT: EBERS PAPYRUS
-</h2>
-<p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-تُعد بردية إيبرس (Ebers Papyrus) المكتوبة حوالي عام 1550 قبل الميلاد واحدة من أقدم وأهم المخطوطات الطبية والدوائية المتبقية في التاريخ.
-</p>
-<div class="glass-panel-gold p-6 rounded-2xl space-y-3">
-<h3 class="font-bold text-amber-200 text-sm uppercase tracking-wider">
-🏛️ HISTORICAL ACCURACY: PER-ANKH (HOUSE OF LIFE)
-</h3>
-<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-كانت Per-Ankh (بيت الحياة) مؤسسة تعليمية ودينية كبرى مرتبطة بالمعرفة وتدريب الأطباء وتوثيق العلاجات في مصر القديمة، وليست مجرد صيدلية بمفهومها الحديث.
-</p>
-</div>
-</div>
-<div class="lg:col-span-5 reveal-node">
-<div class="rounded-3xl p-8 glass-panel-gold border border-amber-500/40 text-center space-y-6 shadow-2xl">
-<div class="text-6xl">📜</div>
-<h3 class="text-2xl font-bold text-white font-cinzel">Ebers Papyrus Scroll</h3>
-<p class="text-xs text-slate-400">20 Meters in Length • 110 Pages of Medical Wisdom</p>
-</div>
-</div>
-</div>
-</section>
-​<!-- ISLAMIC GOLDEN AGE SECTION -->
-<section id="islamic-age" class="py-24 px-4 relative border-t border-slate-800/80 bg-navy-950">
-<div class="max-w-6xl mx-auto space-y-12">
-<div class="text-center space-y-4 reveal-node">
-<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">THE BIRTH OF PROFESSIONAL PHARMACY</span>
-<h2 class="text-3xl sm:text-5xl font-black font-kufi text-white">THE ISLAMIC GOLDEN AGE: AL-SAYDALAH</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-cyan-electric">
-<div class="text-3xl">⚗️</div>
-<h3 class="text-xl font-bold text-cyan-glow font-kufi">التقطير والتركيب (Distillation)</h3>
-<p class="text-xs sm:text-sm text-slate-300">تطوير أدوات الكيمياء مثل الإنبيق (Alembic) واستخلاص الزيوت والمياه المقطرة.</p>
-</div>
-<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-gold-warm">
-<div class="text-3xl">🏛️</div>
-<h3 class="text-xl font-bold text-gold-warm font-kufi">التنظيم المهني والمحتسبة</h3>
-<p class="text-xs sm:text-sm text-slate-300">افتتاح دكاكين الأدوية المستقلة وتطبيق نظام الحسبة للرقابة على جودة العقاقير.</p>
-</div>
-<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-emerald-400">
-<div class="text-3xl">📚</div>
-<h3 class="text-xl font-bold text-emerald-300 font-kufi">الأقرباباذين (Pharmacopoeias)</h3>
-<p class="text-xs sm:text-sm text-slate-300">تأليف موسوعات دوائية دقيقة أصبحت المرجع الأول للمستحضرات والعلاجات.</p>
-</div>
-</div>
-</div>
-</section>
-​<!-- MODERN PHARMACY SECTION -->
-<section id="modern" class="py-24 px-4 relative border-t border-slate-800/80 bg-gradient-to-b from-navy-950 to-slate-900/90">
-<div class="max-w-6xl mx-auto space-y-12">
-<div class="text-center space-y-4 reveal-node">
-<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">PATIENT-CENTERED CARE</span>
-<h2 class="text-3xl sm:text-5xl font-black font-kufi text-white">الصيدلة الحديثة والرعاية السريرية</h2>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="glass-card p-6 rounded-2xl space-y-3">
-<div class="text-2xl">🛡️</div>
-<h3 class="font-bold text-white">Medication Safety</h3>
-<p class="text-xs text-slate-400">ضمان سلامة الدواء والحد من التداخلات الدوائية.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl space-y-3">
-<div class="text-2xl">🩺</div>
-<h3 class="font-bold text-white">Clinical Decisions</h3>
-<p class="text-xs text-slate-400">المشاركة الفعالة في القرارات العلاجية بالمستشفيات.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl space-y-3">
-<div class="text-2xl">📊</div>
-<h3 class="font-bold text-white">Therapeutic Monitoring</h3>
-<p class="text-xs text-slate-400">متابعة التركيزات العلاجية لضمان أفضل فاعلية.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl space-y-3">
-<div class="text-2xl">🤝</div>
-<h3 class="font-bold text-white">Patient Care</h3>
-<p class="text-xs text-slate-400">تقديم الاستشارات الدوائية المباشرة للمرضى.</p>
-</div>
-</div>
-</div>
-</section>
-​<!-- FUTURE SECTION -->
-<section id="future" class="py-24 px-4 relative border-t border-slate-800/80 bg-navy-950">
-<div class="max-w-6xl mx-auto text-center space-y-12">
-<div class="space-y-4 reveal-node">
-<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">THE NEXT FRONTIER</span>
-<h2 class="text-3xl sm:text-5xl font-black font-cinzel text-white">PHARMACY OF THE FUTURE</h2>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-<div class="glass-card p-8 rounded-3xl space-y-4 border border-cyan-electric/30">
-<div class="text-4xl">🧬</div>
-<h3 class="text-xl font-bold text-cyan-glow">Pharmacogenomics</h3>
-<p class="text-xs text-slate-300">تصميم العلاج المفصل بناءً على الشفرة الوراثية للمريض.</p>
-</div>
-<div class="glass-card p-8 rounded-3xl space-y-4 border border-cyan-electric/30">
-<div class="text-4xl">🤖</div>
-<h3 class="text-xl font-bold text-cyan-glow">AI & Automation</h3>
-<p class="text-xs text-slate-300">استخدام الذكاء الاصطناعي في اكتشاف الأدوية وتحليل البيانات.</p>
-</div>
-<div class="glass-card p-8 rounded-3xl space-y-4 border border-cyan-electric/30">
-<div class="text-4xl">🖨️</div>
-<h3 class="text-xl font-bold text-cyan-glow">3D Printed Drugs</h3>
-<p class="text-xs text-slate-300">طباعة الأدوية المخصصة بالجرعات الدقيقة لكل مريض.</p>
-</div>
-</div>
-</div>
-</section>
-​<!-- SOURCES & REFERENCES SECTION -->
-<section id="sources" class="py-16 px-4 border-t border-slate-800 bg-navy-950 text-slate-400 text-xs">
-<div class="max-w-5xl mx-auto space-y-6">
-<h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider font-mono">📚 SOURCES & HISTORICAL REFERENCES</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<a href="https://www.ucl.ac.uk/museums-static/digitalegypt/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40 transition-colors">UCL Digital Egypt for Universities</a>
-<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40 transition-colors">PubMed / NCBI Medical Historical Database</a>
-<a href="https://www.fip.org/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40 transition-colors">International Pharmaceutical Federation (FIP)</a>
-<a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40 transition-colors">World Health Organization (WHO) Guidelines</a>
-</div>
-</div>
-</section>
-​<!-- FOOTER -->
-<footer class="py-16 px-4 bg-navy-950 border-t border-slate-800 text-center space-y-6">
-<img src="assets/lotus-university-logo.png" alt="Lotus Logo" class="h-16 mx-auto object-contain" onerror="this.style.display='none'">
-<h2 class="font-cinzel text-3xl font-bold text-white">PHARMACY<span class="text-cyan-electric">∞</span></h2>
-<p class="font-kufi text-lg text-gold-warm">"شكراً لكل صيدلي ... لصحة أفضل غداً"</p>
-<p class="text-xs text-slate-500">© 2026 Lotus University Faculty of Pharmacy.</p>
-</footer>
-​<!-- ERA MODAL -->
-<div id="era-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-4 bg-navy-950/90 backdrop-blur-xl">
-<div class="glass-panel rounded-3xl max-w-2xl w-full p-6 space-y-6 relative text-right">
-<button id="modal-close-btn" onclick="closeEraModal()" class="absolute top-4 left-4 p-2 text-slate-400 hover:text-white">✕</button>
-<div id="modal-content-body"></div>
-</div>
-</div>
-​<!-- PRESENTATION OVERLAY -->
-<div id="presentation-overlay" class="fixed inset-0 z-[300] hidden bg-navy-950 flex flex-col justify-between p-6 sm:p-12">
-<div class="flex justify-between items-center">
-<div class="flex items-center gap-3">
-<img src="assets/lotus-university-logo.png" alt="Logo" class="h-8 w-auto object-contain" onerror="this.style.display='none'">
-<span class="font-cinzel text-xl font-bold text-white">PHARMACY<span class="text-cyan-electric">∞</span></span>
-</div>
-<button onclick="exitPresentationMode()" class="px-4 py-2 rounded-lg bg-red-500/20 text-red-300 border border-red-500/40 text-xs">EXIT PRESENTATION (ESC)</button>
-</div>
-<div id="presentation-slide-content" class="max-w-4xl mx-auto text-center space-y-6 my-auto"></div>
-<div class="flex justify-between items-center text-xs font-mono text-slate-400">
-<button onclick="prevSlide()" class="px-4 py-2 bg-slate-800 rounded-lg text-cyan-electric">← Previous</button>
-<span id="slide-indicator">Slide 1 of 12</span>
-<button onclick="nextSlide()" class="px-4 py-2 bg-slate-800 rounded-lg text-cyan-electric">Next →</button>
-</div>
-</div>
-​<!-- JAVASCRIPT -->
-<script>
-const TIMELINE_DATA = [
-{ id: "01", period: "PREHISTORY", titleAr: "المعرفة العلاجية المبكرة", timeframe: "Before Written Records", summary: "الاعتماد على الملاحظة التجريبية للأعشاب والنباتات البرية.", whatChanged: "الانتقال إلى المحاكمة التجريبية الأولية.", whyItMatters: "تأسيس الطب الشعبي الأول." },
-{ id: "02", period: "ANCIENT EGYPT", titleAr: "مصر القديمة والتدوين الدوائي", timeframe: "c. 1550 BCE", summary: "تدوين بردية إيبرس وابتكار الأشكال الصيدلانية الأولى.", whatChanged: "التوثيق الكتابي المنظم للجرعات.", whyItMatters: "تأسيس الملاحظة وتوثيق مئات الوصفات." },
-{ id: "03", period: "ISLAMIC GOLDEN AGE", titleAr: "العصر الإسلامي واستقلالية الصيدلة", timeframe: "8th-10th Century CE", summary: "فصل الصيدلة كمهنة مستقلة باسم الصيدلة وتطوير التقطير.", whatChanged: "التفتيش المهني ونظام الحسبة.", whyItMatters: "تأسيس المعايير الأخلاقية والمهنية للصيدلة." },
-{ id: "04", period: "MODERN ERA", titleAr: "الصيدلة الحديثة والرعاية السريرية", timeframe: "21st Century", summary: "التركيز على سلامة المريض والرعاية الدوائية المباشرة.", whatChanged: "الانتقال من مجرد تحضير الدواء إلى الرعاية الكاملة.", whyItMatters: "رفع كفاءة العلاج وتقليل التداخلات الدوائية." }
-];
-​let currentSlideIndex = 0;
-​// FAIL-SAFE LOADER FUNCTION
-function startLoader() {
-const progressBar = document.getElementById('loader-progress-bar');
-const percentageText = document.getElementById('loader-percentage');
-const loadingScreen = document.getElementById('loading-screen');
-if (!loadingScreen) return;
-​let progress = 0;
-const timer = setInterval(() => {
-progress += 20;
-if (progressBar) progressBar.style.width = progress + '%';
-if (percentageText) percentageText.innerText = progress + '%';
-if (progress >= 100) {
-clearInterval(timer);
-setTimeout(() => {
-loadingScreen.style.opacity = '0';
-setTimeout(() => { loadingScreen.style.display = 'none'; }, 500);
-}, 200);
-}
-}, 80);
-​// Absolute Fail-Safe Timeout (Maximum 2 seconds)
-setTimeout(() => {
-if (loadingScreen && loadingScreen.style.display !== 'none') {
-loadingScreen.style.opacity = '0';
-setTimeout(() => { loadingScreen.style.display = 'none'; }, 500);
-}
-}, 2000);
-}
-​window.addEventListener('DOMContentLoaded', () => {
-renderTimeline();
-startLoader();
-setupScroll();
-});
-​// Run loader immediately if DOM is already ready
-if (document.readyState !== 'loading') {
-startLoader();
-}
-​function renderTimeline() {
-const container = document.getElementById('timeline-cards-container');
-if(!container) return;
-container.innerHTML = TIMELINE_DATA.map(item => <div class="glass-card p-6 rounded-2xl cursor-pointer hover:border-cyan-electric/50 transition-all" onclick="openEraModal('${item.id}')"> <span class="text-xs text-cyan-electric font-mono">${item.period} (${item.timeframe})</span> <h3 class="text-xl font-bold text-white font-kufi mt-1">${item.titleAr}</h3> <p class="text-xs text-slate-300 mt-2">${item.summary}</p> </div>).join('');
-}
-​function openEraModal(id) {
-const item = TIMELINE_DATA.find(d => d.id === id);
-if (!item) return;
-document.getElementById('modal-content-body').innerHTML = <h2 class="text-2xl font-bold text-white font-kufi">${item.titleAr}</h2> <p class="text-xs text-cyan-electric font-mono mt-1">${item.period} - ${item.timeframe}</p> <div class="mt-4 space-y-3 text-xs text-slate-300"> <p><strong>ما الذي تغير؟:</strong> ${item.whatChanged}</p> <p><strong>أهمية المرحلة:</strong> ${item.whyItMatters}</p> </div>;
-document.getElementById('era-modal').classList.remove('hidden');
-}
-​function closeEraModal() {
-document.getElementById('era-modal').classList.add('hidden');
-}
-​function startPresentationMode() {
-currentSlideIndex = 0;
-updateSlide();
-document.getElementById('presentation-overlay').classList.remove('hidden');
-}
-​function exitPresentationMode() {
-document.getElementById('presentation-overlay').classList.add('hidden');
-}
-​function updateSlide() {
-const item = TIMELINE_DATA[currentSlideIndex];
-document.getElementById('presentation-slide-content').innerHTML = <span class="text-sm font-mono text-cyan-electric">${item.period} • ${item.timeframe}</span> <h2 class="text-4xl font-bold text-white font-kufi">${item.titleAr}</h2> <p class="text-lg text-slate-300 font-light max-w-2xl mx-auto">${item.summary}</p>;
-document.getElementById('slide-indicator').innerText = Slide ${currentSlideIndex + 1} of ${TIMELINE_DATA.length};
-}
-​function nextSlide() {
-if (currentSlideIndex < TIMELINE_DATA.length - 1) {
-currentSlideIndex++;
-updateSlide();
-}
-}
-​function prevSlide() {
-if (currentSlideIndex > 0) {
-currentSlideIndex--;
-updateSlide();
-}
-}
-​document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
-closeEraModal();
-exitPresentationMode();
-}
-if (!document.getElementById('presentation-overlay').classList.contains('hidden')) {
-if (e.key === 'ArrowRight') prevSlide();
-if (e.key === 'ArrowLeft') nextSlide();
-}
-});
-​function setupScroll() {
-window.addEventListener('scroll', () => {
-const winScroll = document.documentElement.scrollTop;
-const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-const bar = document.getElementById('scroll-progress-bar');
-if (bar) bar.style.width = (winScroll / height) * 100 + '%';
-});
-}
-</script>
+
+<body>
+
+  <div id="scroll-progress"></div>
+  <div class="noise"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="relative flex items-center justify-center">
+      <div class="loader-ring"></div>
+      <div class="loader-core">∞</div>
+    </div>
+
+    <div class="absolute bottom-20 text-center">
+      <div class="font-inter text-xs tracking-[.35em] text-cyan-300">
+        PHARMACY∞
+      </div>
+      <div class="mt-2 text-[11px] text-slate-500 tracking-widest">
+        LOADING KNOWLEDGE...
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="fixed top-0 right-0 left-0 z-[5000]">
+    <nav class="glass border-t-0 border-r-0 border-l-0">
+      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+
+        <a href="#home" class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-cyan-400/20 bg-cyan-400/5">
+            <img
+              src="assets/lotus-university-logo.png"
+              alt="Lotus University"
+              class="h-full w-full object-contain p-1"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;font-cinzel text-cyan-300 text-xl&quot;>L</span>';"
+            >
+          </div>
+
+          <div>
+            <div class="font-cinzel text-sm tracking-[.18em] text-white">
+              LOTUS UNIVERSITY
+            </div>
+            <div class="font-inter text-[9px] tracking-[.35em] text-cyan-400">
+              PHARMACY∞
+            </div>
+          </div>
+        </a>
+
+        <div class="desktop-nav hidden items-center gap-7 md:flex">
+          <a class="nav-link text-xs" href="#home">الرئيسية</a>
+          <a class="nav-link text-xs" href="#timeline">الرحلة التاريخية</a>
+          <a class="nav-link text-xs" href="#egypt">مصر القديمة</a>
+          <a class="nav-link text-xs" href="#islamic">العصر الذهبي</a>
+          <a class="nav-link text-xs" href="#modern">الصيدلة الحديثة</a>
+          <a class="nav-link text-xs" href="#future">المستقبل</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            id="mobile-menu-btn"
+            class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 text-slate-300 md:hidden"
+            aria-label="فتح القائمة"
+            type="button"
+          >
+            ☰
+          </button>
+
+          <button
+            id="presentation-btn"
+            class="btn-gold rounded-xl px-4 py-2 text-xs font-bold"
+            type="button"
+          >
+            <span>▶</span>
+            <span class="hidden sm:inline">Presentation</span>
+          </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu glass">
+          <a href="#home">الرئيسية</a>
+          <a href="#timeline">الرحلة التاريخية</a>
+          <a href="#egypt">مصر القديمة</a>
+          <a href="#islamic">العصر الذهبي</a>
+          <a href="#modern">الصيدلة الحديثة</a>
+          <a href="#future">المستقبل</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="relative flex min-h-screen items-center overflow-hidden pt-24">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+
+      <div class="mx-auto w-full max-w-7xl px-6 py-24">
+        <div class="grid items-center gap-14 lg:grid-cols-[1.2fr_.8fr]">
+
+          <div class="reveal">
+            <div class="mb-6 flex items-center gap-3">
+              <div class="section-line"></div>
+              <span class="font-inter text-[11px] tracking-[.35em] text-cyan-400">
+                THE EVOLUTION OF PHARMACY
+              </span>
+            </div>
+
+            <h1 class="hero-title font-cinzel text-6xl font-bold leading-[.95] tracking-tight text-white sm:text-7xl lg:text-[105px]">
+              PHARMACY
+              <span class="gradient-text">∞</span>
+            </h1>
+
+            <p class="mt-7 max-w-2xl text-lg leading-9 text-slate-400 sm:text-xl">
+              من جذور الطب في الحضارات القديمة إلى عالم
+              <span class="text-cyan-300">الدواء الذكي</span>
+              والصيدلة السريرية والطب الشخصي.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a
+                href="#timeline"
+                class="btn-primary rounded-2xl px-6 py-3 text-sm font-bold"
+              >
+                استكشف الرحلة
+                <span>↓</span>
+              </a>
+
+              <button
+                id="hero-presentation"
+                type="button"
+                class="btn-gold rounded-2xl px-6 py-3 text-sm font-bold"
+              >
+                ابدأ العرض
+                <span>▶</span>
+              </button>
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-3">
+              <span class="pill">⚗️ علم</span>
+              <span class="pill">🏺 تاريخ</span>
+              <span class="pill">🧬 ابتكار</span>
+              <span class="pill">🤖 مستقبل</span>
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <div class="glass relative mx-auto max-w-md rounded-[35px] p-8">
+
+              <div class="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-cyan-400/10"></div>
+              <div class="absolute -bottom-10 -left-10 h-40 w-40 rounded-full border border-amber-400/10"></div>
+
+              <div class="relative">
+                <div class="font-inter text-xs tracking-[.3em] text-slate-500">
+                  PHARMACY / TIMELINE
+                </div>
+
+                <div class="mt-6 flex items-center justify-center">
+                  <div class="relative flex h-64 w-64 items-center justify-center rounded-full border border-cyan-400/15">
+                    <div class="absolute inset-5 rounded-full border border-cyan-400/10"></div>
+                    <div class="absolute inset-12 rounded-full border border-amber-400/10"></div>
+
+                    <div class="text-center">
+                      <div class="font-cinzel text-7xl text-cyan-300 glow-text-cyan">
+                        ∞
+                      </div>
+                      <div class="mt-2 font-inter text-[10px] tracking-[.35em] text-slate-500">
+                        KNOWLEDGE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-7 grid grid-cols-3 gap-2 text-center">
+                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
+                    <div class="font-cinzel text-xl text-cyan-300">5K+</div>
+                    <div class="mt-1 text-[10px] text-slate-500">YEARS</div>
+                  </div>
+
+                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
+                    <div class="font-cinzel text-xl text-amber-300">∞</div>
+                    <div class="mt-1 text-[10px] text-slate-500">DISCOVERY</div>
+                  </div>
+
+                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
+                    <div class="font-cinzel text-xl text-cyan-300">01</div>
+                    <div class="mt-1 text-[10px] text-slate-500">MISSION</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="relative py-24">
+      <div class="mx-auto max-w-5xl px-6 text-center">
+
+        <div class="reveal">
+          <div class="section-number">01 / INTRODUCTION</div>
+
+          <h2 class="mt-4 font-cairo text-3xl font-extrabold text-white sm:text-5xl">
+            الصيدلة ليست مجرد دواء
+          </h2>
+
+          <div class="mx-auto mt-5 section-line"></div>
+
+          <p class="mx-auto mt-8 max-w-3xl text-base leading-9 text-slate-400 sm:text-lg">
+            الصيدلة هي قصة طويلة من الملاحظة والتجربة والمعرفة.
+            بدأت من استخدام النباتات والمعادن والمواد الطبيعية،
+            ثم تطورت مع الكتابة والتجريب والكيمياء، وصولاً إلى
+            التكنولوجيا الحيوية والذكاء الاصطناعي والطب الشخصي.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="relative py-28">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <div class="reveal mb-20 text-center">
+          <div class="section-number">02 / TIMELINE</div>
+
+          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
+            رحلة الصيدلة عبر الزمن
+          </h2>
+
+          <p class="mx-auto mt-5 max-w-2xl text-slate-400">
+            اضغط على أي مرحلة لمعرفة أهم ملامحها وتطور المعرفة الدوائية خلالها.
+          </p>
+        </div>
+
+        <div id="timeline-container" class="timeline"></div>
+
+      </div>
+    </section>
+
+    <!-- EGYPT -->
+    <section id="egypt" class="relative py-28">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+
+          <div class="reveal">
+            <div class="section-number">03 / ANCIENT EGYPT</div>
+
+            <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
+              مصر القديمة
+            </h2>
+
+            <div class="mt-5 section-line"></div>
+
+            <p class="mt-7 text-base leading-9 text-slate-400">
+              امتلك المصريون القدماء معرفة واسعة بالمواد الطبية
+              والنباتات والزيوت والمراهم والمستحضرات المختلفة.
+              وكانت الوصفات تُسجل وتُنقل بين الأجيال، وهو ما يجعل
+              المصادر المصرية القديمة من أهم الشواهد على تاريخ الطب والدواء.
+            </p>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+
+              <div class="glass rounded-2xl p-5">
+                <div class="text-2xl">📜</div>
+                <h3 class="mt-3 font-bold text-white">
+                  بردية إيبرس
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-slate-500">
+                  واحدة من أشهر البرديات الطبية المصرية القديمة،
+                  وتضم وصفات ومعلومات علاجية متنوعة.
+                </p>
+              </div>
+
+              <div class="glass rounded-2xl p-5">
+                <div class="text-2xl">🌿</div>
+                <h3 class="mt-3 font-bold text-white">
+                  النباتات الطبية
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-slate-500">
+                  استخدمت مواد نباتية وزيوت ومكونات طبيعية في
+                  تحضير مستحضرات علاجية.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <div class="history-highlight glass rounded-[35px] p-8 sm:p-10">
+
+              <div class="flex items-center justify-between">
+                <span class="pill">ANCIENT MEDICINE</span>
+                <span class="font-cinzel text-5xl text-amber-300 glow-text-gold">
+                  01
+                </span>
+              </div>
+
+              <div class="mt-10">
+                <div class="font-cinzel text-6xl text-slate-700">
+                  EBERS
+                </div>
+
+                <p class="mt-5 text-sm leading-8 text-slate-500">
+                  الكتابة الطبية ساعدت على حفظ المعرفة وتراكمها
+                  بدلاً من اعتمادها الكامل على النقل الشفهي.
+                </p>
+              </div>
+
+              <div class="mt-9 grid grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-4">
+                  <div class="text-xs text-slate-500">KNOWLEDGE</div>
+                  <div class="mt-1 font-bold text-cyan-300">الوصفات</div>
+                </div>
+
+                <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-4">
+                  <div class="text-xs text-slate-500">MATERIALS</div>
+                  <div class="mt-1 font-bold text-amber-300">النباتات</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ISLAMIC -->
+    <section id="islamic" class="relative overflow-hidden py-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6">
+
+        <div class="reveal text-center">
+          <div class="section-number">04 / ISLAMIC GOLDEN AGE</div>
+
+          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
+            العصر الذهبي للعلوم الطبية
+          </h2>
+
+          <div class="mx-auto mt-5 section-line"></div>
+
+          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
+            شهد العالم الإسلامي تطوراً كبيراً في العلوم الطبية والكيميائية،
+            وظهرت مؤلفات وممارسات ساهمت في تنظيم تحضير الأدوية والتعامل معها.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-3">
+
+          <div class="glass reveal rounded-3xl p-7">
+            <div class="icon-box">🧪</div>
+            <h3 class="mt-5 text-xl font-bold text-white">
+              الكيمياء والتحضير
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              تطورت تقنيات التحضير والتنقية والاستخلاص، وارتبطت
+              العلوم الكيميائية بالممارسات الطبية.
+            </p>
+          </div>
+
+          <div class="glass reveal delay-1 rounded-3xl p-7">
+            <div class="icon-box">📚</div>
+            <h3 class="mt-5 text-xl font-bold text-white">
+              التأليف والتوثيق
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              ساعدت الكتب والمصنفات على تنظيم المعرفة الطبية
+              والصيدلانية وتداولها بين العلماء.
+            </p>
+          </div>
+
+          <div class="glass reveal delay-2 rounded-3xl p-7">
+            <div class="icon-box">🏪</div>
+            <h3 class="mt-5 text-xl font-bold text-white">
+              الصيدليات المبكرة
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              ظهرت ممارسات أكثر تخصصاً في تحضير وبيع المستحضرات
+              الدوائية في المدن الإسلامية.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 glass reveal rounded-3xl p-7">
+          <div class="grid items-center gap-7 md:grid-cols-[auto_1fr]">
+
+            <div class="flex h-20 w-20 items-center justify-center rounded-3xl border border-amber-400/15 bg-amber-400/5 text-4xl">
+              🧑‍🔬
+            </div>
+
+            <div>
+              <div class="text-xs tracking-[.2em] text-amber-400">
+                AL-SAYDALAH
+              </div>
+
+              <h3 class="mt-2 text-2xl font-bold text-white">
+                مفهوم الصيدلة كحرفة ومجال متخصص
+              </h3>
+
+              <p class="mt-3 text-sm leading-8 text-slate-500">
+                تطورت ممارسات الصيدلة تدريجياً لتصبح أكثر تخصصاً،
+                مع الاهتمام بالمكونات والجرعات وطرق التحضير والتخزين.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MODERN -->
+    <section id="modern" class="relative py-28">
+      <div class="mx-auto max-w-7xl px-6">
+
+        <div class="reveal text-center">
+          <div class="section-number">05 / MODERN PHARMACY</div>
+
+          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
+            الصيدلة الحديثة والسريرية
+          </h2>
+
+          <div class="mx-auto mt-5 section-line"></div>
+
+          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
+            انتقلت الصيدلة من التركيز على تحضير الدواء فقط إلى
+            المشاركة المباشرة في رعاية المريض وتحسين نتائج العلاج.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="stat-card glass reveal rounded-3xl p-7">
+            <div class="text-4xl">💊</div>
+            <div class="mt-6 font-cinzel text-3xl text-cyan-300">DRUG</div>
+            <h3 class="mt-2 font-bold text-white">الدواء</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              فهم المادة الفعالة والشكل الصيدلاني وطريقة الاستخدام.
+            </p>
+          </div>
+
+          <div class="stat-card glass reveal delay-1 rounded-3xl p-7">
+            <div class="text-4xl">🧬</div>
+            <div class="mt-6 font-cinzel text-3xl text-cyan-300">BIO</div>
+            <h3 class="mt-2 font-bold text-white">التكنولوجيا الحيوية</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              أدوية بيولوجية وعلاجات تعتمد على تقنيات متقدمة.
+            </p>
+          </div>
+
+          <div class="stat-card glass reveal delay-2 rounded-3xl p-7">
+            <div class="text-4xl">🩺</div>
+            <div class="mt-6 font-cinzel text-3xl text-cyan-300">CLINIC</div>
+            <h3 class="mt-2 font-bold text-white">الصيدلة السريرية</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              متابعة العلاج الدوائي والمساهمة في القرارات العلاجية.
+            </p>
+          </div>
+
+          <div class="stat-card glass reveal delay-3 rounded-3xl p-7">
+            <div class="text-4xl">📊</div>
+            <div class="mt-6 font-cinzel text-3xl text-cyan-300">DATA</div>
+            <h3 class="mt-2 font-bold text-white">البيانات</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+              استخدام المعلومات والبيانات لدعم العلاج والرعاية الصحية.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-10 glass reveal rounded-[30px] p-8 sm:p-10">
+          <div class="grid items-center gap-8 lg:grid-cols-2">
+
+            <div>
+              <span class="pill">CLINICAL PHARMACY</span>
+
+              <h3 class="mt-5 text-3xl font-extrabold text-white">
+                من صرف الدواء إلى رعاية المريض
+              </h3>
+
+              <p class="mt-5 text-sm leading-9 text-slate-400">
+                أصبح الصيدلي جزءاً من الفريق الصحي في العديد من البيئات
+                العلاجية، مع اهتمام أكبر بسلامة الدواء والتداخلات الدوائية
+                والالتزام بالعلاج ومتابعة النتائج.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
+                <div class="text-2xl">🔬</div>
+                <div class="mt-3 font-bold text-white">Research</div>
+                <div class="mt-1 text-xs text-slate-500">البحث والتطوير</div>
+              </div>
+
+              <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
+                <div class="text-2xl">🛡️</div>
+                <div class="mt-3 font-bold text-white">Safety</div>
+                <div class="mt-1 text-xs text-slate-500">سلامة الدواء</div>
+              </div>
+
+              <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5">
+                <div class="text-2xl">👤</div>
+                <div class="mt-3 font-bold text-white">Patient</div>
+                <div class="mt-1 text-xs text-slate-500">المريض</div>
+              </div>
+
+              <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5">
+                <div class="text-2xl">🎯</div>
+                <div class="mt-3 font-bold text-white">Outcomes</div>
+                <div class="mt-1 text-xs text-slate-500">نتائج العلاج</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FUTURE -->
+    <section id="future" class="relative py-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-cyan-950/5 via-transparent to-amber-950/5"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6">
+
+        <div class="reveal text-center">
+          <div class="section-number">06 / FUTURE PHARMACY</div>
+
+          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
+            إلى أين تتجه الصيدلة؟
+          </h2>
+
+          <div class="mx-auto mt-5 section-line"></div>
+
+          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
+            المستقبل يجمع بين العلوم الدوائية والبيانات والذكاء الاصطناعي
+            والهندسة الحيوية، مع تركيز أكبر على احتياجات كل مريض.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+
+          <div class="future-card glass reveal rounded-3xl p-7">
+            <div class="text-4xl">🤖</div>
+            <h3 class="mt-7 text-xl font-bold text-white">
+              الذكاء الاصطناعي
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              تحليل البيانات ودعم اكتشاف الأدوية والقرارات الصحية.
+            </p>
+          </div>
+
+          <div class="future-card glass reveal delay-1 rounded-3xl p-7">
+            <div class="text-4xl">🧬</div>
+            <h3 class="mt-7 text-xl font-bold text-white">
+              الطب الشخصي
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              تصميم العلاج بما يتناسب مع خصائص المريض البيولوجية.
+            </p>
+          </div>
+
+          <div class="future-card glass reveal delay-2 rounded-3xl p-7">
+            <div class="text-4xl">🖨️</div>
+            <h3 class="mt-7 text-xl font-bold text-white">
+              التصنيع المتقدم
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              تقنيات جديدة لتصنيع أشكال دوائية وجرعات أكثر تخصيصاً.
+            </p>
+          </div>
+
+          <div class="future-card glass reveal delay-3 rounded-3xl p-7">
+            <div class="text-4xl">⌚</div>
+            <h3 class="mt-7 text-xl font-bold text-white">
+              الصحة الرقمية
+            </h3>
+            <p class="mt-3 text-sm leading-8 text-slate-500">
+              أجهزة وتقنيات رقمية تساعد على المتابعة المستمرة للعلاج.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="mt-12 reveal">
+          <div class="glass overflow-hidden rounded-[35px] p-8 sm:p-12">
+
+            <div class="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
+
+              <div>
+                <div class="font-inter text-xs tracking-[.35em] text-cyan-400">
+                  PHARMACY∞ / NEXT
+                </div>
+
+                <h3 class="mt-5 text-3xl font-extrabold text-white sm:text-4xl">
+                  المعرفة الدوائية لا تتوقف.
+                </h3>
+
+                <p class="mt-5 max-w-2xl text-sm leading-8 text-slate-400">
+                  كل مرحلة تاريخية أضافت طبقة جديدة من المعرفة،
+                  وكل اكتشاف يفتح الباب أمام سؤال جديد.
+                  وهنا تستمر الرحلة.
+                </p>
+              </div>
+
+              <div class="flex h-36 w-36 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/5">
+                <span class="font-cinzel text-6xl text-cyan-300 glow-text-cyan">
+                  ∞
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="sources" class="relative py-28">
+      <div class="mx-auto max-w-5xl px-6">
+
+        <div class="reveal text-center">
+          <div class="section-number">07 / SOURCES</div>
+
+          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white">
+            مصادر ومراجع مقترحة
+          </h2>
+
+          <div class="mx-auto mt-5 section-line"></div>
+        </div>
+
+        <div class="mt-12 grid gap-4">
+
+          <div class="glass reveal rounded-2xl p-6">
+            <div class="flex gap-4">
+              <div class="icon-box">📖</div>
+              <div>
+                <h3 class="font-bold text-white">
+                  Ebers Papyrus
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-slate-500">
+                  مصدر تاريخي مهم لدراسة الممارسات الطبية المصرية القديمة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass reveal delay-1 rounded-2xl p-6">
+            <div class="flex gap-4">
+              <div class="icon-box">🏛️</div>
+              <div>
+                <h3 class="font-bold text-white">
+                  تاريخ العلوم الطبية والصيدلة
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-slate-500">
+                  دراسات ومراجع أكاديمية حول تطور الطب والصيدلة عبر الحضارات.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass reveal delay-2 rounded-2xl p-6">
+            <div class="flex gap-4">
+              <div class="icon-box">🧪</div>
+              <div>
+                <h3 class="font-bold text-white">
+                  Pharmacognosy & Pharmaceutical Sciences
+                </h3>
+                <p class="mt-2 text-sm leading-7 text-slate-500">
+                  مراجع علمية لفهم المواد الطبيعية والعلوم الصيدلانية الحديثة.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-8 rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5 text-center">
+          <p class="text-xs leading-7 text-slate-500">
+            هذا الموقع تعليمي/عرض تقديمي، وبعض التواريخ والمعلومات التاريخية
+            عُرضت بصورة مختصرة لتناسب تجربة العرض البصري.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/60 py-12">
+    <div class="mx-auto max-w-7xl px-6">
+
+      <div class="grid gap-8 md:grid-cols-3">
+
+        <div>
+          <div class="font-cinzel text-xl tracking-[.18em] text-white">
+            PHARMACY∞
+          </div>
+
+          <p class="mt-3 max-w-sm text-sm leading-7 text-slate-500">
+            The Evolution of Pharmacy
+          </p>
+        </div>
+
+        <div>
+          <div class="text-xs tracking-[.25em] text-cyan-400">
+            LOTUS UNIVERSITY
+          </div>
+
+          <p class="mt-3 text-sm leading-7 text-slate-500">
+            Educational Interactive Presentation
+          </p>
+        </div>
+
+        <div class="md:text-left">
+          <div class="font-inter text-xs tracking-[.25em] text-slate-600">
+            KNOWLEDGE • SCIENCE • FUTURE
+          </div>
+
+          <div class="mt-4 font-cinzel text-3xl text-cyan-400">
+            ∞
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 border-t border-slate-800/50 pt-6 text-center">
+        <p class="text-xs text-slate-600">
+          PHARMACY∞ — The Evolution of Pharmacy
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ERA MODAL -->
+  <div id="era-modal" class="modal-backdrop" aria-hidden="true">
+
+    <div
+      class="modal-box glass rounded-[30px]"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <div class="flex items-start justify-between gap-5 border-b border-slate-800/70 p-6 sm:p-8">
+
+        <div>
+          <div id="modal-era" class="font-inter text-[10px] tracking-[.3em] text-cyan-400"></div>
+          <h2 id="modal-title" class="mt-3 text-2xl font-extrabold text-white sm:text-3xl"></h2>
+        </div>
+
+        <button
+          id="modal-close"
+          class="modal-close"
+          type="button"
+          aria-label="إغلاق"
+        >
+          ✕
+        </button>
+
+      </div>
+
+      <div id="modal-content-body" class="p-6 sm:p-8"></div>
+
+    </div>
+
+  </div>
+
+  <!-- PRESENTATION -->
+  <div id="presentation" aria-hidden="true">
+
+    <div class="presentation-top">
+      <div class="font-cinzel text-sm tracking-[.25em] text-cyan-300">
+        PHARMACY∞
+      </div>
+
+      <button
+        id="presentation-close"
+        class="slide-btn"
+        type="button"
+        aria-label="إغلاق العرض"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- SLIDE 1 -->
+    <div class="presentation-slide active" data-slide="0">
+      <div class="max-w-5xl text-center">
+        <div class="font-inter text-xs tracking-[.4em] text-cyan-400">
+          LOTUS UNIVERSITY
+        </div>
+
+        <h1 class="mt-7 font-cinzel text-6xl font-bold text-white sm:text-8xl lg:text-9xl">
+          PHARMACY<span class="gradient-text">∞</span>
+        </h1>
+
+        <p class="mx-auto mt-7 max-w-2xl text-lg leading-9 text-slate-400">
+          The Evolution of Pharmacy
+        </p>
+
+        <div class="mx-auto mt-9 section-line"></div>
+
+        <p class="mt-8 text-sm text-slate-500">
+          من الماضي إلى المستقبل
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="presentation-slide" data-slide="1">
+      <div class="max-w-5xl">
+        <div class="section-number">01 / ANCIENT ROOTS</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          البداية
+        </h2>
+
+        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
+          بدأت المعرفة الدوائية من المواد الطبيعية والوصفات العلاجية
+          التي استخدمتها الحضارات القديمة، ثم انتقلت عبر الكتابة
+          والتجربة والتوثيق.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="presentation-slide" data-slide="2">
+      <div class="max-w-5xl">
+        <div class="section-number">02 / EGYPT</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          مصر القديمة
+        </h2>
+
+        <div class="mt-9 grid gap-4 sm:grid-cols-3">
+          <div class="glass rounded-2xl p-6">
+            <div class="text-3xl">📜</div>
+            <div class="mt-4 font-bold text-white">البرديات</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6">
+            <div class="text-3xl">🌿</div>
+            <div class="mt-4 font-bold text-white">النباتات الطبية</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6">
+            <div class="text-3xl">⚗️</div>
+            <div class="mt-4 font-bold text-white">المستحضرات</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="presentation-slide" data-slide="3">
+      <div class="max-w-5xl">
+        <div class="section-number">03 / ISLAMIC GOLDEN AGE</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          العصر الذهبي
+        </h2>
+
+        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
+          تطورت علوم الكيمياء والطب والصيدلة، وزادت أهمية التوثيق
+          والتحضير المتخصص للمستحضرات.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="presentation-slide" data-slide="4">
+      <div class="max-w-5xl">
+        <div class="section-number">04 / MODERN PHARMACY</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          الصيدلة الحديثة
+        </h2>
+
+        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
+          أصبحت الصيدلة مرتبطة بالبحث والتطوير والصيدلة السريرية
+          وسلامة الدواء ورعاية المريض.
+        </p>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="presentation-slide" data-slide="5">
+      <div class="max-w-5xl">
+        <div class="section-number">05 / CLINICAL</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          المريض أولاً
+        </h2>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">🛡️</div>
+            <div class="mt-4 font-bold text-white">سلامة الدواء</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">🎯</div>
+            <div class="mt-4 font-bold text-white">نتائج العلاج</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">👤</div>
+            <div class="mt-4 font-bold text-white">رعاية المريض</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7 -->
+    <div class="presentation-slide" data-slide="6">
+      <div class="max-w-5xl">
+        <div class="section-number">06 / FUTURE</div>
+
+        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
+          صيدلة المستقبل
+        </h2>
+
+        <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">🤖</div>
+            <div class="mt-4 font-bold text-white">AI</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">🧬</div>
+            <div class="mt-4 font-bold text-white">Personalized Medicine</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">🖨️</div>
+            <div class="mt-4 font-bold text-white">Advanced Manufacturing</div>
+          </div>
+
+          <div class="glass rounded-2xl p-6 text-center">
+            <div class="text-3xl">⌚</div>
+            <div class="mt-4 font-bold text-white">Digital Health</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8 -->
+    <div class="presentation-slide" data-slide="7">
+      <div class="max-w-5xl text-center">
+        <div class="font-cinzel text-7xl text-cyan-300 glow-text-cyan">
+          ∞
+        </div>
+
+        <h2 class="mt-8 text-4xl font-extrabold text-white sm:text-6xl">
+          المعرفة لا تتوقف
+        </h2>
+
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-9 text-slate-400">
+          وكل اكتشاف جديد يفتح باباً لاكتشاف آخر.
+        </p>
+      </div>
+    </div>
+
+    <!-- PRESENTATION CONTROLS -->
+    <div class="presentation-controls">
+
+      <button
+        id="slide-prev"
+        class="slide-btn"
+        type="button"
+        aria-label="الشريحة السابقة"
+      >
+        →
+      </button>
+
+      <div
+        id="slide-indicator"
+        class="min-w-[110px] text-center font-inter text-xs tracking-widest text-slate-400"
+      >
+        Slide 1 of 8
+      </div>
+
+      <button
+        id="slide-next"
+        class="slide-btn"
+        type="button"
+        aria-label="الشريحة التالية"
+      >
+        ←
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+    "use strict";
+
+    /* =========================================================
+       DATA
+    ========================================================= */
+
+    const TIMELINE_DATA = [
+      {
+        id: "ancient",
+        number: "01",
+        era: "ANCIENT ROOTS",
+        title: "جذور المعرفة الدوائية",
+        period: "العصور القديمة",
+        icon: "🏺",
+        color: "cyan",
+        short:
+          "بدأ استخدام المواد الطبيعية والنباتات والمعادن في الممارسات العلاجية القديمة.",
+        description:
+          "اعتمدت المجتمعات القديمة على ملاحظة تأثير النباتات والمواد الطبيعية، ثم تطورت المعرفة تدريجياً من التجربة المباشرة إلى الوصفات المنظمة والتوثيق.",
+        points: [
+          "استخدام النباتات والمواد الطبيعية في العلاج.",
+          "تطوير طرق بدائية للتحضير والاستخلاص.",
+          "انتقال المعرفة بين الأجيال.",
+          "بداية توثيق الوصفات الطبية."
+        ]
+      },
+
+      {
+        id: "egypt",
+        number: "02",
+        era: "ANCIENT EGYPT",
+        title: "مصر القديمة",
+        period: "الألفية الثانية قبل الميلاد وما حولها",
+        icon: "𓂀",
+        color: "gold",
+        short:
+          "تظهر البرديات المصرية معرفة واسعة بالمواد الطبية والوصفات والمستحضرات.",
+        description:
+          "تقدم البرديات الطبية المصرية القديمة، ومنها بردية إيبرس، دليلاً مهماً على وجود معرفة منظمة بالوصفات والمكونات والممارسات العلاجية.",
+        points: [
+          "برديات طبية تحتوي على وصفات ومعلومات علاجية.",
+          "استخدام النباتات والزيوت والمواد الطبيعية.",
+          "وجود وصفات لمستحضرات متعددة الأشكال.",
+          "الاهتمام بالتوثيق ونقل المعرفة."
+        ]
+      },
+
+      {
+        id: "greek",
+        number: "03",
+        era: "GREEK & ROMAN",
+        title: "التقاليد اليونانية والرومانية",
+        period: "العصور الكلاسيكية",
+        icon: "🏛️",
+        color: "cyan",
+        short:
+          "ساهمت المدارس الطبية الكلاسيكية في تنظيم التفكير الطبي ووصف المواد العلاجية.",
+        description:
+          "أسهمت الكتابات الطبية في العالم اليوناني والروماني في تطوير تصنيف المواد الطبية ووصف طرق استخدامها، وأثرت هذه المعارف في مراحل تاريخية لاحقة.",
+        points: [
+          "تصنيف عدد من المواد العلاجية.",
+          "تنظيم المعرفة الطبية في مؤلفات.",
+          "تطوير مفاهيم مرتبطة بالمزاجات والعلاج.",
+          "انتقال المعرفة إلى الحضارات اللاحقة."
+        ]
+      },
+
+      {
+        id: "islamic",
+        number: "04",
+        era: "ISLAMIC GOLDEN AGE",
+        title: "العصر الذهبي للعلوم",
+        period: "العصور الوسطى",
+        icon: "🧪",
+        color: "gold",
+        short:
+          "شهدت العلوم الطبية والكيميائية تطوراً مهماً، وازداد تخصص تحضير الأدوية.",
+        description:
+          "شهدت الحضارة الإسلامية نشاطاً علمياً واسعاً في الطب والكيمياء والصيدلة، مع ظهور مؤلفات وتقنيات في التحضير والتنقية والاستخلاص والتوثيق.",
+        points: [
+          "تطور تقنيات التحضير والتنقية.",
+          "استخدام عمليات مثل الاستخلاص والتقطير.",
+          "تأليف كتب ومراجع طبية وصيدلانية.",
+          "تطور ممارسات الصيدلة المتخصصة."
+        ]
+      },
+
+      {
+        id: "scientific",
+        number: "05",
+        era: "SCIENTIFIC REVOLUTION",
+        title: "الثورة العلمية",
+        period: "القرنان السابع عشر والثامن عشر وما بعدهما",
+        icon: "🔬",
+        color: "cyan",
+        short:
+          "أصبح التجريب والملاحظة العلمية أساساً أقوى لفهم المواد وتأثيراتها.",
+        description:
+          "مع تطور العلوم الطبيعية والكيمياء، أصبحت دراسة المواد الطبية أكثر ارتباطاً بالقياس والتجريب والتحليل، مما مهد لظهور علم الأدوية الحديث.",
+        points: [
+          "تطور المنهج التجريبي.",
+          "تحسن فهم الكيمياء والمواد.",
+          "زيادة القدرة على تحليل المركبات.",
+          "بداية الطريق نحو علم الأدوية الحديث."
+        ]
+      },
+
+      {
+        id: "modern",
+        number: "06",
+        era: "MODERN PHARMACY",
+        title: "الصيدلة الحديثة",
+        period: "القرنان التاسع عشر والعشرون",
+        icon: "💊",
+        color: "gold",
+        short:
+          "أصبحت الأدوية أكثر ارتباطاً بالكيمياء والصناعة والبحث العلمي المنظم.",
+        description:
+          "أدى تقدم الكيمياء والعلوم الطبية والصناعة إلى ظهور مواد دوائية أكثر نقاءً وأشكال صيدلانية أكثر تنظيماً، ثم توسعت الصناعة الدوائية والبحوث السريرية.",
+        points: [
+          "تطور صناعة الأدوية.",
+          "تحسن نقاء وتركيب المواد الفعالة.",
+          "تطور الأشكال الصيدلانية.",
+          "زيادة أهمية التجارب والبحوث السريرية."
+        ]
+      },
+
+      {
+        id: "clinical",
+        number: "07",
+        era: "CLINICAL PHARMACY",
+        title: "الصيدلة السريرية",
+        period: "العصر الحديث",
+        icon: "🩺",
+        color: "cyan",
+        short:
+          "انتقل دور الصيدلي من المنتج الدوائي إلى المشاركة في رعاية المريض.",
+        description:
+          "أصبحت الصيدلة السريرية مجالاً يهتم باستخدام الدواء بشكل آمن وفعال، ومراجعة العلاج الدوائي والتداخلات ومتابعة نتائج العلاج ضمن فريق الرعاية الصحية.",
+        points: [
+          "مراجعة العلاج الدوائي.",
+          "الاهتمام بالتداخلات الدوائية.",
+          "تحسين الاستخدام الآمن والفعال للدواء.",
+          "المشاركة في رعاية المريض."
+        ]
+      },
+
+      {
+        id: "future",
+        number: "08",
+        era: "FUTURE PHARMACY",
+        title: "صيدلة المستقبل",
+        period: "المستقبل",
+        icon: "🤖",
+        color: "gold",
+        short:
+          "يتجه المجال نحو الذكاء الاصطناعي والطب الشخصي والتكنولوجيا الحيوية.",
+        description:
+          "قد تشهد الصيدلة مزيداً من التكامل مع الذكاء الاصطناعي وتحليل البيانات والطب الشخصي والتكنولوجيا الحيوية والتصنيع المتقدم والصحة الرقمية.",
+        points: [
+          "استخدام الذكاء الاصطناعي وتحليل البيانات.",
+          "تطوير الطب والعلاج الشخصي.",
+          "التوسع في التكنولوجيا الحيوية.",
+          "تطور التصنيع الدوائي والصحة الرقمية."
+        ]
+      }
+    ];
+
+    /* =========================================================
+       HELPERS
+    ========================================================= */
+
+    function escapeHTML(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function $(selector) {
+      return document.querySelector(selector);
+    }
+
+    function $$(selector) {
+      return Array.from(document.querySelectorAll(selector));
+    }
+
+    /* =========================================================
+       LOADER
+    ========================================================= */
+
+    let loaderStarted = false;
+
+    function startLoader() {
+      if (loaderStarted) return;
+
+      loaderStarted = true;
+
+      const loader = document.getElementById("loader");
+
+      if (!loader) return;
+
+      setTimeout(() => {
+        loader.classList.add("hide");
+      }, 700);
+    }
+
+    /* =========================================================
+       TIMELINE
+    ========================================================= */
+
+    function renderTimeline() {
+      const container = document.getElementById("timeline-container");
+
+      if (!container) return;
+
+      container.innerHTML = TIMELINE_DATA.map((item, index) => {
+
+        const accent =
+          item.color === "gold"
+            ? "text-amber-300"
+            : "text-cyan-300";
+
+        const border =
+          item.color === "gold"
+            ? "border-amber-400/10"
+            : "border-cyan-400/10";
+
+        return `
+          <article
+            class="timeline-item reveal ${index % 2 ? "delay-1" : ""}"
+            data-era="${escapeHTML(item.id)}"
+          >
+
+            <div class="timeline-dot"></div>
+
+            <div
+              class="timeline-card glass rounded-[28px] p-6 sm:p-7"
+              tabindex="0"
+              role="button"
+              aria-label="فتح تفاصيل ${escapeHTML(item.title)}"
+              onclick="openEraModal('${escapeHTML(item.id)}')"
+              onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();openEraModal('${escapeHTML(item.id)}')}"
+            >
+
+              <div class="flex items-start justify-between gap-4">
+
+                <div class="flex items-center gap-4">
+
+                  <div class="icon-box">
+                    ${escapeHTML(item.icon)}
+                  </div>
+
+                  <div>
+                    <div class="era-number">
+                      ${escapeHTML(item.number)} / ${escapeHTML(item.era)}
+                    </div>
+
+                    <h3 class="mt-2 text-xl font-extrabold text-white">
+                      ${escapeHTML(item.title)}
+                    </h3>
+                  </div>
+
+                </div>
+
+                <span class="${accent} font-cinzel text-2xl opacity-70">
+                  ${escapeHTML(item.number)}
+                </span>
+
+              </div>
+
+              <div class="mt-5 h-px bg-gradient-to-l from-transparent via-slate-700 to-transparent"></div>
+
+              <p class="mt-5 text-sm leading-8 text-slate-400">
+                ${escapeHTML(item.short)}
+              </p>
+
+              <div class="mt-5 flex items-center justify-between">
+
+                <span class="text-[10px] tracking-[.18em] text-slate-600">
+                  ${escapeHTML(item.period)}
+                </span>
+
+                <span class="${border} rounded-xl border px-3 py-2 text-[10px] ${accent}">
+                  VIEW DETAILS →
+                </span>
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+      }).join("");
+
+      setupReveal();
+    }
+
+    /* =========================================================
+       ERA MODAL
+    ========================================================= */
+
+    function openEraModal(id) {
+      const item = TIMELINE_DATA.find(entry => entry.id === id);
+
+      if (!item) return;
+
+      const modal = document.getElementById("era-modal");
+      const era = document.getElementById("modal-era");
+      const title = document.getElementById("modal-title");
+      const body = document.getElementById("modal-content-body");
+
+      if (!modal || !era || !title || !body) return;
+
+      era.textContent = `${item.number} / ${item.era}`;
+      title.textContent = item.title;
+
+      body.innerHTML = `
+        <div class="grid gap-7">
+
+          <div class="flex items-center gap-4">
+            <div class="icon-box text-3xl">
+              ${escapeHTML(item.icon)}
+            </div>
+
+            <div>
+              <div class="text-xs text-slate-600">
+                PERIOD
+              </div>
+
+              <div class="mt-1 text-sm text-cyan-300">
+                ${escapeHTML(item.period)}
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
+            <p class="text-sm leading-9 text-slate-300">
+              ${escapeHTML(item.description)}
+            </p>
+          </div>
+
+          <div>
+            <div class="mb-4 text-xs tracking-[.25em] text-slate-500">
+              KEY POINTS
+            </div>
+
+            <div class="grid gap-3">
+
+              ${item.points.map((point, index) => `
+                <div class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-black/10 p-4">
+
+                  <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-cyan-400/15 bg-cyan-400/5 font-inter text-[10px] text-cyan-300">
+                    ${index + 1}
+                  </span>
+
+                  <p class="text-sm leading-7 text-slate-400">
+                    ${escapeHTML(point)}
+                  </p>
+
+                </div>
+              `).join("")}
+
+            </div>
+          </div>
+
+        </div>
+      `;
+
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      document.getElementById("modal-close")?.focus();
+    }
+
+    function closeEraModal() {
+      const modal = document.getElementById("era-modal");
+
+      if (!modal) return;
+
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    /* =========================================================
+       REVEAL
+    ========================================================= */
+
+    let revealObserver;
+
+    function setupReveal() {
+      const elements = $$(".reveal");
+
+      if (!("IntersectionObserver" in window)) {
+        elements.forEach(el => el.classList.add("active"));
+        return;
+      }
+
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.08,
+            rootMargin: "0px 0px -50px 0px"
+          }
+        );
+      }
+
+      elements.forEach(el => {
+        if (!el.classList.contains("active")) {
+          revealObserver.observe(el);
+        }
+      });
+    }
+
+    /* =========================================================
+       SCROLL
+    ========================================================= */
+
+    function setupScroll() {
+      const progress = document.getElementById("scroll-progress");
+
+      if (!progress) return;
+
+      const update = () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+
+        const percentage =
+          docHeight > 0
+            ? (scrollTop / docHeight) * 100
+            : 0;
+
+        progress.style.width = `${percentage}%`;
+      };
+
+      window.addEventListener("scroll", update, {
+        passive: true
+      });
+
+      update();
+    }
+
+    /* =========================================================
+       PARTICLES
+    ========================================================= */
+
+    function initParticles() {
+      const canvas = document.getElementById("particles");
+
+      if (!canvas) return;
+
+      const ctx = canvas.getContext("2d");
+
+      if (!ctx) return;
+
+      const reducedMotion =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reducedMotion) return;
+
+      let width = 0;
+      let height = 0;
+
+      const particles = [];
+
+      function resize() {
+        width = canvas.width = window.innerWidth * devicePixelRatio;
+        height = canvas.height = window.innerHeight * devicePixelRatio;
+
+        canvas.style.width = `${window.innerWidth}px`;
+        canvas.style.height = `${window.innerHeight}px`;
+
+        ctx.setTransform(
+          devicePixelRatio,
+          0,
+          0,
+          devicePixelRatio,
+          0,
+          0
+        );
+      }
+
+      function createParticles() {
+        particles.length = 0;
+
+        const count = Math.min(
+          90,
+          Math.max(35, Math.floor(window.innerWidth / 16))
+        );
+
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            r: Math.random() * 1.5 + .35,
+            vx: (Math.random() - .5) * .18,
+            vy: (Math.random() - .5) * .18,
+            a: Math.random() * .35 + .08
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(
+          0,
+          0,
+          window.innerWidth,
+          window.innerHeight
+        );
+
+        for (const p of particles) {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < -10) p.x = window.innerWidth + 10;
+          if (p.x > window.innerWidth + 10) p.x = -10;
+
+          if (p.y < -10) p.y = window.innerHeight + 10;
+          if (p.y > window.innerHeight + 10) p.y = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(34,211,238,${p.a})`;
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      resize();
+      createParticles();
+      draw();
+
+      window.addEventListener("resize", () => {
+        resize();
+        createParticles();
+      });
+    }
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    function setupMobileMenu() {
+      const button = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      if (!button || !menu) return;
+
+      button.addEventListener("click", () => {
+        menu.classList.toggle("open");
+
+        button.setAttribute(
+          "aria-expanded",
+          menu.classList.contains("open")
+        );
+      });
+
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          button.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (
+          menu.classList.contains("open") &&
+          !menu.contains(event.target) &&
+          !button.contains(event.target)
+        ) {
+          menu.classList.remove("open");
+          button.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    /* =========================================================
+       PRESENTATION
+    ========================================================= */
+
+    let currentSlide = 0;
+
+    const presentation = {
+      get slides() {
+        return $$(".presentation-slide");
+      },
+
+      get total() {
+        return this.slides.length;
+      }
+    };
+
+    function updateSlide(index) {
+      const slides = presentation.slides;
+
+      if (!slides.length) return;
+
+      if (index < 0) {
+        index = slides.length - 1;
+      }
+
+      if (index >= slides.length) {
+        index = 0;
+      }
+
+      currentSlide = index;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentSlide);
+      });
+
+      const indicator = document.getElementById("slide-indicator");
+
+      if (indicator) {
+        indicator.textContent =
+          `Slide ${currentSlide + 1} of ${slides.length}`;
+      }
+    }
+
+    function nextSlide() {
+      updateSlide(currentSlide + 1);
+    }
+
+    function previousSlide() {
+      updateSlide(currentSlide - 1);
+    }
+
+    async function openPresentation() {
+      const app = document.getElementById("presentation");
+
+      if (!app) return;
+
+      currentSlide = 0;
+      updateSlide(0);
+
+      app.classList.add("open");
+      app.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      try {
+        if (app.requestFullscreen) {
+          await app.requestFullscreen();
+        }
+      } catch (error) {
+        /* Fullscreen may be blocked by the browser. */
+      }
+    }
+
+    async function closePresentation() {
+      const app = document.getElementById("presentation");
+
+      if (!app) return;
+
+      app.classList.remove("open");
+      app.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+
+      try {
+        if (document.fullscreenElement) {
+          await document.exitFullscreen();
+        }
+      } catch (error) {
+        /* Ignore fullscreen errors. */
+      }
+    }
+
+    function setupPresentation() {
+      const presentationBtn =
+        document.getElementById("presentation-btn");
+
+      const heroPresentation =
+        document.getElementById("hero-presentation");
+
+      const closeBtn =
+        document.getElementById("presentation-close");
+
+      const nextBtn =
+        document.getElementById("slide-next");
+
+      const prevBtn =
+        document.getElementById("slide-prev");
+
+      presentationBtn?.addEventListener(
+        "click",
+        openPresentation
+      );
+
+      heroPresentation?.addEventListener(
+        "click",
+        openPresentation
+      );
+
+      closeBtn?.addEventListener(
+        "click",
+        closePresentation
+      );
+
+      nextBtn?.addEventListener(
+        "click",
+        nextSlide
+      );
+
+      prevBtn?.addEventListener(
+        "click",
+        previousSlide
+      );
+    }
+
+    /* =========================================================
+       KEYBOARD
+    ========================================================= */
+
+    function setupKeyboard() {
+      document.addEventListener("keydown", event => {
+
+        const presentationOpen =
+          document
+            .getElementById("presentation")
+            ?.classList.contains("open");
+
+        const modalOpen =
+          document
+            .getElementById("era-modal")
+            ?.classList.contains("open");
+
+        if (presentationOpen) {
+
+          if (event.key === "ArrowLeft") {
+            nextSlide();
+          }
+
+          if (event.key === "ArrowRight") {
+            previousSlide();
+          }
+
+          if (event.key === "Escape") {
+            closePresentation();
+          }
+
+          return;
+        }
+
+        if (modalOpen && event.key === "Escape") {
+          closeEraModal();
+        }
+      });
+    }
+
+    /* =========================================================
+       MODAL EVENTS
+    ========================================================= */
+
+    function setupModal() {
+      const modal = document.getElementById("era-modal");
+      const close = document.getElementById("modal-close");
+
+      close?.addEventListener(
+        "click",
+        closeEraModal
+      );
+
+      modal?.addEventListener("click", event => {
+        if (event.target === modal) {
+          closeEraModal();
+        }
+      });
+    }
+
+    /* =========================================================
+       INITIALIZE
+    ========================================================= */
+
+    function initializeApp() {
+      renderTimeline();
+      setupReveal();
+      setupScroll();
+      setupMobileMenu();
+      setupPresentation();
+      setupKeyboard();
+      setupModal();
+      initParticles();
+      startLoader();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener(
+        "DOMContentLoaded",
+        initializeApp,
+        { once: true }
+      );
+    } else {
+      initializeApp();
+    }
+
+    window.openEraModal = openEraModal;
+    window.closeEraModal = closeEraModal;
+    window.nextSlide = nextSlide;
+    window.previousSlide = previousSlide;
+    window.openPresentation = openPresentation;
+    window.closePresentation = closePresentation;
+
+  </script>
+
 </body>
 </html>
