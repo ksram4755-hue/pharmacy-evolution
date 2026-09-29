@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PHARMACY∞ — The Evolution of Pharmacy. تجربة رقمية تفاعلية سينمائية تستعرض تطور علم الصيدلة والمعرفة العلاجية عبر التاريخ وحتى المستقبل بمناسبة اليوم العالمي للصيدلي 2026 في جامعة لوتس - كلية الصيدلة.">
+<meta name="keywords" content="Pharmacy, Evolution of Pharmacy, Lotus University, World Pharmacists Day 2026, Ebers Papyrus, Al-Saydalah, Clinical Pharmacy, Pharmacogenomics">
+<meta name="author" content="Lotus University - Faculty of Pharmacy">
+<meta name="theme-color" content="#020617">
+<meta property="og:title" content="PHARMACY∞ | The Evolution of Pharmacy — Lotus University">
+<meta property="og:description" content="رحلة عبر آلاف السنين من المعرفة العلاجية وتحضير الأدوية وتطور مهنة الصيدلة حتى عصر الرعاية الدوائية والتقنيات الحديثة.">
+<meta property="og:image" content="assets/lotus-university-logo.png">
+<meta property="og:type" content="website">
+​<title>PHARMACY∞ | The Evolution of Pharmacy — Lotus University</title>
+​<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;600;700&display=swap" rel="stylesheet">
+​<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+navy: {
+950: '#020617',
+900: '#030712',
+800: '#0b1329',
+700: '#111e38',
+600: '#1e293b'
+},
+cyan: {
+glow: '#00f2fe',
+electric: '#06b6d4',
+deep: '#0284c7'
+},
+gold: {
+warm: '#d4af37',
+light: '#f59e0b',
+bright: '#fbbf24'
+}
+},
+fontFamily: {
+sans: ['Cairo', 'Inter', 'sans-serif'],
+cinzel: ['Cinzel', 'serif'],
+kufi: ['Reem Kufi', 'sans-serif']
+}
+}
+}
+}
+</script>
+​<!-- Custom CSS Styles -->
+<style>
+:root {
+--bg-dark: #020617;
+--cyan-glow: rgba(6, 182, 212, 0.4);
+--gold-glow: rgba(212, 175, 55, 0.3);
+}
+​body {
+background-color: var(--bg-dark);
+color: #f8fafc;
+font-family: 'Cairo', 'Inter', sans-serif;
+overflow-x: hidden;
+}
+​/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #030712;
+}
+::-webkit-scrollbar-thumb {
+background: #1e293b;
+border-radius: 4px;
+border: 1px solid rgba(6, 182, 212, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+background: #06b6d4;
+}
+​/* Custom Cursor (Desktop Only) */
+@media (min-width: 1024px) {
+.custom-cursor {
+width: 22px;
+height: 22px;
+border: 1.5px solid #06b6d4;
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 9999;
+transition: transform 0.15s ease-out, background-color 0.15s ease-out;
+transform: translate(-50%, -50%);
+}
+.custom-cursor-dot {
+width: 5px;
+height: 5px;
+background-color: #00f2fe;
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 10000;
+transform: translate(-50%, -50%);
+}
+body.hover-active .custom-cursor {
+transform: translate(-50%, -50%) scale(2.4);
+background-color: rgba(6, 182, 212, 0.15);
+border-color: #00f2fe;
+}
+}
+​/* Glassmorphism Styles */
+.glass-panel {
+background: rgba(11, 19, 41, 0.75);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+​.glass-panel-gold {
+background: rgba(22, 19, 12, 0.8);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+border: 1px solid rgba(212, 175, 55, 0.35);
+box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.12);
+}
+​.glass-card {
+background: rgba(15, 23, 42, 0.65);
+backdrop-filter: blur(14px);
+border: 1px solid rgba(255, 255, 255, 0.06);
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+​.glass-card:hover {
+border-color: rgba(6, 182, 212, 0.45);
+transform: translateY(-5px);
+box-shadow: 0 14px 35px -10px rgba(6, 182, 212, 0.3);
+}
+​/* Glow Effects */
+.glow-text-cyan {
+text-shadow: 0 0 15px rgba(6, 182, 212, 0.6), 0 0 30px rgba(0, 242, 254, 0.35);
+}
+​.glow-text-gold {
+text-shadow: 0 0 15px rgba(212, 175, 55, 0.6), 0 0 30px rgba(245, 158, 11, 0.35);
+}
+​/* Particle Canvas */
+#particle-canvas {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 0;
+}
+​/* Scroll Reveal Effect */
+.reveal-node {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+​.reveal-node.revealed {
+opacity: 1;
+transform: translateY(0);
+}
+​/* Timeline Gradient Line */
+.timeline-line {
+background: linear-gradient(180deg, rgba(6,182,212,0) 0%, rgba(6,182,212,0.85) 12%, rgba(212,175,55,0.85) 88%, rgba(6,182,212,0) 100%);
+}
+</style>
+</head>
+<body class="bg-navy-950 text-slate-100 selection:bg-cyan-electric selection:text-navy-950 relative">
+​<!-- Custom Cursor -->
+<div class="custom-cursor hidden lg:block" id="cursor" aria-hidden="true"></div>
+<div class="custom-cursor-dot hidden lg:block" id="cursor-dot" aria-hidden="true"></div>
+​<!-- Canvas Background Particles -->
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+​<!-- LOADING SCREEN -->
+<div id="loading-screen" class="fixed inset-0 z-[1000] bg-navy-950 flex flex-col items-center justify-center transition-opacity duration-1000 p-6">
+<div class="flex flex-col items-center max-w-md w-full text-center space-y-6">
+<div class="w-28 h-28 relative flex items-center justify-center mb-2">
+<div class="absolute inset-0 rounded-full bg-cyan-electric/20 blur-xl animate-pulse"></div>
+<img src="assets/lotus-university-logo.png" alt="Lotus University Logo" class="w-full h-full object-contain relative z-10 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)]">
+</div>
+<div class="space-y-1.5">
+<h1 class="font-cinzel text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-cyan-electric">
+PHARMACY<span class="text-cyan-electric">∞</span>
+</h1>
+<p class="text-xs text-cyan-electric/90 font-mono uppercase tracking-widest">Faculty of Pharmacy • World Pharmacists Day 2026</p>
+</div>
+<div class="w-full bg-slate-800/80 h-2 rounded-full overflow-hidden border border-slate-700/60 p-0.5">
+<div id="loader-progress-bar" class="h-full bg-gradient-to-r from-cyan-electric via-cyan-glow to-gold-warm rounded-full w-0 transition-all duration-300 ease-out"></div>
+</div>
+<div class="flex justify-between items-center w-full text-xs font-mono text-slate-400 pt-1">
+<span>LOADING THE JOURNEY...</span>
+<span id="loader-percentage" class="text-cyan-electric font-bold">0%</span>
+</div>
+</div>
+</div>
+​<!-- GLOBAL SCROLL PROGRESS BAR -->
+<div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-1 bg-transparent z-[90]">
+<div id="scroll-progress-bar" class="h-full bg-gradient-to-r from-cyan-electric via-cyan-400 to-gold-warm w-0"></div>
+</div>
+​<!-- NAVIGATION HEADER -->
+<header id="main-header" class="fixed top-0 right-0 left-0 z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto">
+<nav class="glass-panel rounded-2xl px-4 py-3 sm:px-6 flex items-center justify-between border border-white/10 shadow-2xl">
+<a href="#hero" class="flex items-center space-x-3 space-x-reverse group">
+<img src="assets/lotus-university-logo.png" alt="Lotus University Logo" class="h-9 w-auto object-contain">
+<div class="flex flex-col">
+<span class="font-cinzel text-lg sm:text-xl font-bold tracking-wider text-white flex items-center gap-1">
+PHARMACY<span class="text-cyan-electric">∞</span>
+</span>
+<span class="text-[9px] text-slate-400 uppercase tracking-widest font-mono hidden sm:inline-block">Lotus University</span>
+</div>
+</a>
+​<div class="hidden lg:flex items-center space-x-1 space-x-reverse text-xs xl:text-sm font-medium text-slate-300">
+<a href="#intro" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">JOURNEY</a>
+<a href="#timeline" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">TIMELINE</a>
+<a href="#egypt" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">EGYPT</a>
+<a href="#islamic-age" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">ISLAMIC GOLDEN AGE</a>
+<a href="#modern" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">MODERN PHARMACY</a>
+<a href="#future" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">FUTURE</a>
+<a href="#sources" class="px-3 py-1.5 rounded-lg hover:text-cyan-electric hover:bg-white/5 transition-colors">SOURCES</a>
+</div>
+​<div class="flex items-center space-x-3 space-x-reverse">
+<button id="btn-open-presentation" class="relative group overflow-hidden rounded-xl px-4 py-2 bg-gradient-to-r from-cyan-electric/20 to-blue-600/20 border border-cyan-electric/50 text-cyan-glow hover:text-white transition-all duration-300">
+<span class="relative z-10 text-xs sm:text-sm font-semibold tracking-wider flex items-center gap-2">
+<span>📽️</span> PRESENTATION MODE
+</span>
+</button>
+</div>
+</nav>
+</div>
+</header>
+​<!-- HERO SECTION -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
+<div class="max-w-5xl mx-auto text-center z-10 relative space-y-8">
+<div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-panel border border-cyan-electric/30">
+<img src="assets/lotus-university-logo.png" alt="Lotus Logo" class="h-7 w-auto object-contain">
+<span class="text-xs sm:text-sm font-semibold tracking-wider text-cyan-electric uppercase">Lotus University • Faculty of Pharmacy</span>
+</div>
+​<div class="space-y-4">
+<h1 class="font-cinzel text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white leading-tight">
+PHARMACY<span class="text-cyan-electric glow-text-cyan">∞</span>
+</h1>
+<p class="font-cinzel text-lg sm:text-2xl text-slate-300 font-semibold tracking-widest uppercase">
+THE EVOLUTION OF PHARMACY
+</p>
+<h2 class="font-kufi text-3xl sm:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-gold-warm to-amber-400 py-2">
+من الطبيعة إلى المستقبل
+</h2>
+</div>
+​<div class="max-w-2xl mx-auto p-4 rounded-2xl glass-panel-gold border border-gold-warm/30 space-y-2">
+<span class="text-xs font-mono text-gold-warm uppercase tracking-widest font-bold">WORLD PHARMACISTS DAY 2026 SLOGAN</span>
+<p class="font-kufi text-xl sm:text-2xl font-bold text-white">
+"صيدلي اليوم ... لصحة أفضل غداً"
+</p>
+</div>
+​<p class="max-w-2xl mx-auto text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+رحلة عبر آلاف السنين من المعرفة العلاجية وتحضير الأدوية وتطور مهنة الصيدلة حتى عصر الرعاية الدوائية والتقنيات الحديثة.
+</p>
+​<div class="pt-4 flex justify-center">
+<a href="#intro" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-electric to-blue-600 text-navy-950 font-bold text-base shadow-[0_0_25px_rgba(6,182,212,0.4)] hover:scale-105 transition-all duration-300">
+EXPLORE THE JOURNEY
+</a>
+</div>
+</div>
+</section>
+​<!-- HISTORICAL TIMELINE SECTION -->
+<section id="timeline" class="py-24 px-4 relative max-w-7xl mx-auto">
+<div class="text-center space-y-4 mb-16 reveal-node">
+<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">CHRONOLOGICAL EVOLUTION</span>
+<h2 class="text-3xl sm:text-5xl font-black font-cinzel text-white">THE HISTORICAL JOURNEY</h2>
+<p class="text-slate-400 text-sm max-w-xl mx-auto">اضغط على أي حقبة تاريخية لاستعراض التفاصيل الكاملة.</p>
+</div>
+​<div class="relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 timeline-line hidden md:block"></div>
+<div class="space-y-12 relative" id="timeline-cards-container"></div>
+</div>
+</section>
+​<!-- ANCIENT EGYPT SECTION -->
+<section id="egypt" class="py-24 px-4 relative border-t border-slate-800/80 bg-gradient-to-b from-navy-950 via-slate-900/80 to-navy-950">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-6 reveal-node">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+1550 BCE • EGYPTIAN HERITAGE
+</div>
+<h2 class="text-3xl sm:text-5xl font-black font-kufi text-gold-warm">
+ANCIENT EGYPT: EBERS PAPYRUS
+</h2>
+<p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+تُعد بردية إيبرس (Ebers Papyrus) المكتوبة حوالي عام 1550 قبل الميلاد واحدة من أقدم وأهم المخطوطات الطبية والدوائية المتبقية في التاريخ.
+</p>
+<div class="glass-panel-gold p-6 rounded-2xl space-y-3">
+<h3 class="font-bold text-amber-200 text-sm uppercase tracking-wider">
+🏛️ HISTORICAL ACCURACY: PER-ANKH (HOUSE OF LIFE)
+</h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+كانت Per-Ankh (بيت الحياة) مؤسسة تعليمية ودينية كبرى مرتبطة بالمعرفة وتدريب الأطباء وتوثيق العلاجات في مصر القديمة.
+</p>
+</div>
+</div>
+<div class="lg:col-span-5 reveal-node">
+<div class="rounded-3xl p-8 glass-panel-gold border border-amber-500/40 text-center space-y-6 shadow-2xl">
+<div class="text-6xl">📜</div>
+<h3 class="text-2xl font-bold text-white font-cinzel">Ebers Papyrus Scroll</h3>
+<p class="text-xs text-slate-400">20 Meters in Length • 110 Pages of Medical Wisdom</p>
+</div>
+</div>
+</div>
+</section>
+​<!-- ISLAMIC GOLDEN AGE SECTION -->
+<section id="islamic-age" class="py-24 px-4 relative border-t border-slate-800/80 bg-navy-950">
+<div class="max-w-6xl mx-auto space-y-12">
+<div class="text-center space-y-4 reveal-node">
+<span class="text-xs font-mono text-cyan-electric tracking-widest uppercase">THE BIRTH OF PROFESSIONAL PHARMACY</span>
+<h2 class="text-3xl sm:text-5xl font-black font-kufi text-white">THE ISLAMIC GOLDEN AGE: AL-SAYDALAH</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-cyan-electric">
+<div class="text-3xl">⚗️</div>
+<h3 class="text-xl font-bold text-cyan-glow font-kufi">التقطير والتركيب (Distillation)</h3>
+<p class="text-xs sm:text-sm text-slate-300">تطوير أدوات الكيمياء مثل الإنبيق (Alembic) واستخلاص الزيوت والمياه المقطرة.</p>
+</div>
+<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-gold-warm">
+<div class="text-3xl">🏛️</div>
+<h3 class="text-xl font-bold text-gold-warm font-kufi">التنظيم المهني والمحتسبة</h3>
+<p class="text-xs sm:text-sm text-slate-300">افتتاح دكاكين الأدوية المستقلة وتطبيق نظام الحسبة للرقابة على جودة العقاقير.</p>
+</div>
+<div class="reveal-node glass-card p-6 rounded-2xl space-y-4 border-t-2 border-t-emerald-400">
+<div class="text-3xl">📚</div>
+<h3 class="text-xl font-bold text-emerald-300 font-kufi">الأقرباباذين (Pharmacopoeias)</h3>
+<p class="text-xs sm:text-sm text-slate-300">تأليف موسوعات دوائية دقيقة أصبحت المرجع الأول للمستحضرات والعلاجات.</p>
+</div>
+</div>
+</div>
+</section>
+​<!-- SOURCES & REFERENCES SECTION -->
+<section id="sources" class="py-16 px-4 border-t border-slate-800 bg-navy-950 text-slate-400 text-xs">
+<div class="max-w-5xl mx-auto space-y-6">
+<h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider font-mono">📚 SOURCES & HISTORICAL REFERENCES</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a href="https://www.ucl.ac.uk/museums-static/digitalegypt/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40">UCL Digital Egypt for Universities</a>
+<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40">PubMed / NCBI</a>
+<a href="https://www.fip.org/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40">International Pharmaceutical Federation (FIP)</a>
+<a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 hover:border-cyan-electric/40">World Health Organization (WHO)</a>
+</div>
+</div>
+</section>
+​<!-- FOOTER -->
+<footer class="py-16 px-4 bg-navy-950 border-t border-slate-800 text-center space-y-6">
+<img src="assets/lotus-university-logo.png" alt="Lotus Logo" class="h-16 mx-auto object-contain">
+<h2 class="font-cinzel text-3xl font-bold text-white">PHARMACY<span class="text-cyan-electric">∞</span></h2>
+<p class="font-kufi text-lg text-gold-warm">"شكراً لكل صيدلي ... لصحة أفضل غداً"</p>
+<p class="text-xs text-slate-500">© 2026 Lotus University Faculty of Pharmacy.</p>
+</footer>
+​<!-- ERA MODAL -->
+<div id="era-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-4 bg-navy-950/90 backdrop-blur-xl">
+<div class="glass-panel rounded-3xl max-w-2xl w-full p-6 space-y-6 relative text-right">
+<button id="modal-close-btn" onclick="closeEraModal()" class="absolute top-4 left-4 p-2 text-slate-400 hover:text-white">✕</button>
+<div id="modal-content-body"></div>
+</div>
+</div>
+​<!-- JAVASCRIPT -->
+<script>
+const TIMELINE_DATA = [
+{ id: "01", period: "PREHISTORY", titleAr: "المعرفة العلاجية المبكرة", timeframe: "Before Written Records", summary: "الاعتماد على الملاحظة التجريبية للأعشاب والنباتات البرية.", whatChanged: "الانتقال إلى المحاكمة التجريبية الأولية.", whyItMatters: "تأسيس الطب الشعبي الأول." },
+{ id: "02", period: "ANCIENT EGYPT", titleAr: "مصر القديمة والتدوين الدوائي", timeframe: "c. 1550 BCE", summary: "تدوين بردية إيبرس وابتكار الأشكال الصيدلانية الأولى.", whatChanged: "التوثيق الكتابي المنظم للجرعات.", whyItMatters: "تأسيس الملاحظة وتوثيق مئات الوصفات." },
+{ id: "03", period: "ISLAMIC GOLDEN AGE", titleAr: "العصر الإسلامي واستقلالية الصيدلة", timeframe: "8th-10th Century CE", summary: "فصل الصيدلة كمهنة مستقلة باسم الصيدلة وتطوير التقطير.", whatChanged: "التفتيش المهني ونظام الحسبة.", whyItMatters: "تأسيس المعايير الأخلاقية والمهنية للصيدلة." }
+];
+​window.addEventListener('DOMContentLoaded', () => {
+renderTimeline();
+initLoader();
+setupScroll();
+});
+​function initLoader() {
+let progress = 0;
+const interval = setInterval(() => {
+progress += 20;
+document.getElementById('loader-progress-bar').style.width = progress + '%';
+document.getElementById('loader-percentage').innerText = progress + '%';
+if (progress >= 100) {
+clearInterval(interval);
+document.getElementById('loading-screen').style.display = 'none';
+}
+}, 100);
+}
+​function renderTimeline() {
+const container = document.getElementById('timeline-cards-container');
+container.innerHTML = TIMELINE_DATA.map(item => <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="openEraModal('${item.id}')"> <span class="text-xs text-cyan-electric font-mono">${item.period} (${item.timeframe})</span> <h3 class="text-xl font-bold text-white font-kufi mt-1">${item.titleAr}</h3> <p class="text-xs text-slate-300 mt-2">${item.summary}</p> </div>).join('');
+}
+​function openEraModal(id) {
+const item = TIMELINE_DATA.find(d => d.id === id);
+document.getElementById('modal-content-body').innerHTML = <h2 class="text-2xl font-bold text-white font-kufi">${item.titleAr}</h2> <p class="text-xs text-cyan-electric font-mono mt-1">${item.period} - ${item.timeframe}</p> <div class="mt-4 space-y-3 text-xs text-slate-300"> <p><strong>ما الذي تغير؟:</strong> ${item.whatChanged}</p> <p><strong>أهمية المرحلة:</strong> ${item.whyItMatters}</p> </div>;
+document.getElementById('era-modal').classList.remove('hidden');
+}
+​function closeEraModal() {
+document.getElementById('era-modal').classList.add('hidden');
+}
+​function setupScroll() {
+window.addEventListener('scroll', () => {
+const winScroll = document.documentElement.scrollTop;
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+document.getElementById('scroll-progress-bar').style.width = (winScroll / height) * 100 + '%';
+});
+}
+</script>
+</body>
+</html>
