@@ -1,2622 +1,2902 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PHARMACY∞ | The Evolution of Pharmacy — Lotus University</title>
+<title>PHARMACY∞ | تاريخ وتطور علم الصيدلة</title>
 
-  <meta name="description" content="رحلة تطور علم الصيدلة من الحضارات القديمة إلى الصيدلة المستقبلية — Lotus University">
-  <meta name="theme-color" content="#020617">
+<meta name="description"
+content="رحلة علمية وتاريخية عبر تطور الصيدلة من الحضارات القديمة إلى الصيدلة الإكلينيكية والطب الدقيق والذكاء الاصطناعي.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{
+    --bg:#05080d;
+    --bg2:#09111b;
+    --panel:rgba(12,22,34,.78);
+    --panel2:rgba(15,30,45,.92);
+    --cyan:#39e6ff;
+    --cyan2:#00a9c7;
+    --gold:#d8b56a;
+    --gold2:#ffe3a1;
+    --white:#f4f8fb;
+    --muted:#9aabba;
+    --line:rgba(255,255,255,.09);
+    --danger:#ff6078;
+    --green:#55e6a5;
+    --shadow:0 25px 80px rgba(0,0,0,.42);
+}
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            cairo: ['Cairo', 'sans-serif'],
-            cinzel: ['Cinzel', 'serif'],
-            inter: ['Inter', 'sans-serif'],
-            kufi: ['Reem Kufi', 'sans-serif']
-          },
-          colors: {
-            cyan: {
-              glow: '#22d3ee',
-              electric: '#06b6d4',
-              deep: '#083344'
-            },
-            gold: {
-              warm: '#f59e0b',
-              light: '#fbbf24',
-              bright: '#fde68a'
-            }
-          },
-          boxShadow: {
-            glow: '0 0 30px rgba(34,211,238,.25)',
-            'gold-glow': '0 0 30px rgba(245,158,11,.20)'
-          }
-        }
-      }
-    };
-  </script>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-  <style>
-    :root {
-      --bg: #020617;
-      --bg2: #06111f;
-      --card: rgba(8, 20, 35, .72);
-      --card2: rgba(15, 35, 52, .62);
-      --cyan: #22d3ee;
-      --cyan2: #06b6d4;
-      --gold: #f59e0b;
-      --gold2: #fbbf24;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --border: rgba(34, 211, 238, .15);
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+body{
+    background:
+        radial-gradient(circle at 20% 10%,rgba(57,230,255,.08),transparent 25%),
+        radial-gradient(circle at 80% 30%,rgba(216,181,106,.06),transparent 25%),
+        var(--bg);
+    color:var(--white);
+    font-family:Cairo,Arial,sans-serif;
+    overflow-x:hidden;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body.modal-open{
+    overflow:hidden;
+}
 
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 10% 10%, rgba(6,182,212,.08), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(245,158,11,.05), transparent 28%),
-        linear-gradient(180deg, #020617 0%, #030b15 45%, #020617 100%);
-      color: var(--text);
-      font-family: Cairo, sans-serif;
-      overflow-x: hidden;
-    }
+::selection{
+    background:var(--cyan);
+    color:#001017;
+}
 
-    ::selection {
-      background: rgba(34,211,238,.25);
-      color: white;
-    }
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+button{
+    font-family:inherit;
+}
 
-    ::-webkit-scrollbar-track {
-      background: #020617;
-    }
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
 
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(var(--cyan), var(--gold));
-      border-radius: 20px;
-    }
+.progress{
+    position:fixed;
+    top:0;
+    right:0;
+    height:3px;
+    width:0;
+    background:linear-gradient(90deg,var(--gold),var(--cyan));
+    z-index:9999;
+    box-shadow:0 0 15px var(--cyan);
+}
 
-    .font-cinzel {
-      font-family: Cinzel, serif;
-    }
+/* ================= NAV ================= */
 
-    .font-inter {
-      font-family: Inter, sans-serif;
-    }
+nav{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    height:76px;
+    z-index:1000;
+    background:rgba(5,8,13,.74);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+}
 
-    .font-kufi {
-      font-family: "Reem Kufi", sans-serif;
-    }
+.nav-inner{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-    .glass {
-      background: linear-gradient(
-        135deg,
-        rgba(15, 35, 52, .72),
-        rgba(3, 15, 27, .58)
-      );
-      border: 1px solid rgba(148,163,184,.12);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.035),
-        0 20px 70px rgba(0,0,0,.22);
-    }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
-    .glass:hover {
-      border-color: rgba(34,211,238,.25);
-    }
+.logo-mark{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(57,230,255,.5);
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    color:var(--cyan);
+    font-size:20px;
+    box-shadow:0 0 25px rgba(57,230,255,.12);
+}
 
-    .glow-text-cyan {
-      text-shadow:
-        0 0 8px rgba(34,211,238,.65),
-        0 0 28px rgba(34,211,238,.22);
-    }
+.logo-text{
+    font-family:Cinzel,serif;
+    letter-spacing:2px;
+    font-size:18px;
+}
 
-    .glow-text-gold {
-      text-shadow:
-        0 0 8px rgba(245,158,11,.55),
-        0 0 28px rgba(245,158,11,.18);
-    }
+.logo-text span{
+    color:var(--cyan);
+}
 
-    .gradient-text {
-      background: linear-gradient(
-        90deg,
-        #67e8f9,
-        #22d3ee,
-        #fbbf24,
-        #67e8f9
-      );
-      background-size: 300% auto;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: gradientMove 8s linear infinite;
-    }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
 
-    @keyframes gradientMove {
-      to {
-        background-position: 300% center;
-      }
-    }
+.nav-links a{
+    color:#afbeca;
+    font-size:13px;
+    transition:.3s;
+}
 
-    .hero-grid {
-      background-image:
-        linear-gradient(rgba(34,211,238,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34,211,238,.035) 1px, transparent 1px);
-      background-size: 45px 45px;
-      mask-image: linear-gradient(to bottom, black, transparent);
-      -webkit-mask-image: linear-gradient(to bottom, black, transparent);
-    }
+.nav-links a:hover{
+    color:var(--cyan);
+}
 
-    .noise {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 9998;
-      opacity: .025;
-      background-image:
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
-    }
+.nav-actions{
+    display:flex;
+    gap:8px;
+}
 
-    #particles {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-    }
+.nav-btn{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.035);
+    color:var(--white);
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-    #scroll-progress {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 3px;
-      width: 0;
-      z-index: 10000;
-      background: linear-gradient(90deg, var(--gold), var(--cyan));
-      box-shadow: 0 0 15px rgba(34,211,238,.65);
-    }
+.nav-btn:hover{
+    border-color:rgba(57,230,255,.45);
+    color:var(--cyan);
+}
 
-    .loader {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        radial-gradient(circle, rgba(6,182,212,.08), transparent 35%),
-        #020617;
-      transition: opacity .7s ease, visibility .7s ease;
-    }
+.mobile-menu{
+    display:none;
+}
 
-    .loader.hide {
-      opacity: 0;
-      visibility: hidden;
-    }
+/* ================= HERO ================= */
 
-    .loader-ring {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      border: 2px solid rgba(34,211,238,.12);
-      border-top-color: var(--cyan);
-      border-right-color: var(--gold);
-      animation: spin 1.2s linear infinite;
-    }
+.hero{
+    min-height:100vh;
+    padding-top:150px;
+    padding-bottom:100px;
+    position:relative;
+    display:flex;
+    align-items:center;
+}
 
-    .loader-core {
-      position: absolute;
-      font-family: Cinzel, serif;
-      font-size: 20px;
-      letter-spacing: 5px;
-      color: white;
-    }
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+.eyebrow{
+    color:var(--cyan);
+    letter-spacing:3px;
+    font-size:12px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(35px);
-      transition:
-        opacity .8s ease,
-        transform .8s cubic-bezier(.2,.7,.2,1);
-    }
+.hero h1{
+    font-family:Cinzel,Reem Kufi,serif;
+    font-size:clamp(48px,7vw,92px);
+    line-height:.98;
+    letter-spacing:-2px;
+}
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.hero h1 span{
+    display:block;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.35);
+}
 
-    .delay-1 {
-      transition-delay: .1s;
-    }
+.hero-subtitle{
+    margin-top:28px;
+    max-width:680px;
+    color:var(--muted);
+    font-size:17px;
+    line-height:2;
+}
 
-    .delay-2 {
-      transition-delay: .2s;
-    }
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:32px;
+}
 
-    .delay-3 {
-      transition-delay: .3s;
-    }
+.btn{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.045);
+    color:var(--white);
+    padding:13px 21px;
+    border-radius:13px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:13px;
+}
 
-    .delay-4 {
-      transition-delay: .4s;
-    }
+.btn:hover{
+    transform:translateY(-2px);
+    border-color:rgba(57,230,255,.45);
+}
 
-    .nav-link {
-      position: relative;
-      color: #94a3b8;
-      transition: .3s ease;
-    }
+.btn-primary{
+    background:linear-gradient(135deg,#123f4b,#0a2029);
+    border-color:rgba(57,230,255,.45);
+    color:var(--cyan);
+}
 
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      right: 50%;
-      bottom: -8px;
-      width: 0;
-      height: 2px;
-      transform: translateX(50%);
-      background: var(--cyan);
-      box-shadow: 0 0 10px var(--cyan);
-      transition: .3s ease;
-    }
+.btn-gold{
+    border-color:rgba(216,181,106,.4);
+    color:var(--gold2);
+}
 
-    .nav-link:hover {
-      color: white;
-    }
+.hero-orbit{
+    width:min(440px,80vw);
+    aspect-ratio:1;
+    margin:auto;
+    position:relative;
+    display:grid;
+    place-items:center;
+}
 
-    .nav-link:hover::after {
-      width: 70%;
-    }
+.orbit{
+    position:absolute;
+    border:1px solid rgba(57,230,255,.12);
+    border-radius:50%;
+}
 
-    .hero-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(1px);
-      pointer-events: none;
-    }
+.orbit.one{
+    width:100%;
+    height:100%;
+    animation:spin 30s linear infinite;
+}
 
-    .orb-1 {
-      width: 430px;
-      height: 430px;
-      top: -180px;
-      right: -150px;
-      background: radial-gradient(
-        circle,
-        rgba(34,211,238,.16),
-        rgba(34,211,238,0) 70%
-      );
-    }
+.orbit.two{
+    width:75%;
+    height:75%;
+    border-color:rgba(216,181,106,.13);
+    animation:spinReverse 22s linear infinite;
+}
 
-    .orb-2 {
-      width: 360px;
-      height: 360px;
-      bottom: -120px;
-      left: -130px;
-      background: radial-gradient(
-        circle,
-        rgba(245,158,11,.12),
-        rgba(245,158,11,0) 70%
-      );
-    }
+.orbit.three{
+    width:48%;
+    height:48%;
+    border-color:rgba(57,230,255,.2);
+    animation:spin 14s linear infinite;
+}
 
-    .section-line {
-      width: 90px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
-      box-shadow: 0 0 12px rgba(34,211,238,.45);
-    }
+.orbit::after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    background:var(--cyan);
+    border-radius:50%;
+    top:-3px;
+    left:50%;
+    box-shadow:0 0 20px var(--cyan);
+}
 
-    .timeline {
-      position: relative;
-    }
+.orbit.two::after{
+    background:var(--gold);
+    box-shadow:0 0 20px var(--gold);
+}
 
-    .timeline::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 50%;
-      width: 1px;
-      transform: translateX(50%);
-      background: linear-gradient(
+.hero-core{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:
+        radial-gradient(circle,#123a46 0,#08151d 48%,#05080d 72%);
+    border:1px solid rgba(57,230,255,.35);
+    display:grid;
+    place-items:center;
+    box-shadow:
+        0 0 70px rgba(57,230,255,.12),
+        inset 0 0 50px rgba(57,230,255,.08);
+    z-index:2;
+}
+
+.hero-core div{
+    text-align:center;
+}
+
+.hero-core strong{
+    display:block;
+    font-family:Cinzel,serif;
+    font-size:40px;
+    color:var(--cyan);
+}
+
+.hero-core small{
+    color:var(--muted);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:105px 0;
+    position:relative;
+}
+
+.section-head{
+    margin-bottom:55px;
+}
+
+.section-label{
+    color:var(--cyan);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-family:Reem Kufi,Cairo,sans-serif;
+    font-size:clamp(30px,4vw,52px);
+    line-height:1.3;
+}
+
+.section-description{
+    color:var(--muted);
+    line-height:2;
+    max-width:800px;
+    margin-top:15px;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.stat{
+    padding:25px;
+    border:1px solid var(--line);
+    background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    border-radius:18px;
+}
+
+.stat strong{
+    display:block;
+    font-family:Cinzel,serif;
+    font-size:32px;
+    color:var(--cyan);
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* ================= TIMELINE ================= */
+
+.timeline{
+    position:relative;
+    margin-top:40px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    right:50%;
+    transform:translateX(50%);
+    top:0;
+    bottom:0;
+    width:1px;
+    background:linear-gradient(
         to bottom,
         transparent,
-        rgba(34,211,238,.65) 8%,
-        rgba(245,158,11,.4) 50%,
-        rgba(34,211,238,.65) 92%,
+        rgba(57,230,255,.5),
+        rgba(216,181,106,.45),
         transparent
-      );
-      box-shadow: 0 0 18px rgba(34,211,238,.18);
+    );
+}
+
+.timeline-item{
+    width:50%;
+    padding:0 42px 70px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    margin-left:auto;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    text-align:left;
+}
+
+.timeline-dot{
+    position:absolute;
+    top:0;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--cyan);
+    box-shadow:0 0 18px rgba(57,230,255,.45);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-7px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-7px;
+}
+
+.timeline-card{
+    padding:25px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:
+        linear-gradient(145deg,rgba(15,30,45,.92),rgba(6,13,21,.92));
+    transition:.35s;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+.timeline-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(57,230,255,.045),transparent);
+    transform:translateX(-100%);
+    transition:.6s;
+}
+
+.timeline-card:hover::before{
+    transform:translateX(100%);
+}
+
+.timeline-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(57,230,255,.35);
+    box-shadow:var(--shadow);
+}
+
+.timeline-year{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.timeline-title{
+    font-size:20px;
+    font-weight:800;
+    margin:8px 0;
+}
+
+.timeline-short{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:13px;
+}
+
+.timeline-tag{
+    display:inline-block;
+    margin-top:15px;
+    color:var(--cyan);
+    border:1px solid rgba(57,230,255,.18);
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:10px;
+}
+
+/* ================= DEEP CARDS ================= */
+
+.deep-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.deep-card{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:27px;
+    background:rgba(255,255,255,.025);
+}
+
+.deep-number{
+    font-family:Cinzel,serif;
+    color:var(--gold);
+    font-size:12px;
+}
+
+.deep-card h3{
+    margin:12px 0;
+    font-size:19px;
+}
+
+.deep-card p{
+    color:var(--muted);
+    line-height:2;
+    font-size:13px;
+}
+
+.deep-card ul{
+    margin-top:15px;
+    padding-right:18px;
+    color:#b9c7d1;
+    line-height:2;
+    font-size:12px;
+}
+
+.deep-card li::marker{
+    color:var(--cyan);
+}
+
+/* ================= ERA ================= */
+
+.era{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
+    align-items:stretch;
+}
+
+.era-feature{
+    min-height:430px;
+    border-radius:25px;
+    border:1px solid rgba(216,181,106,.2);
+    background:
+        radial-gradient(circle at 50% 20%,rgba(216,181,106,.12),transparent 35%),
+        linear-gradient(145deg,#15120d,#080b10);
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.era-feature .big{
+    font-family:Cinzel,serif;
+    font-size:70px;
+    color:rgba(216,181,106,.25);
+}
+
+.era-feature h3{
+    font-size:27px;
+}
+
+.era-feature p{
+    color:var(--muted);
+    line-height:2;
+    margin-top:10px;
+}
+
+.era-points{
+    display:grid;
+    gap:12px;
+}
+
+.era-point{
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.025);
+    border-radius:18px;
+    padding:21px;
+}
+
+.era-point strong{
+    color:var(--cyan);
+    font-size:13px;
+}
+
+.era-point p{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/* ================= PERSONS ================= */
+
+.people{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.person{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:24px;
+    background:linear-gradient(150deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
+    cursor:pointer;
+    transition:.3s;
+}
+
+.person:hover{
+    transform:translateY(-5px);
+    border-color:rgba(216,181,106,.4);
+}
+
+.person-symbol{
+    width:50px;
+    height:50px;
+    border-radius:15px;
+    border:1px solid rgba(216,181,106,.3);
+    color:var(--gold2);
+    display:grid;
+    place-items:center;
+    font-family:Cinzel,serif;
+    margin-bottom:18px;
+}
+
+.person h3{
+    font-size:17px;
+}
+
+.person small{
+    display:block;
+    color:var(--cyan);
+    margin:5px 0 10px;
+}
+
+.person p{
+    color:var(--muted);
+    line-height:1.9;
+    font-size:12px;
+}
+
+/* ================= PHARMACOPOEIA ================= */
+
+.pharma-box{
+    border:1px solid rgba(57,230,255,.17);
+    border-radius:25px;
+    padding:35px;
+    background:
+        linear-gradient(145deg,rgba(15,36,49,.7),rgba(7,13,20,.8));
+}
+
+.pharma-line{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:20px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.pharma-line:last-child{
+    border-bottom:0;
+}
+
+.pharma-year{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+}
+
+.pharma-line h4{
+    margin-bottom:5px;
+}
+
+.pharma-line p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.9;
+}
+
+/* ================= FUTURE ================= */
+
+.future{
+    border:1px solid rgba(57,230,255,.15);
+    border-radius:30px;
+    padding:50px;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(57,230,255,.08),transparent 30%),
+        radial-gradient(circle at 80% 80%,rgba(216,181,106,.07),transparent 30%),
+        rgba(255,255,255,.02);
+}
+
+.future-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-top:35px;
+}
+
+.future-card{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:22px;
+    background:rgba(0,0,0,.15);
+}
+
+.future-card strong{
+    display:block;
+    color:var(--cyan);
+    margin-bottom:9px;
+}
+
+.future-card p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+}
+
+/* ================= SOURCES ================= */
+
+.sources{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.source{
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:20px;
+    background:rgba(255,255,255,.025);
+}
+
+.source strong{
+    color:var(--gold2);
+}
+
+.source p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.9;
+    margin-top:5px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    background:rgba(0,0,0,.78);
+    backdrop-filter:blur(18px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(900px,100%);
+    max-height:88vh;
+    overflow:auto;
+    border:1px solid rgba(57,230,255,.25);
+    border-radius:25px;
+    background:
+        linear-gradient(145deg,#0b1621,#050a10);
+    box-shadow:0 40px 120px rgba(0,0,0,.7);
+    padding:35px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    top:15px;
+    left:15px;
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.04);
+    color:white;
+    cursor:pointer;
+}
+
+.modal-year{
+    color:var(--gold);
+    font-family:Cinzel,serif;
+    letter-spacing:2px;
+}
+
+.modal-title{
+    font-size:32px;
+    margin:8px 0 20px;
+}
+
+.modal-content{
+    color:#c3d0d9;
+    line-height:2;
+    font-size:14px;
+}
+
+.modal-content h4{
+    color:var(--cyan);
+    margin:22px 0 8px;
+}
+
+.modal-content ul{
+    padding-right:20px;
+}
+
+/* ================= PRESENTATION ================= */
+
+.presentation{
+    position:fixed;
+    inset:0;
+    z-index:7000;
+    background:#030609;
+    display:none;
+}
+
+.presentation.active{
+    display:block;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    display:none;
+    padding:7vw;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle at 20% 30%,rgba(57,230,255,.07),transparent 35%),
+        radial-gradient(circle at 80% 70%,rgba(216,181,106,.06),transparent 35%);
+}
+
+.slide.active{
+    display:flex;
+}
+
+.slide-inner{
+    width:min(1050px,90%);
+}
+
+.slide-kicker{
+    color:var(--cyan);
+    font-size:12px;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.slide h2{
+    font-family:Reem Kufi,Cairo,sans-serif;
+    font-size:clamp(38px,6vw,76px);
+    line-height:1.2;
+}
+
+.slide p{
+    color:#aab9c4;
+    font-size:18px;
+    line-height:2;
+    max-width:850px;
+    margin-top:25px;
+}
+
+.slide-list{
+    margin-top:25px;
+    display:grid;
+    gap:12px;
+}
+
+.slide-list div{
+    border-right:2px solid var(--cyan);
+    padding-right:15px;
+    color:#c8d2d9;
+}
+
+.presentation-controls{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.presentation-controls button{
+    width:46px;
+    height:42px;
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.05);
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.slide-counter{
+    position:absolute;
+    top:25px;
+    left:30px;
+    color:var(--muted);
+    font-family:Inter,sans-serif;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:60px 0;
+    border-top:1px solid var(--line);
+    background:#03060a;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+}
+
+.footer-brand{
+    font-family:Cinzel,serif;
+    font-size:20px;
+}
+
+.footer-brand span{
+    color:var(--cyan);
+}
+
+.footer-note{
+    color:var(--muted);
+    font-size:11px;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+@keyframes spin{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
+}
+
+@keyframes spinReverse{
+    from{transform:rotate(360deg)}
+    to{transform:rotate(0)}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
     }
 
-    .timeline-item {
-      position: relative;
-      width: 50%;
-      padding: 0 35px 65px;
+    .mobile-menu{
+        display:block;
     }
 
-    .timeline-item:nth-child(odd) {
-      margin-left: 50%;
+    .hero-grid,
+    .era{
+        grid-template-columns:1fr;
     }
 
-    .timeline-item:nth-child(even) {
-      margin-right: 0;
+    .hero{
+        padding-top:125px;
     }
 
-    .timeline-dot {
-      position: absolute;
-      top: 22px;
-      right: -7px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #020617;
-      border: 2px solid var(--cyan);
-      box-shadow:
-        0 0 0 5px rgba(34,211,238,.08),
-        0 0 22px rgba(34,211,238,.75);
-      z-index: 2;
+    .hero-orbit{
+        width:300px;
     }
 
-    .timeline-item:nth-child(even) .timeline-dot {
-      left: -7px;
-      right: auto;
+    .stats{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .timeline-card {
-      cursor: pointer;
-      transition:
-        transform .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
+    .deep-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .timeline-card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(34,211,238,.42);
-      box-shadow:
-        0 20px 60px rgba(0,0,0,.35),
-        0 0 35px rgba(34,211,238,.08);
+    .people{
+        grid-template-columns:1fr 1fr;
     }
 
-    .era-number {
-      font-family: Cinzel, serif;
-      font-size: 12px;
-      letter-spacing: 4px;
-      color: var(--cyan);
+    .future-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .icon-box {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34,211,238,.14),
-          rgba(245,158,11,.06)
-        );
-      border: 1px solid rgba(34,211,238,.2);
-      font-size: 25px;
-      flex-shrink: 0;
+    .timeline::before{
+        right:14px;
+        transform:none;
     }
 
-    .stat-card {
-      position: relative;
-      overflow: hidden;
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        width:100%;
+        margin:0;
+        text-align:right;
+        padding-right:45px;
+        padding-left:0;
     }
 
-    .stat-card::before {
-      content: "";
-      position: absolute;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: rgba(34,211,238,.06);
-      top: -70px;
-      left: -70px;
+    .timeline-item .timeline-dot,
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        right:7px;
+        left:auto;
     }
 
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 13px;
-      border-radius: 999px;
-      font-size: 12px;
-      background: rgba(34,211,238,.07);
-      border: 1px solid rgba(34,211,238,.15);
-      color: #a5f3fc;
+    .sources{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:75px 0;
     }
 
-    .future-card {
-      min-height: 240px;
-      transition: .35s ease;
+    .hero h1{
+        font-size:48px;
     }
 
-    .future-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(245,158,11,.35);
-      box-shadow: 0 25px 70px rgba(0,0,0,.3);
+    .hero-subtitle{
+        font-size:14px;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: 1px solid rgba(34,211,238,.35);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34,211,238,.16),
-          rgba(34,211,238,.04)
-        );
-      color: #cffafe;
-      transition: .3s ease;
-      cursor: pointer;
+    .stats,
+    .deep-grid,
+    .people,
+    .future-grid{
+        grid-template-columns:1fr;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      border-color: rgba(34,211,238,.65);
-      box-shadow: 0 0 30px rgba(34,211,238,.16);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(34,211,238,.25),
-          rgba(34,211,238,.07)
-        );
+    .future{
+        padding:28px;
     }
 
-    .btn-gold {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border: 1px solid rgba(245,158,11,.35);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(245,158,11,.15),
-          rgba(245,158,11,.035)
-        );
-      color: #fef3c7;
-      transition: .3s ease;
-      cursor: pointer;
+    .pharma-line{
+        grid-template-columns:1fr;
+        gap:5px;
     }
 
-    .btn-gold:hover {
-      transform: translateY(-2px);
-      border-color: rgba(245,158,11,.65);
-      box-shadow: 0 0 30px rgba(245,158,11,.14);
+    .modal-box{
+        padding:25px 20px;
     }
 
-    .section-number {
-      font-family: Cinzel, serif;
-      font-size: 12px;
-      letter-spacing: 4px;
-      color: rgba(148,163,184,.65);
+    .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
     }
+}
 
-    .history-highlight {
-      position: relative;
-      overflow: hidden;
+@media(prefers-reduced-motion:reduce){
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
     }
-
-    .history-highlight::after {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      left: -120px;
-      bottom: -170px;
-      background: radial-gradient(
-        circle,
-        rgba(245,158,11,.09),
-        transparent 70%
-      );
-      pointer-events: none;
-    }
-
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 9000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: rgba(0,0,0,.76);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      opacity: 0;
-      visibility: hidden;
-      transition: .3s ease;
-    }
-
-    .modal-backdrop.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .modal-box {
-      width: min(850px, 100%);
-      max-height: 88vh;
-      overflow-y: auto;
-      transform: translateY(25px) scale(.97);
-      transition: .35s ease;
-    }
-
-    .modal-backdrop.open .modal-box {
-      transform: translateY(0) scale(1);
-    }
-
-    .modal-close {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      border: 1px solid rgba(148,163,184,.15);
-      background: rgba(255,255,255,.04);
-      color: #cbd5e1;
-      cursor: pointer;
-      transition: .25s ease;
-    }
-
-    .modal-close:hover {
-      color: white;
-      border-color: rgba(34,211,238,.35);
-      background: rgba(34,211,238,.08);
-    }
-
-    #presentation {
-      position: fixed;
-      inset: 0;
-      z-index: 9500;
-      background:
-        radial-gradient(
-          circle at 50% 30%,
-          rgba(6,182,212,.10),
-          transparent 40%
-        ),
-        #020617;
-      display: none;
-      overflow: hidden;
-    }
-
-    #presentation.open {
-      display: block;
-    }
-
-    .presentation-slide {
-      min-height: 100vh;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 90px 7vw 110px;
-    }
-
-    .presentation-slide.active {
-      display: flex;
-      animation: slideIn .55s ease both;
-    }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .presentation-controls {
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 22px;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .presentation-top {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      left: 25px;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .slide-btn {
-      width: 45px;
-      height: 45px;
-      border-radius: 14px;
-      border: 1px solid rgba(34,211,238,.18);
-      background: rgba(8,20,35,.72);
-      color: #cffafe;
-      cursor: pointer;
-      transition: .25s ease;
-    }
-
-    .slide-btn:hover {
-      border-color: rgba(34,211,238,.5);
-      background: rgba(34,211,238,.08);
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    @media (max-width: 900px) {
-      .timeline::before {
-        right: 20px;
-        transform: none;
-      }
-
-      .timeline-item,
-      .timeline-item:nth-child(odd),
-      .timeline-item:nth-child(even) {
-        width: 100%;
-        margin: 0;
-        padding-right: 60px;
-        padding-left: 0;
-      }
-
-      .timeline-dot,
-      .timeline-item:nth-child(even) .timeline-dot {
-        right: 13px;
-        left: auto;
-      }
-
-      .desktop-nav {
-        display: none !important;
-      }
-
-      .mobile-menu {
-        display: none;
-        position: absolute;
-        top: 75px;
-        right: 15px;
-        left: 15px;
-        padding: 14px;
-        border-radius: 20px;
-        z-index: 50;
-      }
-
-      .mobile-menu.open {
-        display: block;
-      }
-
-      .mobile-menu a {
-        display: block;
-        padding: 12px 10px;
-        border-radius: 10px;
-        color: #cbd5e1;
-      }
-
-      .mobile-menu a:hover {
-        background: rgba(34,211,238,.07);
-        color: white;
-      }
-
-      .hero-title {
-        font-size: clamp(42px, 12vw, 80px) !important;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .timeline-item,
-      .timeline-item:nth-child(odd),
-      .timeline-item:nth-child(even) {
-        padding-right: 45px;
-      }
-
-      .timeline::before {
-        right: 12px;
-      }
-
-      .timeline-dot,
-      .timeline-item:nth-child(even) .timeline-dot {
-        right: 5px;
-      }
-
-      .presentation-slide {
-        padding: 80px 22px 110px;
-      }
-
-      .presentation-top {
-        right: 15px;
-        left: 15px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <div id="scroll-progress"></div>
-  <div class="noise"></div>
-  <canvas id="particles"></canvas>
+<div class="progress" id="progress"></div>
 
-  <!-- LOADER -->
-  <div id="loader" class="loader">
-    <div class="relative flex items-center justify-center">
-      <div class="loader-ring"></div>
-      <div class="loader-core">∞</div>
+<!-- ================= NAV ================= -->
+
+<nav>
+<div class="container nav-inner">
+
+    <a href="#home" class="logo">
+        <div class="logo-mark">⚕</div>
+        <div class="logo-text">PHARMACY<span>∞</span></div>
+    </a>
+
+    <div class="nav-links">
+        <a href="#timeline">الخط الزمني</a>
+        <a href="#civilizations">الحضارات</a>
+        <a href="#people">الشخصيات</a>
+        <a href="#pharmacopoeia">Pharmacopoeia</a>
+        <a href="#modern">الصيدلة الحديثة</a>
+        <a href="#future">المستقبل</a>
+        <a href="#sources">المراجع</a>
     </div>
 
-    <div class="absolute bottom-20 text-center">
-      <div class="font-inter text-xs tracking-[.35em] text-cyan-300">
-        PHARMACY∞
-      </div>
-      <div class="mt-2 text-[11px] text-slate-500 tracking-widest">
-        LOADING KNOWLEDGE...
-      </div>
+    <div class="nav-actions">
+        <button class="nav-btn" onclick="startPresentation()" title="Presentation">▶</button>
+        <button class="nav-btn mobile-menu" onclick="toggleMobile()">☰</button>
     </div>
-  </div>
 
-  <!-- HEADER -->
-  <header class="fixed top-0 right-0 left-0 z-[5000]">
-    <nav class="glass border-t-0 border-r-0 border-l-0">
-      <div class="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+</div>
+</nav>
 
-        <a href="#home" class="flex items-center gap-3">
-          <div class="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-cyan-400/20 bg-cyan-400/5">
-            <img
-              src="assets/lotus-university-logo.png"
-              alt="Lotus University"
-              class="h-full w-full object-contain p-1"
-              onerror="this.style.display='none';this.parentElement.innerHTML='<span class=&quot;font-cinzel text-cyan-300 text-xl&quot;>L</span>';"
-            >
-          </div>
+<!-- ================= HERO ================= -->
 
-          <div>
-            <div class="font-cinzel text-sm tracking-[.18em] text-white">
-              LOTUS UNIVERSITY
-            </div>
-            <div class="font-inter text-[9px] tracking-[.35em] text-cyan-400">
-              PHARMACY∞
-            </div>
-          </div>
-        </a>
+<header class="hero" id="home">
 
-        <div class="desktop-nav hidden items-center gap-7 md:flex">
-          <a class="nav-link text-xs" href="#home">الرئيسية</a>
-          <a class="nav-link text-xs" href="#timeline">الرحلة التاريخية</a>
-          <a class="nav-link text-xs" href="#egypt">مصر القديمة</a>
-          <a class="nav-link text-xs" href="#islamic">العصر الذهبي</a>
-          <a class="nav-link text-xs" href="#modern">الصيدلة الحديثة</a>
-          <a class="nav-link text-xs" href="#future">المستقبل</a>
-        </div>
+<div class="container hero-grid">
 
-        <div class="flex items-center gap-2">
-          <button
-            id="mobile-menu-btn"
-            class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/60 text-slate-300 md:hidden"
-            aria-label="فتح القائمة"
-            type="button"
-          >
-            ☰
-          </button>
+<div class="reveal">
 
-          <button
-            id="presentation-btn"
-            class="btn-gold rounded-xl px-4 py-2 text-xs font-bold"
-            type="button"
-          >
-            <span>▶</span>
-            <span class="hidden sm:inline">Presentation</span>
-          </button>
-        </div>
-
-        <div id="mobile-menu" class="mobile-menu glass">
-          <a href="#home">الرئيسية</a>
-          <a href="#timeline">الرحلة التاريخية</a>
-          <a href="#egypt">مصر القديمة</a>
-          <a href="#islamic">العصر الذهبي</a>
-          <a href="#modern">الصيدلة الحديثة</a>
-          <a href="#future">المستقبل</a>
-        </div>
-
-      </div>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section id="home" class="relative flex min-h-screen items-center overflow-hidden pt-24">
-      <div class="hero-grid absolute inset-0"></div>
-      <div class="hero-orb orb-1"></div>
-      <div class="hero-orb orb-2"></div>
-
-      <div class="mx-auto w-full max-w-7xl px-6 py-24">
-        <div class="grid items-center gap-14 lg:grid-cols-[1.2fr_.8fr]">
-
-          <div class="reveal">
-            <div class="mb-6 flex items-center gap-3">
-              <div class="section-line"></div>
-              <span class="font-inter text-[11px] tracking-[.35em] text-cyan-400">
-                THE EVOLUTION OF PHARMACY
-              </span>
-            </div>
-
-            <h1 class="hero-title font-cinzel text-6xl font-bold leading-[.95] tracking-tight text-white sm:text-7xl lg:text-[105px]">
-              PHARMACY
-              <span class="gradient-text">∞</span>
-            </h1>
-
-            <p class="mt-7 max-w-2xl text-lg leading-9 text-slate-400 sm:text-xl">
-              من جذور الطب في الحضارات القديمة إلى عالم
-              <span class="text-cyan-300">الدواء الذكي</span>
-              والصيدلة السريرية والطب الشخصي.
-            </p>
-
-            <div class="mt-9 flex flex-wrap gap-3">
-              <a
-                href="#timeline"
-                class="btn-primary rounded-2xl px-6 py-3 text-sm font-bold"
-              >
-                استكشف الرحلة
-                <span>↓</span>
-              </a>
-
-              <button
-                id="hero-presentation"
-                type="button"
-                class="btn-gold rounded-2xl px-6 py-3 text-sm font-bold"
-              >
-                ابدأ العرض
-                <span>▶</span>
-              </button>
-            </div>
-
-            <div class="mt-12 flex flex-wrap gap-3">
-              <span class="pill">⚗️ علم</span>
-              <span class="pill">🏺 تاريخ</span>
-              <span class="pill">🧬 ابتكار</span>
-              <span class="pill">🤖 مستقبل</span>
-            </div>
-          </div>
-
-          <div class="reveal delay-2">
-            <div class="glass relative mx-auto max-w-md rounded-[35px] p-8">
-
-              <div class="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-cyan-400/10"></div>
-              <div class="absolute -bottom-10 -left-10 h-40 w-40 rounded-full border border-amber-400/10"></div>
-
-              <div class="relative">
-                <div class="font-inter text-xs tracking-[.3em] text-slate-500">
-                  PHARMACY / TIMELINE
-                </div>
-
-                <div class="mt-6 flex items-center justify-center">
-                  <div class="relative flex h-64 w-64 items-center justify-center rounded-full border border-cyan-400/15">
-                    <div class="absolute inset-5 rounded-full border border-cyan-400/10"></div>
-                    <div class="absolute inset-12 rounded-full border border-amber-400/10"></div>
-
-                    <div class="text-center">
-                      <div class="font-cinzel text-7xl text-cyan-300 glow-text-cyan">
-                        ∞
-                      </div>
-                      <div class="mt-2 font-inter text-[10px] tracking-[.35em] text-slate-500">
-                        KNOWLEDGE
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mt-7 grid grid-cols-3 gap-2 text-center">
-                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
-                    <div class="font-cinzel text-xl text-cyan-300">5K+</div>
-                    <div class="mt-1 text-[10px] text-slate-500">YEARS</div>
-                  </div>
-
-                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
-                    <div class="font-cinzel text-xl text-amber-300">∞</div>
-                    <div class="mt-1 text-[10px] text-slate-500">DISCOVERY</div>
-                  </div>
-
-                  <div class="rounded-xl border border-slate-800 bg-black/20 p-3">
-                    <div class="font-cinzel text-xl text-cyan-300">01</div>
-                    <div class="mt-1 text-[10px] text-slate-500">MISSION</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- INTRO -->
-    <section class="relative py-24">
-      <div class="mx-auto max-w-5xl px-6 text-center">
-
-        <div class="reveal">
-          <div class="section-number">01 / INTRODUCTION</div>
-
-          <h2 class="mt-4 font-cairo text-3xl font-extrabold text-white sm:text-5xl">
-            الصيدلة ليست مجرد دواء
-          </h2>
-
-          <div class="mx-auto mt-5 section-line"></div>
-
-          <p class="mx-auto mt-8 max-w-3xl text-base leading-9 text-slate-400 sm:text-lg">
-            الصيدلة هي قصة طويلة من الملاحظة والتجربة والمعرفة.
-            بدأت من استخدام النباتات والمعادن والمواد الطبيعية،
-            ثم تطورت مع الكتابة والتجريب والكيمياء، وصولاً إلى
-            التكنولوجيا الحيوية والذكاء الاصطناعي والطب الشخصي.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section id="timeline" class="relative py-28">
-      <div class="mx-auto max-w-7xl px-6">
-
-        <div class="reveal mb-20 text-center">
-          <div class="section-number">02 / TIMELINE</div>
-
-          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
-            رحلة الصيدلة عبر الزمن
-          </h2>
-
-          <p class="mx-auto mt-5 max-w-2xl text-slate-400">
-            اضغط على أي مرحلة لمعرفة أهم ملامحها وتطور المعرفة الدوائية خلالها.
-          </p>
-        </div>
-
-        <div id="timeline-container" class="timeline"></div>
-
-      </div>
-    </section>
-
-    <!-- EGYPT -->
-    <section id="egypt" class="relative py-28">
-      <div class="mx-auto max-w-7xl px-6">
-
-        <div class="grid items-center gap-10 lg:grid-cols-2">
-
-          <div class="reveal">
-            <div class="section-number">03 / ANCIENT EGYPT</div>
-
-            <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
-              مصر القديمة
-            </h2>
-
-            <div class="mt-5 section-line"></div>
-
-            <p class="mt-7 text-base leading-9 text-slate-400">
-              امتلك المصريون القدماء معرفة واسعة بالمواد الطبية
-              والنباتات والزيوت والمراهم والمستحضرات المختلفة.
-              وكانت الوصفات تُسجل وتُنقل بين الأجيال، وهو ما يجعل
-              المصادر المصرية القديمة من أهم الشواهد على تاريخ الطب والدواء.
-            </p>
-
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-
-              <div class="glass rounded-2xl p-5">
-                <div class="text-2xl">📜</div>
-                <h3 class="mt-3 font-bold text-white">
-                  بردية إيبرس
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-slate-500">
-                  واحدة من أشهر البرديات الطبية المصرية القديمة،
-                  وتضم وصفات ومعلومات علاجية متنوعة.
-                </p>
-              </div>
-
-              <div class="glass rounded-2xl p-5">
-                <div class="text-2xl">🌿</div>
-                <h3 class="mt-3 font-bold text-white">
-                  النباتات الطبية
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-slate-500">
-                  استخدمت مواد نباتية وزيوت ومكونات طبيعية في
-                  تحضير مستحضرات علاجية.
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="reveal delay-2">
-            <div class="history-highlight glass rounded-[35px] p-8 sm:p-10">
-
-              <div class="flex items-center justify-between">
-                <span class="pill">ANCIENT MEDICINE</span>
-                <span class="font-cinzel text-5xl text-amber-300 glow-text-gold">
-                  01
-                </span>
-              </div>
-
-              <div class="mt-10">
-                <div class="font-cinzel text-6xl text-slate-700">
-                  EBERS
-                </div>
-
-                <p class="mt-5 text-sm leading-8 text-slate-500">
-                  الكتابة الطبية ساعدت على حفظ المعرفة وتراكمها
-                  بدلاً من اعتمادها الكامل على النقل الشفهي.
-                </p>
-              </div>
-
-              <div class="mt-9 grid grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-4">
-                  <div class="text-xs text-slate-500">KNOWLEDGE</div>
-                  <div class="mt-1 font-bold text-cyan-300">الوصفات</div>
-                </div>
-
-                <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-4">
-                  <div class="text-xs text-slate-500">MATERIALS</div>
-                  <div class="mt-1 font-bold text-amber-300">النباتات</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ISLAMIC -->
-    <section id="islamic" class="relative overflow-hidden py-28">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent"></div>
-
-      <div class="relative mx-auto max-w-7xl px-6">
-
-        <div class="reveal text-center">
-          <div class="section-number">04 / ISLAMIC GOLDEN AGE</div>
-
-          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
-            العصر الذهبي للعلوم الطبية
-          </h2>
-
-          <div class="mx-auto mt-5 section-line"></div>
-
-          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
-            شهد العالم الإسلامي تطوراً كبيراً في العلوم الطبية والكيميائية،
-            وظهرت مؤلفات وممارسات ساهمت في تنظيم تحضير الأدوية والتعامل معها.
-          </p>
-        </div>
-
-        <div class="mt-14 grid gap-5 md:grid-cols-3">
-
-          <div class="glass reveal rounded-3xl p-7">
-            <div class="icon-box">🧪</div>
-            <h3 class="mt-5 text-xl font-bold text-white">
-              الكيمياء والتحضير
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              تطورت تقنيات التحضير والتنقية والاستخلاص، وارتبطت
-              العلوم الكيميائية بالممارسات الطبية.
-            </p>
-          </div>
-
-          <div class="glass reveal delay-1 rounded-3xl p-7">
-            <div class="icon-box">📚</div>
-            <h3 class="mt-5 text-xl font-bold text-white">
-              التأليف والتوثيق
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              ساعدت الكتب والمصنفات على تنظيم المعرفة الطبية
-              والصيدلانية وتداولها بين العلماء.
-            </p>
-          </div>
-
-          <div class="glass reveal delay-2 rounded-3xl p-7">
-            <div class="icon-box">🏪</div>
-            <h3 class="mt-5 text-xl font-bold text-white">
-              الصيدليات المبكرة
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              ظهرت ممارسات أكثر تخصصاً في تحضير وبيع المستحضرات
-              الدوائية في المدن الإسلامية.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="mt-8 glass reveal rounded-3xl p-7">
-          <div class="grid items-center gap-7 md:grid-cols-[auto_1fr]">
-
-            <div class="flex h-20 w-20 items-center justify-center rounded-3xl border border-amber-400/15 bg-amber-400/5 text-4xl">
-              🧑‍🔬
-            </div>
-
-            <div>
-              <div class="text-xs tracking-[.2em] text-amber-400">
-                AL-SAYDALAH
-              </div>
-
-              <h3 class="mt-2 text-2xl font-bold text-white">
-                مفهوم الصيدلة كحرفة ومجال متخصص
-              </h3>
-
-              <p class="mt-3 text-sm leading-8 text-slate-500">
-                تطورت ممارسات الصيدلة تدريجياً لتصبح أكثر تخصصاً،
-                مع الاهتمام بالمكونات والجرعات وطرق التحضير والتخزين.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- MODERN -->
-    <section id="modern" class="relative py-28">
-      <div class="mx-auto max-w-7xl px-6">
-
-        <div class="reveal text-center">
-          <div class="section-number">05 / MODERN PHARMACY</div>
-
-          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
-            الصيدلة الحديثة والسريرية
-          </h2>
-
-          <div class="mx-auto mt-5 section-line"></div>
-
-          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
-            انتقلت الصيدلة من التركيز على تحضير الدواء فقط إلى
-            المشاركة المباشرة في رعاية المريض وتحسين نتائج العلاج.
-          </p>
-        </div>
-
-        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
-          <div class="stat-card glass reveal rounded-3xl p-7">
-            <div class="text-4xl">💊</div>
-            <div class="mt-6 font-cinzel text-3xl text-cyan-300">DRUG</div>
-            <h3 class="mt-2 font-bold text-white">الدواء</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-500">
-              فهم المادة الفعالة والشكل الصيدلاني وطريقة الاستخدام.
-            </p>
-          </div>
-
-          <div class="stat-card glass reveal delay-1 rounded-3xl p-7">
-            <div class="text-4xl">🧬</div>
-            <div class="mt-6 font-cinzel text-3xl text-cyan-300">BIO</div>
-            <h3 class="mt-2 font-bold text-white">التكنولوجيا الحيوية</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-500">
-              أدوية بيولوجية وعلاجات تعتمد على تقنيات متقدمة.
-            </p>
-          </div>
-
-          <div class="stat-card glass reveal delay-2 rounded-3xl p-7">
-            <div class="text-4xl">🩺</div>
-            <div class="mt-6 font-cinzel text-3xl text-cyan-300">CLINIC</div>
-            <h3 class="mt-2 font-bold text-white">الصيدلة السريرية</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-500">
-              متابعة العلاج الدوائي والمساهمة في القرارات العلاجية.
-            </p>
-          </div>
-
-          <div class="stat-card glass reveal delay-3 rounded-3xl p-7">
-            <div class="text-4xl">📊</div>
-            <div class="mt-6 font-cinzel text-3xl text-cyan-300">DATA</div>
-            <h3 class="mt-2 font-bold text-white">البيانات</h3>
-            <p class="mt-3 text-sm leading-7 text-slate-500">
-              استخدام المعلومات والبيانات لدعم العلاج والرعاية الصحية.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="mt-10 glass reveal rounded-[30px] p-8 sm:p-10">
-          <div class="grid items-center gap-8 lg:grid-cols-2">
-
-            <div>
-              <span class="pill">CLINICAL PHARMACY</span>
-
-              <h3 class="mt-5 text-3xl font-extrabold text-white">
-                من صرف الدواء إلى رعاية المريض
-              </h3>
-
-              <p class="mt-5 text-sm leading-9 text-slate-400">
-                أصبح الصيدلي جزءاً من الفريق الصحي في العديد من البيئات
-                العلاجية، مع اهتمام أكبر بسلامة الدواء والتداخلات الدوائية
-                والالتزام بالعلاج ومتابعة النتائج.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-3">
-              <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
-                <div class="text-2xl">🔬</div>
-                <div class="mt-3 font-bold text-white">Research</div>
-                <div class="mt-1 text-xs text-slate-500">البحث والتطوير</div>
-              </div>
-
-              <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
-                <div class="text-2xl">🛡️</div>
-                <div class="mt-3 font-bold text-white">Safety</div>
-                <div class="mt-1 text-xs text-slate-500">سلامة الدواء</div>
-              </div>
-
-              <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5">
-                <div class="text-2xl">👤</div>
-                <div class="mt-3 font-bold text-white">Patient</div>
-                <div class="mt-1 text-xs text-slate-500">المريض</div>
-              </div>
-
-              <div class="rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5">
-                <div class="text-2xl">🎯</div>
-                <div class="mt-3 font-bold text-white">Outcomes</div>
-                <div class="mt-1 text-xs text-slate-500">نتائج العلاج</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FUTURE -->
-    <section id="future" class="relative py-28">
-      <div class="absolute inset-0 bg-gradient-to-b from-cyan-950/5 via-transparent to-amber-950/5"></div>
-
-      <div class="relative mx-auto max-w-7xl px-6">
-
-        <div class="reveal text-center">
-          <div class="section-number">06 / FUTURE PHARMACY</div>
-
-          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white sm:text-5xl">
-            إلى أين تتجه الصيدلة؟
-          </h2>
-
-          <div class="mx-auto mt-5 section-line"></div>
-
-          <p class="mx-auto mt-7 max-w-3xl text-base leading-9 text-slate-400">
-            المستقبل يجمع بين العلوم الدوائية والبيانات والذكاء الاصطناعي
-            والهندسة الحيوية، مع تركيز أكبر على احتياجات كل مريض.
-          </p>
-        </div>
-
-        <div class="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-
-          <div class="future-card glass reveal rounded-3xl p-7">
-            <div class="text-4xl">🤖</div>
-            <h3 class="mt-7 text-xl font-bold text-white">
-              الذكاء الاصطناعي
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              تحليل البيانات ودعم اكتشاف الأدوية والقرارات الصحية.
-            </p>
-          </div>
-
-          <div class="future-card glass reveal delay-1 rounded-3xl p-7">
-            <div class="text-4xl">🧬</div>
-            <h3 class="mt-7 text-xl font-bold text-white">
-              الطب الشخصي
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              تصميم العلاج بما يتناسب مع خصائص المريض البيولوجية.
-            </p>
-          </div>
-
-          <div class="future-card glass reveal delay-2 rounded-3xl p-7">
-            <div class="text-4xl">🖨️</div>
-            <h3 class="mt-7 text-xl font-bold text-white">
-              التصنيع المتقدم
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              تقنيات جديدة لتصنيع أشكال دوائية وجرعات أكثر تخصيصاً.
-            </p>
-          </div>
-
-          <div class="future-card glass reveal delay-3 rounded-3xl p-7">
-            <div class="text-4xl">⌚</div>
-            <h3 class="mt-7 text-xl font-bold text-white">
-              الصحة الرقمية
-            </h3>
-            <p class="mt-3 text-sm leading-8 text-slate-500">
-              أجهزة وتقنيات رقمية تساعد على المتابعة المستمرة للعلاج.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="mt-12 reveal">
-          <div class="glass overflow-hidden rounded-[35px] p-8 sm:p-12">
-
-            <div class="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
-
-              <div>
-                <div class="font-inter text-xs tracking-[.35em] text-cyan-400">
-                  PHARMACY∞ / NEXT
-                </div>
-
-                <h3 class="mt-5 text-3xl font-extrabold text-white sm:text-4xl">
-                  المعرفة الدوائية لا تتوقف.
-                </h3>
-
-                <p class="mt-5 max-w-2xl text-sm leading-8 text-slate-400">
-                  كل مرحلة تاريخية أضافت طبقة جديدة من المعرفة،
-                  وكل اكتشاف يفتح الباب أمام سؤال جديد.
-                  وهنا تستمر الرحلة.
-                </p>
-              </div>
-
-              <div class="flex h-36 w-36 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-400/5">
-                <span class="font-cinzel text-6xl text-cyan-300 glow-text-cyan">
-                  ∞
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SOURCES -->
-    <section id="sources" class="relative py-28">
-      <div class="mx-auto max-w-5xl px-6">
-
-        <div class="reveal text-center">
-          <div class="section-number">07 / SOURCES</div>
-
-          <h2 class="mt-4 font-cairo text-4xl font-extrabold text-white">
-            مصادر ومراجع مقترحة
-          </h2>
-
-          <div class="mx-auto mt-5 section-line"></div>
-        </div>
-
-        <div class="mt-12 grid gap-4">
-
-          <div class="glass reveal rounded-2xl p-6">
-            <div class="flex gap-4">
-              <div class="icon-box">📖</div>
-              <div>
-                <h3 class="font-bold text-white">
-                  Ebers Papyrus
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-slate-500">
-                  مصدر تاريخي مهم لدراسة الممارسات الطبية المصرية القديمة.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass reveal delay-1 rounded-2xl p-6">
-            <div class="flex gap-4">
-              <div class="icon-box">🏛️</div>
-              <div>
-                <h3 class="font-bold text-white">
-                  تاريخ العلوم الطبية والصيدلة
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-slate-500">
-                  دراسات ومراجع أكاديمية حول تطور الطب والصيدلة عبر الحضارات.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="glass reveal delay-2 rounded-2xl p-6">
-            <div class="flex gap-4">
-              <div class="icon-box">🧪</div>
-              <div>
-                <h3 class="font-bold text-white">
-                  Pharmacognosy & Pharmaceutical Sciences
-                </h3>
-                <p class="mt-2 text-sm leading-7 text-slate-500">
-                  مراجع علمية لفهم المواد الطبيعية والعلوم الصيدلانية الحديثة.
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="mt-8 rounded-2xl border border-amber-400/10 bg-amber-400/5 p-5 text-center">
-          <p class="text-xs leading-7 text-slate-500">
-            هذا الموقع تعليمي/عرض تقديمي، وبعض التواريخ والمعلومات التاريخية
-            عُرضت بصورة مختصرة لتناسب تجربة العرض البصري.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800/60 py-12">
-    <div class="mx-auto max-w-7xl px-6">
-
-      <div class="grid gap-8 md:grid-cols-3">
-
-        <div>
-          <div class="font-cinzel text-xl tracking-[.18em] text-white">
-            PHARMACY∞
-          </div>
-
-          <p class="mt-3 max-w-sm text-sm leading-7 text-slate-500">
-            The Evolution of Pharmacy
-          </p>
-        </div>
-
-        <div>
-          <div class="text-xs tracking-[.25em] text-cyan-400">
-            LOTUS UNIVERSITY
-          </div>
-
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-            Educational Interactive Presentation
-          </p>
-        </div>
-
-        <div class="md:text-left">
-          <div class="font-inter text-xs tracking-[.25em] text-slate-600">
-            KNOWLEDGE • SCIENCE • FUTURE
-          </div>
-
-          <div class="mt-4 font-cinzel text-3xl text-cyan-400">
-            ∞
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-10 border-t border-slate-800/50 pt-6 text-center">
-        <p class="text-xs text-slate-600">
-          PHARMACY∞ — The Evolution of Pharmacy
-        </p>
-      </div>
-
+    <div class="eyebrow">
+        LOTUS UNIVERSITY · PHARMACY HISTORY
     </div>
-  </footer>
 
-  <!-- ERA MODAL -->
-  <div id="era-modal" class="modal-backdrop" aria-hidden="true">
+    <h1>
+        PHARMACY
+        <span>∞ EVOLUTION</span>
+    </h1>
 
-    <div
-      class="modal-box glass rounded-[30px]"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
-    >
+    <p class="hero-subtitle">
+        ليست الصيدلة مجرد تاريخ من الأعشاب والعقاقير؛
+        إنها رحلة انتقال المعرفة الدوائية من الوصفات القديمة،
+        إلى علم المواد الفعالة، ثم التصنيع الدوائي، والتنظيم،
+        والصيدلة الإكلينيكية، وصولًا إلى الطب الدقيق والذكاء الاصطناعي.
+    </p>
 
-      <div class="flex items-start justify-between gap-5 border-b border-slate-800/70 p-6 sm:p-8">
-
-        <div>
-          <div id="modal-era" class="font-inter text-[10px] tracking-[.3em] text-cyan-400"></div>
-          <h2 id="modal-title" class="mt-3 text-2xl font-extrabold text-white sm:text-3xl"></h2>
-        </div>
-
-        <button
-          id="modal-close"
-          class="modal-close"
-          type="button"
-          aria-label="إغلاق"
-        >
-          ✕
+    <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="document.querySelector('#timeline').scrollIntoView()">
+            ابدأ الرحلة التاريخية
         </button>
 
-      </div>
-
-      <div id="modal-content-body" class="p-6 sm:p-8"></div>
-
+        <button class="btn btn-gold" onclick="startPresentation()">
+            وضع العرض الأكاديمي
+        </button>
     </div>
 
-  </div>
+</div>
 
-  <!-- PRESENTATION -->
-  <div id="presentation" aria-hidden="true">
+<div class="hero-orbit reveal">
 
-    <div class="presentation-top">
-      <div class="font-cinzel text-sm tracking-[.25em] text-cyan-300">
-        PHARMACY∞
-      </div>
+    <div class="orbit one"></div>
+    <div class="orbit two"></div>
+    <div class="orbit three"></div>
 
-      <button
-        id="presentation-close"
-        class="slide-btn"
-        type="button"
-        aria-label="إغلاق العرض"
-      >
-        ✕
-      </button>
-    </div>
-
-    <!-- SLIDE 1 -->
-    <div class="presentation-slide active" data-slide="0">
-      <div class="max-w-5xl text-center">
-        <div class="font-inter text-xs tracking-[.4em] text-cyan-400">
-          LOTUS UNIVERSITY
+    <div class="hero-core">
+        <div>
+            <strong>Rx</strong>
+            <small>Knowledge → Medicine</small>
         </div>
+    </div>
 
-        <h1 class="mt-7 font-cinzel text-6xl font-bold text-white sm:text-8xl lg:text-9xl">
-          PHARMACY<span class="gradient-text">∞</span>
-        </h1>
+</div>
 
-        <p class="mx-auto mt-7 max-w-2xl text-lg leading-9 text-slate-400">
-          The Evolution of Pharmacy
+</div>
+</header>
+
+
+<!-- ================= STATS ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="stats reveal">
+
+    <div class="stat">
+        <strong>5000+</strong>
+        <span>عام تقريبًا من التوثيق الدوائي القديم</span>
+    </div>
+
+    <div class="stat">
+        <strong>1498</strong>
+        <span>فلورنسا ودور الدساتير الدوائية الرسمية</span>
+    </div>
+
+    <div class="stat">
+        <strong>1841</strong>
+        <span>تأسيس Pharmaceutical Society of Great Britain</span>
+    </div>
+
+    <div class="stat">
+        <strong>21st C.</strong>
+        <span>Precision Medicine + Digital Pharmacy + AI</span>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= TIMELINE ================= -->
+
+<section id="timeline">
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">01 · THE LONG TIMELINE</div>
+    <h2 class="section-title">من المادة الطبية إلى علم الصيدلة</h2>
+    <p class="section-description">
+        اضغط على أي محطة لفتح التفاصيل العلمية والتاريخية.
+        الهدف هنا ليس حفظ التواريخ فقط، بل فهم كيف أدى كل تحول
+        إلى تغيير وظيفة الصيدلي وطريقة اكتشاف الدواء وتصنيعه واستخدامه.
+    </p>
+</div>
+
+<div class="timeline" id="timelineContainer"></div>
+
+</div>
+</section>
+
+
+<!-- ================= CIVILIZATIONS ================= -->
+
+<section id="civilizations">
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">02 · CIVILIZATIONS</div>
+    <h2 class="section-title">الجذور الحضارية لعلم الدواء</h2>
+    <p class="section-description">
+        قبل ظهور كلمة Pharmacist بمفهومها الحديث، كانت هناك منظومات
+        للمعرفة الطبية وتحضير المواد العلاجية في عدة حضارات.
+    </p>
+</div>
+
+<div class="era">
+
+<div class="era-feature reveal">
+    <div class="big">Rx</div>
+    <h3>من الوصفة إلى المنهج العلمي</h3>
+    <p>
+        أهم تحول في تاريخ الصيدلة لم يكن اختراع دواء واحد،
+        بل انتقال المعرفة من وصفات متوارثة إلى عمليات يمكن
+        وصفها وتوثيقها ومقارنتها وتنظيم جودتها.
+    </p>
+</div>
+
+<div class="era-points reveal">
+
+    <div class="era-point">
+        <strong>MESOPOTAMIA · بلاد الرافدين</strong>
+        <p>
+            تقدم النصوص الطبية المسمارية أدلة على وصف مواد نباتية
+            ومعدنية وحيوانية وتحضيرها واستخدامها في ممارسات علاجية
+            قديمة.
         </p>
+    </div>
 
-        <div class="mx-auto mt-9 section-line"></div>
-
-        <p class="mt-8 text-sm text-slate-500">
-          من الماضي إلى المستقبل
+    <div class="era-point">
+        <strong>ANCIENT EGYPT · مصر القديمة</strong>
+        <p>
+            البرديات الطبية المصرية، ومنها برديات تحتوي على وصفات
+            علاجية، تمثل أحد أهم الأدلة المكتوبة على المعرفة الطبية
+            والصيدلانية في مصر القديمة.
         </p>
-      </div>
     </div>
 
-    <!-- SLIDE 2 -->
-    <div class="presentation-slide" data-slide="1">
-      <div class="max-w-5xl">
-        <div class="section-number">01 / ANCIENT ROOTS</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          البداية
-        </h2>
-
-        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
-          بدأت المعرفة الدوائية من المواد الطبيعية والوصفات العلاجية
-          التي استخدمتها الحضارات القديمة، ثم انتقلت عبر الكتابة
-          والتجربة والتوثيق.
+    <div class="era-point">
+        <strong>GREEK WORLD · العالم اليوناني</strong>
+        <p>
+            ظهر اهتمام أكثر منهجية بوصف المواد الطبية ومصادرها
+            واستخداماتها، ثم أصبح ذلك أساسًا مهمًا للـMateria Medica.
         </p>
-      </div>
     </div>
 
-    <!-- SLIDE 3 -->
-    <div class="presentation-slide" data-slide="2">
-      <div class="max-w-5xl">
-        <div class="section-number">02 / EGYPT</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          مصر القديمة
-        </h2>
-
-        <div class="mt-9 grid gap-4 sm:grid-cols-3">
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl">📜</div>
-            <div class="mt-4 font-bold text-white">البرديات</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl">🌿</div>
-            <div class="mt-4 font-bold text-white">النباتات الطبية</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6">
-            <div class="text-3xl">⚗️</div>
-            <div class="mt-4 font-bold text-white">المستحضرات</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 4 -->
-    <div class="presentation-slide" data-slide="3">
-      <div class="max-w-5xl">
-        <div class="section-number">03 / ISLAMIC GOLDEN AGE</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          العصر الذهبي
-        </h2>
-
-        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
-          تطورت علوم الكيمياء والطب والصيدلة، وزادت أهمية التوثيق
-          والتحضير المتخصص للمستحضرات.
+    <div class="era-point">
+        <strong>ROMAN & GALENIC TRADITION</strong>
+        <p>
+            ارتبط اسم Galen بتراث طبي دوائي واسع استمر تأثيره
+            لقرون، وأصبحت طرق تحضير المستحضرات المنسوبة إلى التقليد
+            الجاليني جزءًا من تاريخ الـGalenicals.
         </p>
-      </div>
     </div>
 
-    <!-- SLIDE 5 -->
-    <div class="presentation-slide" data-slide="4">
-      <div class="max-w-5xl">
-        <div class="section-number">04 / MODERN PHARMACY</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          الصيدلة الحديثة
-        </h2>
-
-        <p class="mt-8 max-w-3xl text-lg leading-10 text-slate-400">
-          أصبحت الصيدلة مرتبطة بالبحث والتطوير والصيدلة السريرية
-          وسلامة الدواء ورعاية المريض.
+    <div class="era-point">
+        <strong>ISLAMIC GOLDEN AGE</strong>
+        <p>
+            شهدت المراكز العلمية في الحضارة الإسلامية حركة ترجمة
+            وتأليف وتطوير للمعرفة الطبية والكيميائية، مع اهتمام
+            بالتقطير والاستخلاص وتحضير المستحضرات.
         </p>
-      </div>
     </div>
 
-    <!-- SLIDE 6 -->
-    <div class="presentation-slide" data-slide="5">
-      <div class="max-w-5xl">
-        <div class="section-number">05 / CLINICAL</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          المريض أولاً
-        </h2>
-
-        <div class="mt-10 grid gap-4 sm:grid-cols-3">
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">🛡️</div>
-            <div class="mt-4 font-bold text-white">سلامة الدواء</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">🎯</div>
-            <div class="mt-4 font-bold text-white">نتائج العلاج</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">👤</div>
-            <div class="mt-4 font-bold text-white">رعاية المريض</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 7 -->
-    <div class="presentation-slide" data-slide="6">
-      <div class="max-w-5xl">
-        <div class="section-number">06 / FUTURE</div>
-
-        <h2 class="mt-5 text-5xl font-extrabold text-white sm:text-7xl">
-          صيدلة المستقبل
-        </h2>
-
-        <div class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">🤖</div>
-            <div class="mt-4 font-bold text-white">AI</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">🧬</div>
-            <div class="mt-4 font-bold text-white">Personalized Medicine</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">🖨️</div>
-            <div class="mt-4 font-bold text-white">Advanced Manufacturing</div>
-          </div>
-
-          <div class="glass rounded-2xl p-6 text-center">
-            <div class="text-3xl">⌚</div>
-            <div class="mt-4 font-bold text-white">Digital Health</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 8 -->
-    <div class="presentation-slide" data-slide="7">
-      <div class="max-w-5xl text-center">
-        <div class="font-cinzel text-7xl text-cyan-300 glow-text-cyan">
-          ∞
-        </div>
-
-        <h2 class="mt-8 text-4xl font-extrabold text-white sm:text-6xl">
-          المعرفة لا تتوقف
-        </h2>
-
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-9 text-slate-400">
-          وكل اكتشاف جديد يفتح باباً لاكتشاف آخر.
-        </p>
-      </div>
-    </div>
-
-    <!-- PRESENTATION CONTROLS -->
-    <div class="presentation-controls">
-
-      <button
-        id="slide-prev"
-        class="slide-btn"
-        type="button"
-        aria-label="الشريحة السابقة"
-      >
-        →
-      </button>
-
-      <div
-        id="slide-indicator"
-        class="min-w-[110px] text-center font-inter text-xs tracking-widest text-slate-400"
-      >
-        Slide 1 of 8
-      </div>
-
-      <button
-        id="slide-next"
-        class="slide-btn"
-        type="button"
-        aria-label="الشريحة التالية"
-      >
-        ←
-      </button>
-
-    </div>
-
-  </div>
-
-  <script>
-    "use strict";
-
-    /* =========================================================
-       DATA
-    ========================================================= */
-
-    const TIMELINE_DATA = [
-      {
-        id: "ancient",
-        number: "01",
-        era: "ANCIENT ROOTS",
-        title: "جذور المعرفة الدوائية",
-        period: "العصور القديمة",
-        icon: "🏺",
-        color: "cyan",
-        short:
-          "بدأ استخدام المواد الطبيعية والنباتات والمعادن في الممارسات العلاجية القديمة.",
-        description:
-          "اعتمدت المجتمعات القديمة على ملاحظة تأثير النباتات والمواد الطبيعية، ثم تطورت المعرفة تدريجياً من التجربة المباشرة إلى الوصفات المنظمة والتوثيق.",
-        points: [
-          "استخدام النباتات والمواد الطبيعية في العلاج.",
-          "تطوير طرق بدائية للتحضير والاستخلاص.",
-          "انتقال المعرفة بين الأجيال.",
-          "بداية توثيق الوصفات الطبية."
-        ]
-      },
-
-      {
-        id: "egypt",
-        number: "02",
-        era: "ANCIENT EGYPT",
-        title: "مصر القديمة",
-        period: "الألفية الثانية قبل الميلاد وما حولها",
-        icon: "𓂀",
-        color: "gold",
-        short:
-          "تظهر البرديات المصرية معرفة واسعة بالمواد الطبية والوصفات والمستحضرات.",
-        description:
-          "تقدم البرديات الطبية المصرية القديمة، ومنها بردية إيبرس، دليلاً مهماً على وجود معرفة منظمة بالوصفات والمكونات والممارسات العلاجية.",
-        points: [
-          "برديات طبية تحتوي على وصفات ومعلومات علاجية.",
-          "استخدام النباتات والزيوت والمواد الطبيعية.",
-          "وجود وصفات لمستحضرات متعددة الأشكال.",
-          "الاهتمام بالتوثيق ونقل المعرفة."
-        ]
-      },
-
-      {
-        id: "greek",
-        number: "03",
-        era: "GREEK & ROMAN",
-        title: "التقاليد اليونانية والرومانية",
-        period: "العصور الكلاسيكية",
-        icon: "🏛️",
-        color: "cyan",
-        short:
-          "ساهمت المدارس الطبية الكلاسيكية في تنظيم التفكير الطبي ووصف المواد العلاجية.",
-        description:
-          "أسهمت الكتابات الطبية في العالم اليوناني والروماني في تطوير تصنيف المواد الطبية ووصف طرق استخدامها، وأثرت هذه المعارف في مراحل تاريخية لاحقة.",
-        points: [
-          "تصنيف عدد من المواد العلاجية.",
-          "تنظيم المعرفة الطبية في مؤلفات.",
-          "تطوير مفاهيم مرتبطة بالمزاجات والعلاج.",
-          "انتقال المعرفة إلى الحضارات اللاحقة."
-        ]
-      },
-
-      {
-        id: "islamic",
-        number: "04",
-        era: "ISLAMIC GOLDEN AGE",
-        title: "العصر الذهبي للعلوم",
-        period: "العصور الوسطى",
-        icon: "🧪",
-        color: "gold",
-        short:
-          "شهدت العلوم الطبية والكيميائية تطوراً مهماً، وازداد تخصص تحضير الأدوية.",
-        description:
-          "شهدت الحضارة الإسلامية نشاطاً علمياً واسعاً في الطب والكيمياء والصيدلة، مع ظهور مؤلفات وتقنيات في التحضير والتنقية والاستخلاص والتوثيق.",
-        points: [
-          "تطور تقنيات التحضير والتنقية.",
-          "استخدام عمليات مثل الاستخلاص والتقطير.",
-          "تأليف كتب ومراجع طبية وصيدلانية.",
-          "تطور ممارسات الصيدلة المتخصصة."
-        ]
-      },
-
-      {
-        id: "scientific",
-        number: "05",
-        era: "SCIENTIFIC REVOLUTION",
-        title: "الثورة العلمية",
-        period: "القرنان السابع عشر والثامن عشر وما بعدهما",
-        icon: "🔬",
-        color: "cyan",
-        short:
-          "أصبح التجريب والملاحظة العلمية أساساً أقوى لفهم المواد وتأثيراتها.",
-        description:
-          "مع تطور العلوم الطبيعية والكيمياء، أصبحت دراسة المواد الطبية أكثر ارتباطاً بالقياس والتجريب والتحليل، مما مهد لظهور علم الأدوية الحديث.",
-        points: [
-          "تطور المنهج التجريبي.",
-          "تحسن فهم الكيمياء والمواد.",
-          "زيادة القدرة على تحليل المركبات.",
-          "بداية الطريق نحو علم الأدوية الحديث."
-        ]
-      },
-
-      {
-        id: "modern",
-        number: "06",
-        era: "MODERN PHARMACY",
-        title: "الصيدلة الحديثة",
-        period: "القرنان التاسع عشر والعشرون",
-        icon: "💊",
-        color: "gold",
-        short:
-          "أصبحت الأدوية أكثر ارتباطاً بالكيمياء والصناعة والبحث العلمي المنظم.",
-        description:
-          "أدى تقدم الكيمياء والعلوم الطبية والصناعة إلى ظهور مواد دوائية أكثر نقاءً وأشكال صيدلانية أكثر تنظيماً، ثم توسعت الصناعة الدوائية والبحوث السريرية.",
-        points: [
-          "تطور صناعة الأدوية.",
-          "تحسن نقاء وتركيب المواد الفعالة.",
-          "تطور الأشكال الصيدلانية.",
-          "زيادة أهمية التجارب والبحوث السريرية."
-        ]
-      },
-
-      {
-        id: "clinical",
-        number: "07",
-        era: "CLINICAL PHARMACY",
-        title: "الصيدلة السريرية",
-        period: "العصر الحديث",
-        icon: "🩺",
-        color: "cyan",
-        short:
-          "انتقل دور الصيدلي من المنتج الدوائي إلى المشاركة في رعاية المريض.",
-        description:
-          "أصبحت الصيدلة السريرية مجالاً يهتم باستخدام الدواء بشكل آمن وفعال، ومراجعة العلاج الدوائي والتداخلات ومتابعة نتائج العلاج ضمن فريق الرعاية الصحية.",
-        points: [
-          "مراجعة العلاج الدوائي.",
-          "الاهتمام بالتداخلات الدوائية.",
-          "تحسين الاستخدام الآمن والفعال للدواء.",
-          "المشاركة في رعاية المريض."
-        ]
-      },
-
-      {
-        id: "future",
-        number: "08",
-        era: "FUTURE PHARMACY",
-        title: "صيدلة المستقبل",
-        period: "المستقبل",
-        icon: "🤖",
-        color: "gold",
-        short:
-          "يتجه المجال نحو الذكاء الاصطناعي والطب الشخصي والتكنولوجيا الحيوية.",
-        description:
-          "قد تشهد الصيدلة مزيداً من التكامل مع الذكاء الاصطناعي وتحليل البيانات والطب الشخصي والتكنولوجيا الحيوية والتصنيع المتقدم والصحة الرقمية.",
-        points: [
-          "استخدام الذكاء الاصطناعي وتحليل البيانات.",
-          "تطوير الطب والعلاج الشخصي.",
-          "التوسع في التكنولوجيا الحيوية.",
-          "تطور التصنيع الدوائي والصحة الرقمية."
-        ]
-      }
-    ];
-
-    /* =========================================================
-       HELPERS
-    ========================================================= */
-
-    function escapeHTML(value) {
-      return String(value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-    }
-
-    function $(selector) {
-      return document.querySelector(selector);
-    }
-
-    function $$(selector) {
-      return Array.from(document.querySelectorAll(selector));
-    }
-
-    /* =========================================================
-       LOADER
-    ========================================================= */
-
-    let loaderStarted = false;
-
-    function startLoader() {
-      if (loaderStarted) return;
-
-      loaderStarted = true;
-
-      const loader = document.getElementById("loader");
-
-      if (!loader) return;
-
-      setTimeout(() => {
-        loader.classList.add("hide");
-      }, 700);
-    }
-
-    /* =========================================================
-       TIMELINE
-    ========================================================= */
-
-    function renderTimeline() {
-      const container = document.getElementById("timeline-container");
-
-      if (!container) return;
-
-      container.innerHTML = TIMELINE_DATA.map((item, index) => {
-
-        const accent =
-          item.color === "gold"
-            ? "text-amber-300"
-            : "text-cyan-300";
-
-        const border =
-          item.color === "gold"
-            ? "border-amber-400/10"
-            : "border-cyan-400/10";
-
-        return `
-          <article
-            class="timeline-item reveal ${index % 2 ? "delay-1" : ""}"
-            data-era="${escapeHTML(item.id)}"
-          >
-
-            <div class="timeline-dot"></div>
-
-            <div
-              class="timeline-card glass rounded-[28px] p-6 sm:p-7"
-              tabindex="0"
-              role="button"
-              aria-label="فتح تفاصيل ${escapeHTML(item.title)}"
-              onclick="openEraModal('${escapeHTML(item.id)}')"
-              onkeydown="if(event.key === 'Enter' || event.key === ' '){event.preventDefault();openEraModal('${escapeHTML(item.id)}')}"
-            >
-
-              <div class="flex items-start justify-between gap-4">
-
-                <div class="flex items-center gap-4">
-
-                  <div class="icon-box">
-                    ${escapeHTML(item.icon)}
-                  </div>
-
-                  <div>
-                    <div class="era-number">
-                      ${escapeHTML(item.number)} / ${escapeHTML(item.era)}
-                    </div>
-
-                    <h3 class="mt-2 text-xl font-extrabold text-white">
-                      ${escapeHTML(item.title)}
-                    </h3>
-                  </div>
-
-                </div>
-
-                <span class="${accent} font-cinzel text-2xl opacity-70">
-                  ${escapeHTML(item.number)}
-                </span>
-
-              </div>
-
-              <div class="mt-5 h-px bg-gradient-to-l from-transparent via-slate-700 to-transparent"></div>
-
-              <p class="mt-5 text-sm leading-8 text-slate-400">
-                ${escapeHTML(item.short)}
-              </p>
-
-              <div class="mt-5 flex items-center justify-between">
-
-                <span class="text-[10px] tracking-[.18em] text-slate-600">
-                  ${escapeHTML(item.period)}
-                </span>
-
-                <span class="${border} rounded-xl border px-3 py-2 text-[10px] ${accent}">
-                  VIEW DETAILS →
-                </span>
-
-              </div>
-
-            </div>
-
-          </article>
-        `;
-      }).join("");
-
-      setupReveal();
-    }
-
-    /* =========================================================
-       ERA MODAL
-    ========================================================= */
-
-    function openEraModal(id) {
-      const item = TIMELINE_DATA.find(entry => entry.id === id);
-
-      if (!item) return;
-
-      const modal = document.getElementById("era-modal");
-      const era = document.getElementById("modal-era");
-      const title = document.getElementById("modal-title");
-      const body = document.getElementById("modal-content-body");
-
-      if (!modal || !era || !title || !body) return;
-
-      era.textContent = `${item.number} / ${item.era}`;
-      title.textContent = item.title;
-
-      body.innerHTML = `
-        <div class="grid gap-7">
-
-          <div class="flex items-center gap-4">
-            <div class="icon-box text-3xl">
-              ${escapeHTML(item.icon)}
-            </div>
-
-            <div>
-              <div class="text-xs text-slate-600">
-                PERIOD
-              </div>
-
-              <div class="mt-1 text-sm text-cyan-300">
-                ${escapeHTML(item.period)}
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-cyan-400/10 bg-cyan-400/5 p-5">
-            <p class="text-sm leading-9 text-slate-300">
-              ${escapeHTML(item.description)}
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= DEEP KNOWLEDGE ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">03 · CORE CONCEPTS</div>
+    <h2 class="section-title">التحولات التي صنعت مهنة الصيدلة</h2>
+</div>
+
+<div class="deep-grid">
+
+<div class="deep-card reveal">
+    <div class="deep-number">01</div>
+    <h3>Materia Medica</h3>
+    <p>
+        مرحلة كان التركيز فيها على المواد ذات الاستخدام الطبي:
+        النباتات، المعادن، والمواد الحيوانية، مع وصف خصائصها
+        وتحضيرها واستخداماتها.
+    </p>
+    <ul>
+        <li>Dioscorides</li>
+        <li>De Materia Medica</li>
+        <li>وصف المصادر والمواد</li>
+    </ul>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">02</div>
+    <h3>Pharmacopoeia</h3>
+    <p>
+        الانتقال من الوصفة المحلية إلى معيار مكتوب يحدد أسماء
+        المواد وطرق التحضير ومواصفات الجودة، ثم أصبح للدساتير
+        الدوائية دور تنظيمي وقانوني في دول مختلفة.
+    </p>
+    <ul>
+        <li>Florence 1498</li>
+        <li>Nuremberg 1546</li>
+        <li>British Pharmacopoeia 1864</li>
+    </ul>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">03</div>
+    <h3>Medicinal Chemistry</h3>
+    <p>
+        أصبح السؤال لا يقتصر على "أي نبات يستخدم؟"
+        بل أصبح: ما المادة الفعالة؟ ما تركيبها؟ وكيف يمكن
+        تعديلها للحصول على تأثير أفضل؟
+    </p>
+    <ul>
+        <li>Isolation</li>
+        <li>Structure</li>
+        <li>Synthesis</li>
+    </ul>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">04</div>
+    <h3>Industrial Pharmacy</h3>
+    <p>
+        مع التصنيع واسع النطاق ظهرت تحديات جديدة:
+        ثبات الدواء، الجرعة، التعبئة، التوحيد، مراقبة الجودة،
+        والتصنيع بكميات كبيرة.
+    </p>
+    <ul>
+        <li>Mass production</li>
+        <li>Dosage forms</li>
+        <li>Quality control</li>
+    </ul>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">05</div>
+    <h3>Clinical Pharmacy</h3>
+    <p>
+        تغير دور الصيدلي من تحضير وصرف الدواء فقط إلى المشاركة
+        في رعاية المريض، مراجعة العلاج الدوائي، متابعة النتائج
+        والمساهمة في الاستخدام الآمن والفعال للأدوية.
+    </p>
+    <ul>
+        <li>Medication review</li>
+        <li>Drug information</li>
+        <li>Patient-centered care</li>
+    </ul>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">06</div>
+    <h3>Precision Medicine</h3>
+    <p>
+        أصبحت الاختلافات الجينية والبيولوجية بين المرضى جزءًا
+        من التفكير الدوائي الحديث، مما يدعم اختيار علاج أكثر
+        ملاءمة لفئة أو مريض محدد.
+    </p>
+    <ul>
+        <li>Pharmacogenomics</li>
+        <li>Biomarkers</li>
+        <li>Personalized therapy</li>
+    </ul>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= PEOPLE ================= -->
+
+<section id="people">
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">04 · FIGURES</div>
+    <h2 class="section-title">أسماء غيّرت مسار المعرفة الدوائية</h2>
+</div>
+
+<div class="people" id="peopleContainer"></div>
+
+</div>
+</section>
+
+
+<!-- ================= PHARMACOPOEIA ================= -->
+
+<section id="pharmacopoeia">
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">05 · PHARMACOPOEIA</div>
+    <h2 class="section-title">حين أصبحت جودة الدواء معيارًا مكتوبًا</h2>
+
+    <p class="section-description">
+        تاريخ الـPharmacopoeia مهم لأنه يوضح كيف انتقلت الصيدلة
+        من معرفة الوصفة إلى مفهوم رسمي للهوية والنقاوة والجودة.
+    </p>
+</div>
+
+<div class="pharma-box reveal" id="pharmaContainer"></div>
+
+</div>
+</section>
+
+
+<!-- ================= MODERN ================= -->
+
+<section id="modern">
+
+<div class="container">
+
+<div class="section-head reveal">
+    <div class="section-label">06 · MODERN PHARMACY</div>
+    <h2 class="section-title">القرن العشرون: التحول الكبير</h2>
+</div>
+
+<div class="deep-grid">
+
+<div class="deep-card reveal">
+    <div class="deep-number">1900s</div>
+    <h3>من المعمل إلى الصناعة</h3>
+    <p>
+        أصبحت الكيمياء والصناعة جزءًا أساسيًا من اكتشاف وإنتاج
+        المواد الدوائية على نطاق واسع.
+    </p>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">1930s–1940s</div>
+    <h3>Antimicrobial Revolution</h3>
+    <p>
+        ظهور وتطوير أدوية مضادة للعدوى غيّر قدرة الطب على التعامل
+        مع عدد كبير من الأمراض المعدية، وترافق ذلك مع توسع التصنيع
+        الدوائي.
+    </p>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">1940s</div>
+    <h3>Penicillin & Mass Production</h3>
+    <p>
+        تحول البنسلين من اكتشاف مخبري إلى دواء قابل للإنتاج على
+        نطاق واسع كان محطة رئيسية في تاريخ الصناعة الدوائية.
+    </p>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">1950s–1960s</div>
+    <h3>Therapeutic Revolution</h3>
+    <p>
+        توسعت الخيارات العلاجية بشكل كبير، وبدأ دور الصيدلي
+        داخل المستشفيات في التطور مع زيادة تعقيد العلاج الدوائي.
+    </p>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">1960s</div>
+    <h3>Drug Safety Regulation</h3>
+    <p>
+        أدت قضايا سلامة الأدوية إلى تعزيز المتطلبات التنظيمية
+        المتعلقة بالأدلة على الفعالية والسلامة قبل التسويق في
+        عدد من الأنظمة الرقابية.
+    </p>
+</div>
+
+<div class="deep-card reveal">
+    <div class="deep-number">1980s–2000s</div>
+    <h3>Clinical Pharmacy Expansion</h3>
+    <p>
+        اتسعت ممارسة الصيدلة لتشمل معلومات الدواء، مراجعة العلاج،
+        الرعاية المتمحورة حول المريض، والعمل ضمن الفريق الصحي.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= FUTURE ================= -->
+
+<section id="future">
+
+<div class="container">
+
+<div class="future reveal">
+
+    <div class="section-label">07 · THE NEXT ERA</div>
+
+    <h2 class="section-title">
+        إلى أين تتجه الصيدلة؟
+    </h2>
+
+    <p class="section-description">
+        المستقبل لا يعني اختفاء الصيدلي؛ بل يعني أن الأدوات التي
+        يستخدمها الصيدلي ستصبح أكثر اعتمادًا على البيانات والبيولوجيا
+        الجزيئية والأنظمة الرقمية.
+    </p>
+
+    <div class="future-grid">
+
+        <div class="future-card">
+            <strong>AI in Pharmacy</strong>
+            <p>
+                تحليل البيانات، دعم اكتشاف الأدوية، اكتشاف الأنماط
+                ومساعدة المتخصصين في اتخاذ قرارات مبنية على البيانات.
             </p>
-          </div>
+        </div>
 
-          <div>
-            <div class="mb-4 text-xs tracking-[.25em] text-slate-500">
-              KEY POINTS
+        <div class="future-card">
+            <strong>Pharmacogenomics</strong>
+            <p>
+                ربط الاختلافات الجينية باستجابة المريض لبعض الأدوية
+                بهدف تحسين اختيار العلاج والجرعة عند توفر الدليل المناسب.
+            </p>
+        </div>
+
+        <div class="future-card">
+            <strong>Biologics</strong>
+            <p>
+                توسع دور الأدوية البيولوجية والعلاجات الموجهة في
+                مجالات علاجية متعددة.
+            </p>
+        </div>
+
+        <div class="future-card">
+            <strong>Digital Pharmacy</strong>
+            <p>
+                أنظمة معلومات الدواء، السجلات الإلكترونية، المتابعة
+                الرقمية والخدمات الصيدلية المعتمدة على التكنولوجيا.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SOURCES ================= -->
+
+<section id="sources">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+    <div class="section-label">08 · ACADEMIC SOURCES</div>
+
+    <h2 class="section-title">المراجع والمصادر</h2>
+
+    <p class="section-description">
+        هذه الصفحة ليست بديلًا عن الكتب والمراجع الأكاديمية؛
+        وضعت المصادر الأساسية هنا حتى يستطيع الحضور الرجوع
+        إلى المادة الأصلية.
+    </p>
+
+</div>
+
+<div class="sources">
+
+    <div class="source reveal">
+        <strong>Royal Pharmaceutical Society</strong>
+        <p>
+            History of the Royal Pharmaceutical Society and the
+            development of pharmacy education, regulation and practice.
+        </p>
+    </div>
+
+    <div class="source reveal">
+        <strong>National Library of Medicine</strong>
+        <p>
+            Historical collections relating to Dioscorides, Galen,
+            ancient pharmacy and the history of medicine.
+        </p>
+    </div>
+
+    <div class="source reveal">
+        <strong>United States Pharmacopeia</strong>
+        <p>
+            Historical development of USP and pharmaceutical quality
+            standards beginning in the 19th century.
+        </p>
+    </div>
+
+    <div class="source reveal">
+        <strong>British Pharmacopoeia</strong>
+        <p>
+            Official standards for medicines in the United Kingdom
+            since 1864 and the historical development of the BP.
+        </p>
+    </div>
+
+    <div class="source reveal">
+        <strong>American Institute of the History of Pharmacy</strong>
+        <p>
+            Historical resources covering pharmacy practice,
+            education, medicines and pharmaceutical institutions.
+        </p>
+    </div>
+
+    <div class="source reveal">
+        <strong>Historical Medical Literature</strong>
+        <p>
+            Primary and scholarly historical works should be consulted
+            when using specific dates, attribution claims or disputed
+            "first" discoveries.
+        </p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-inner">
+
+    <div class="footer-brand">
+        PHARMACY<span>∞</span>
+    </div>
+
+    <div class="footer-note">
+        Pharmacy History Exhibition · Lotus University · Academic Edition
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="modal-close" onclick="closeModal()">×</button>
+
+<div class="modal-year" id="modalYear"></div>
+
+<h2 class="modal-title" id="modalTitle"></h2>
+
+<div class="modal-content" id="modalContent"></div>
+
+</div>
+</div>
+
+
+<!-- ================= PRESENTATION ================= -->
+
+<div class="presentation" id="presentation">
+
+<div class="slide-counter">
+    <span id="slideNumber">1</span> / <span id="slideTotal">12</span>
+</div>
+
+<div id="slides"></div>
+
+<div class="presentation-controls">
+    <button onclick="previousSlide()">‹</button>
+    <button onclick="nextSlide()">›</button>
+    <button onclick="closePresentation()">×</button>
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   HISTORICAL TIMELINE
+========================================================= */
+
+const timelineData = [
+
+{
+    year:"PREHISTORY → ANTIQUITY",
+    title:"قبل ظهور الصيدلة كمهنة",
+    tag:"ORIGINS",
+    short:"بدأت المعرفة الدوائية من ملاحظة الإنسان لتأثير النباتات والمواد الطبيعية على الجسم.",
+    content:`
+        <h4>الفكرة الأساسية</h4>
+        <p>
+        قبل وجود مهنة الصيدلة أو علم الأدوية بالمفهوم الحديث،
+        اعتمدت المجتمعات على الخبرة المتراكمة في معرفة المواد
+        الطبيعية التي يمكن استخدامها في العلاج.
+        </p>
+
+        <h4>لماذا هذه المرحلة مهمة؟</h4>
+        <ul>
+            <li>نشأت فكرة المادة العلاجية من الطبيعة.</li>
+            <li>بدأ التمييز بين المواد المفيدة والضارة بالتجربة.</li>
+            <li>انتقلت المعرفة شفهيًا ثم ظهرت لاحقًا في نصوص مكتوبة.</li>
+        </ul>
+    `
+},
+
+{
+    year:"c. 2nd millennium BCE",
+    title:"بلاد الرافدين والنصوص المسمارية",
+    tag:"MESOPOTAMIA",
+    short:"النصوص الطبية المسمارية تقدم أدلة على وصف مواد نباتية ومعدنية وتحضيرها.",
+    content:`
+        <h4>ما الذي نعرفه؟</h4>
+        <p>
+        تركت حضارات بلاد الرافدين نصوصًا طبية مسمارية تصف
+        مواد علاجية وطرق استخدامها وتحضيرها.
+        </p>
+
+        <h4>الأهمية الصيدلانية</h4>
+        <p>
+        تمثل هذه النصوص مرحلة مبكرة من توثيق العلاقة بين
+        مادة محددة واستعمال طبي محدد، وهو مبدأ سيصبح لاحقًا
+        جزءًا من علم الـMateria Medica.
+        </p>
+    `
+},
+
+{
+    year:"c. 1550 BCE",
+    title:"مصر القديمة والبرديات الطبية",
+    tag:"ANCIENT EGYPT",
+    short:"البرديات المصرية تمثل أحد أهم مصادر المعرفة الطبية الدوائية في العالم القديم.",
+    content:`
+        <h4>Ebers Papyrus</h4>
+        <p>
+        يعود تاريخ برديات طبية مصرية مهمة إلى الألفية الثانية
+        قبل الميلاد، وتحتوي على وصفات ومواد واستخدامات علاجية.
+        </p>
+
+        <h4>ماذا تكشف لنا؟</h4>
+        <ul>
+            <li>وجود معرفة منظمة بالمواد الطبية.</li>
+            <li>استخدام مواد نباتية ومعدنية وغيرها.</li>
+            <li>الاهتمام بطريقة تحضير المستحضر وطريقة استعماله.</li>
+        </ul>
+
+        <h4>ملاحظة تاريخية</h4>
+        <p>
+        لا ينبغي إسقاط مفهوم "الصيدلي الحديث" على مصر القديمة؛
+        كانت الممارسة جزءًا من منظومة الطب القديمة وليست مهنة
+        مستقلة بالمفهوم الحالي.
+        </p>
+    `
+},
+
+{
+    year:"1st century CE",
+    title:"Dioscorides و De Materia Medica",
+    tag:"GREEK PHARMACOLOGY",
+    short:"أصبح وصف المواد الطبية وجمع المعلومات عنها أكثر تنظيمًا.",
+    content:`
+        <h4>Dioscorides</h4>
+        <p>
+        كان Dioscorides عالمًا يونانيًا في القرن الأول الميلادي،
+        وارتبط اسمه بكتاب De Materia Medica، وهو من أهم الأعمال
+        التاريخية في وصف المواد ذات الاستخدام الطبي.
+        </p>
+
+        <h4>أهمية الكتاب</h4>
+        <ul>
+            <li>وصف عدد كبير من المواد الطبية.</li>
+            <li>اهتمام بمصادر المواد وخصائصها.</li>
+            <li>أثر طويل في الأدبيات الدوائية الأوروبية والشرق أوسطية.</li>
+        </ul>
+    `
+},
+
+{
+    year:"129 – c. 216 CE",
+    title:"Galen والتقاليد الجالينية",
+    tag:"GALENIC PHARMACY",
+    short:"أصبح التراث الجاليني مؤثرًا في الطب وتحضير المستحضرات لقرون.",
+    content:`
+        <h4>Galen</h4>
+        <p>
+        عاش Galen في القرن الثاني الميلادي، وترك مجموعة واسعة
+        من الأعمال الطبية التي استمر تأثيرها عبر العصور اللاحقة.
+        </p>
+
+        <h4>Galenicals</h4>
+        <p>
+        ارتبطت التقاليد الجالينية بتحضير مستحضرات من مواد طبيعية
+        وفق طرق محددة، وهو ما أصبح جزءًا مهمًا من تاريخ
+        pharmaceutical preparations.
+        </p>
+
+        <h4>الأهمية التاريخية</h4>
+        <p>
+        يمثل هذا التراث مرحلة مهمة في انتقال الصيدلة من مجرد
+        معرفة المادة إلى معرفة كيفية تحضيرها في صورة دوائية.
+        </p>
+    `
+},
+
+{
+    year:"8th–13th centuries",
+    title:"الحضارة الإسلامية والعصر الذهبي",
+    tag:"ISLAMIC GOLDEN AGE",
+    short:"الترجمة والتأليف والتجريب الكيميائي والطبي ساهمت في تطور المعرفة الدوائية.",
+    content:`
+        <h4>حركة المعرفة</h4>
+        <p>
+        شهدت الحضارة الإسلامية حركة واسعة لترجمة المؤلفات
+        الطبية اليونانية والسريانية والفارسية، إلى جانب ظهور
+        أعمال أصلية في الطب والصيدلة والكيمياء.
+        </p>
+
+        <h4>تطور المستحضرات</h4>
+        <ul>
+            <li>التقطير.</li>
+            <li>الاستخلاص.</li>
+            <li>تحضير الشرابات والمراهم والمستحضرات المختلفة.</li>
+            <li>تنظيم المعرفة الخاصة بالمواد الطبية.</li>
+        </ul>
+
+        <h4>شخصيات مهمة</h4>
+        <p>
+        من الأسماء المرتبطة بتاريخ الطب والكيمياء والصيدلة:
+        الرازي، الزهراوي، وابن سينا، مع ضرورة التمييز بين
+        أدوارهم التاريخية المختلفة وعدم وصفهم جميعًا بصيغة
+        "صيادلة" بالمفهوم المهني الحديث.
+        </p>
+    `
+},
+
+{
+    year:"1498",
+    title:"Florence Pharmacopoeia",
+    tag:"PHARMACOPOEIA",
+    short:"تُعد في بعض الدراسات أول Pharmacopoeia رسمية أوروبية بالمعنى الحديث.",
+    content:`
+        <h4>لماذا Pharmacopoeia؟</h4>
+        <p>
+        الفكرة الأساسية هي وجود مرجع مكتوب يمكن استخدامه
+        لتوحيد وصف وتحضير بعض المستحضرات بدل ترك كل وصفة
+        لاجتهاد محلي مختلف.
+        </p>
+
+        <h4>الأثر</h4>
+        <p>
+        ساعدت الدساتير الدوائية الرسمية على تحويل جودة الدواء
+        من مفهوم يعتمد على خبرة الشخص إلى مفهوم يمكن وضع
+        معايير مكتوبة له.
+        </p>
+    `
+},
+
+{
+    year:"1546",
+    title:"Nuremberg Dispensatorium",
+    tag:"EARLY OFFICIAL STANDARDS",
+    short:"محطة مهمة في تطور المراجع الدوائية الرسمية الأوروبية.",
+    content:`
+        <h4>Dispensatorium</h4>
+        <p>
+        صدر دستور دوائي في نورمبرغ سنة 1546، ويُذكر ضمن
+        المحطات الرئيسية في تاريخ تنظيم وصف وتحضير الأدوية.
+        </p>
+
+        <h4>الفكرة التي استمرت</h4>
+        <p>
+        توحيد الوصفات والمواد والطرق يمثل خطوة نحو مفهوم
+        pharmaceutical standardization الذي أصبح لاحقًا
+        جزءًا أساسيًا من جودة الدواء.
+        </p>
+    `
+},
+
+{
+    year:"1618",
+    title:"Pharmacopoeia Londinensis",
+    tag:"LONDON",
+    short:"نشر دستور لندن الدوائي يمثل مرحلة مهمة في تنظيم المستحضرات الطبية في إنجلترا.",
+    content:`
+        <h4>لماذا مهم؟</h4>
+        <p>
+        أصبحت الحاجة إلى توحيد المستحضرات الطبية أكثر وضوحًا
+        مع توسع ممارسة الطب والصيدلة في المدن الأوروبية.
+        </p>
+
+        <h4>النتيجة</h4>
+        <p>
+        تطورت العلاقة بين المهنة والمراجع الرسمية والرقابة
+        على تحضير الأدوية.
+        </p>
+    `
+},
+
+{
+    year:"1820",
+    title:"United States Pharmacopeia",
+    tag:"USP",
+    short:"تأسست USP في الولايات المتحدة بهدف وضع معايير رسمية لجودة الأدوية.",
+    content:`
+        <h4>1820</h4>
+        <p>
+        تأسست United States Pharmacopeia في الولايات المتحدة
+        في القرن التاسع عشر بهدف المساعدة في ضمان جودة الأدوية
+        من حيث الهوية والقوة والنقاوة وغيرها من معايير الجودة.
+        </p>
+
+        <h4>الأهمية الحديثة</h4>
+        <p>
+        أصبح مفهوم pharmaceutical standards جزءًا أساسيًا من
+        ضمان جودة الدواء وحماية المريض.
+        </p>
+    `
+},
+
+{
+    year:"1841",
+    title:"تأسيس Pharmaceutical Society of Great Britain",
+    tag:"PROFESSIONALIZATION",
+    short:"محطة رئيسية في تحول الصيدلة إلى مهنة منظمة ذات تعليم وتمثيل مهني.",
+    content:`
+        <h4>1841</h4>
+        <p>
+        تأسست Pharmaceutical Society of Great Britain سنة 1841،
+        وكانت من المحطات الأساسية في تنظيم التعليم والممارسة
+        الصيدلانية في بريطانيا.
+        </p>
+
+        <h4>ما الذي تغير؟</h4>
+        <ul>
+            <li>تنظيم التعليم.</li>
+            <li>تطوير معايير المهنة.</li>
+            <li>المساهمة في تنظيم بيع وصرف بعض المواد.</li>
+            <li>تعزيز الهوية المهنية للصيدلي.</li>
+        </ul>
+    `
+},
+
+{
+    year:"1852–1868",
+    title:"من التسجيل إلى التنظيم القانوني",
+    tag:"REGULATION",
+    short:"قوانين القرن التاسع عشر ساهمت في بناء إطار مهني وتعليمي ورقابي للصيدلة.",
+    content:`
+        <h4>1852</h4>
+        <p>
+        ساهم Pharmacy Act في إنشاء سجل للصيادلة المؤهلين
+        في بريطانيا.
+        </p>
+
+        <h4>1868</h4>
+        <p>
+        عزز Pharmacy Act التنظيم المتعلق بالتعليم والممارسة
+        وبيع وصرف بعض المواد الخطرة.
+        </p>
+
+        <h4>المعنى التاريخي</h4>
+        <p>
+        هنا بدأت الصيدلة تتحول بوضوح من حرفة تعتمد على الخبرة
+        إلى profession لها شروط دخول وتعليم وتنظيم.
+        </p>
+    `
+},
+
+{
+    year:"1864",
+    title:"British Pharmacopoeia",
+    tag:"QUALITY STANDARDS",
+    short:"بدأت الـBP في تقديم معايير رسمية للأدوية في بريطانيا منذ 1864.",
+    content:`
+        <h4>British Pharmacopoeia</h4>
+        <p>
+        أصدرت بريطانيا أول طبعة من British Pharmacopoeia
+        سنة 1864، وأصبح لها دور طويل الأمد في وضع معايير
+        رسمية للمواد والمستحضرات الدوائية.
+        </p>
+
+        <h4>الفكرة المحورية</h4>
+        <p>
+        لا يكفي أن نعرف اسم الدواء؛ يجب أن نعرف ما الذي
+        يعتبر دواءً مطابقًا للمواصفات.
+        </p>
+    `
+},
+
+{
+    year:"Late 19th – early 20th century",
+    title:"ظهور Medicinal Chemistry",
+    tag:"CHEMISTRY",
+    short:"بدأ اكتشاف المواد الفعالة وعزلها وتعديلها كيميائيًا في تغيير مفهوم الدواء.",
+    content:`
+        <h4>من النبات إلى الجزيء</h4>
+        <p>
+        بدأت الكيمياء الدوائية تنقل التركيز من المادة الخام
+        إلى المركب الفعال وتركيبه الكيميائي.
+        </p>
+
+        <h4>تغيير جذري</h4>
+        <ul>
+            <li>Isolation of active compounds</li>
+            <li>Chemical characterization</li>
+            <li>Synthesis</li>
+            <li>Structure–activity relationships</li>
+        </ul>
+    `
+},
+
+{
+    year:"1920s–1940s",
+    title:"الدواء يصبح صناعة علمية",
+    tag:"INDUSTRIAL PHARMACY",
+    short:"توسعت الصناعة الدوائية وظهرت تقنيات الإنتاج واسع النطاق وضبط الجودة.",
+    content:`
+        <h4>Industrial transformation</h4>
+        <p>
+        مع تطور الكيمياء والتصنيع أصبح من الممكن إنتاج المواد
+        الدوائية على نطاق أكبر وبمواصفات أكثر ثباتًا.
+        </p>
+
+        <h4>التحديات الجديدة</h4>
+        <ul>
+            <li>Stability</li>
+            <li>Uniformity</li>
+            <li>Dosage accuracy</li>
+            <li>Packaging</li>
+            <li>Quality control</li>
+        </ul>
+    `
+},
+
+{
+    year:"1940s",
+    title:"Penicillin والانتقال إلى الإنتاج واسع النطاق",
+    tag:"ANTIBIOTICS",
+    short:"أصبح البنسلين مثالًا تاريخيًا على انتقال اكتشاف دوائي إلى إنتاج واسع واستخدام طبي كبير.",
+    content:`
+        <h4>التحول</h4>
+        <p>
+        اكتشاف البنسلين كان نقطة انطلاق، لكن تحويله إلى دواء
+        متاح على نطاق واسع تطلب تطوير عمليات الإنتاج والتنقية
+        والجودة.
+        </p>
+
+        <h4>أهمية الصيدلة</h4>
+        <p>
+        هذه المرحلة توضح أن اكتشاف المادة ليس سوى جزء من رحلة
+        الدواء؛ فهناك formulation وmanufacturing وquality
+        assurance وdistribution.
+        </p>
+    `
+},
+
+{
+    year:"1950s–1960s",
+    title:"Therapeutic Revolution",
+    tag:"MODERN THERAPY",
+    short:"أدى توسع الخيارات العلاجية إلى زيادة أهمية الصيدلي داخل المستشفى.",
+    content:`
+        <h4>ما الذي تغير؟</h4>
+        <p>
+        أصبح لدى الأطباء والصيادلة مجموعة متزايدة من الأدوية
+        ذات التأثيرات المختلفة، وأصبحت إدارة العلاج الدوائي
+        أكثر تعقيدًا.
+        </p>
+
+        <h4>النتيجة</h4>
+        <p>
+        تطورت خدمات الصيدلة في المستشفيات، وبدأت الحاجة إلى
+        معلومات دوائية أكثر تخصصًا ومتابعة أفضل لاستخدام الأدوية.
+        </p>
+    `
+},
+
+{
+    year:"1960s →",
+    title:"Drug Safety & Modern Regulation",
+    tag:"PATIENT SAFETY",
+    short:"أصبحت الأدلة على السلامة والفعالية جزءًا أساسيًا من تطوير الدواء وتنظيمه.",
+    content:`
+        <h4>الفكرة</h4>
+        <p>
+        شهد القرن العشرون توسعًا كبيرًا في المتطلبات التنظيمية
+        المتعلقة بسلامة وفعالية الأدوية قبل طرحها.
+        </p>
+
+        <h4>لماذا؟</h4>
+        <p>
+        لأن الدواء منتج ذو تأثير بيولوجي، وبالتالي لا يمكن
+        تقييمه بالاعتماد على التصنيع وحده؛ يجب تقييم فوائده
+        ومخاطره بناءً على أدلة علمية.
+        </p>
+    `
+},
+
+{
+    year:"1960s–1980s",
+    title:"Clinical Pharmacy",
+    tag:"PATIENT-CENTERED",
+    short:"انتقل جزء من عمل الصيدلي من المنتج الدوائي إلى المريض والنتيجة العلاجية.",
+    content:`
+        <h4>Clinical Pharmacy</h4>
+        <p>
+        أصبحت الصيدلة الإكلينيكية تركز على الاستخدام الآمن
+        والفعال للأدوية ومراجعة العلاج والمعلومات الدوائية
+        والتعاون مع باقي الفريق الصحي.
+        </p>
+
+        <h4>تحول فلسفي</h4>
+        <p>
+        السؤال لم يعد فقط:
+        "هل الدواء تم تحضيره بشكل صحيح؟"
+        بل أصبح أيضًا:
+        "هل هذا الدواء مناسب لهذا المريض؟"
+        </p>
+    `
+},
+
+{
+    year:"1990s–2003",
+    title:"Genomics يدخل عالم الدواء",
+    tag:"PHARMACOGENOMICS",
+    short:"أصبح فهم الجينوم البشري جزءًا مهمًا من البحث في اختلاف استجابة المرضى للأدوية.",
+    content:`
+        <h4>Pharmacogenomics</h4>
+        <p>
+        تهدف pharmacogenomics إلى دراسة العلاقة بين الاختلافات
+        الجينية واستجابة الإنسان للأدوية.
+        </p>
+
+        <h4>لماذا هذا مهم؟</h4>
+        <ul>
+            <li>اختلاف الاستجابة بين المرضى.</li>
+            <li>احتمال اختلاف الجرعة المناسبة.</li>
+            <li>البحث عن biomarkers.</li>
+            <li>دعم العلاج الموجه.</li>
+        </ul>
+    `
+},
+
+{
+    year:"21st Century",
+    title:"Digital Pharmacy",
+    tag:"DIGITAL",
+    short:"أصبحت المعلومات الدوائية والسجلات الإلكترونية والأنظمة الرقمية جزءًا من الممارسة الحديثة.",
+    content:`
+        <h4>Digital transformation</h4>
+        <p>
+        أصبحت أنظمة المعلومات الإلكترونية وسجلات المرضى
+        وقواعد بيانات الأدوية وأدوات دعم القرار جزءًا من
+        البيئة الصحية الحديثة.
+        </p>
+
+        <h4>التحدي</h4>
+        <p>
+        التكنولوجيا لا تلغي الحاجة إلى الصيدلي؛ بل تزيد أهمية
+        قدرته على تقييم المعلومات والتأكد من جودتها واستخدامها
+        بصورة آمنة.
+        </p>
+    `
+},
+
+{
+    year:"NOW → FUTURE",
+    title:"AI + Precision Pharmacy",
+    tag:"NEXT ERA",
+    short:"تتجه الصيدلة إلى عصر يجمع البيانات والبيولوجيا الجزيئية والذكاء الاصطناعي.",
+    content:`
+        <h4>AI</h4>
+        <p>
+        يمكن للذكاء الاصطناعي دعم تحليل البيانات واكتشاف الأنماط
+        والمساعدة في مراحل البحث الدوائي، مع بقاء التحقق العلمي
+        والمسؤولية المهنية عناصر أساسية.
+        </p>
+
+        <h4>Precision Medicine</h4>
+        <p>
+        يجمع هذا الاتجاه بين المعلومات الجينية والبيولوجية
+        والسريرية لتطوير علاجات أكثر ملاءمة لفئات محددة من المرضى.
+        </p>
+
+        <h4>السؤال القادم</h4>
+        <p>
+        إذا كان الدواء في الماضي يعتمد على المادة،
+        ثم على الجزيء، ثم على المريض،
+        فالمستقبل يتجه إلى دمج الدواء + الجينوم + البيانات
+        + السياق السريري.
+        </p>
+    `
+}
+
+];
+
+
+/* =========================================================
+   PEOPLE
+========================================================= */
+
+const peopleData = [
+
+{
+    symbol:"D",
+    name:"Dioscorides",
+    era:"1st Century CE",
+    text:"ارتبط اسمه بكتاب De Materia Medica، أحد أهم الأعمال التاريخية في وصف المواد الطبية.",
+    content:`
+        <h4>لماذا مهم؟</h4>
+        <p>
+        يمثل Dioscorides مرحلة مهمة في تاريخ تنظيم المعرفة
+        حول المواد الطبية ووصف خصائصها واستخداماتها.
+        </p>
+        <h4>العمل الأشهر</h4>
+        <p>De Materia Medica.</p>
+    `
+},
+
+{
+    symbol:"G",
+    name:"Galen",
+    era:"129 – c.216 CE",
+    text:"أثر تراثه الطبي والدوائي في الممارسة الطبية لقرون طويلة.",
+    content:`
+        <h4>Galenic Tradition</h4>
+        <p>
+        ارتبط اسمه بتاريخ تحضير المستحضرات الطبية وبتراث
+        طبي استمر تأثيره في أوروبا والشرق الأوسط لقرون.
+        </p>
+    `
+},
+
+{
+    symbol:"R",
+    name:"الرازي",
+    era:"9th–10th Century",
+    text:"من أبرز علماء الطب والكيمياء في الحضارة الإسلامية.",
+    content:`
+        <h4>الأهمية</h4>
+        <p>
+        ارتبط الرازي بالتأليف الطبي والكيميائي وبالملاحظة
+        والتجربة في الطب، ويُعد من الأسماء الكبرى في تاريخ
+        العلوم الطبية في الحضارة الإسلامية.
+        </p>
+    `
+},
+
+{
+    symbol:"A",
+    name:"ابن سينا",
+    era:"c.980–1037",
+    text:"أثر كتاب القانون في الطب في تاريخ المعرفة الطبية والدوائية لقرون.",
+    content:`
+        <h4>القانون في الطب</h4>
+        <p>
+        كان كتاب القانون في الطب من الأعمال المؤثرة في تاريخ
+        الطب، وتناول الأدوية المفردة والمركبة ضمن منظومة
+        طبية واسعة.
+        </p>
+    `
+},
+
+{
+    symbol:"Z",
+    name:"الزهراوي",
+    era:"10th–11th Century",
+    text:"من الأسماء المهمة في تاريخ الجراحة والأدوات الطبية والتحضير الطبي.",
+    content:`
+        <h4>الأهمية</h4>
+        <p>
+        ارتبط الزهراوي بكتاب التصريف وبوصف عدد كبير من الأدوات
+        والإجراءات الطبية، وهو جزء مهم من تاريخ تطور الممارسة الطبية.
+        </p>
+    `
+},
+
+{
+    symbol:"L",
+    name:"Lyman Spalding",
+    era:"19th Century",
+    text:"ارتبط اقتراحه بتأسيس United States Pharmacopeia.",
+    content:`
+        <h4>1820</h4>
+        <p>
+        اقترح Lyman Spalding إطارًا لإنشاء دستور دوائي أمريكي،
+        وأصبحت USP لاحقًا مؤسسة مهمة في وضع معايير جودة الأدوية.
+        </p>
+    `
+},
+
+{
+    symbol:"I",
+    name:"Isabella Clarke",
+    era:"19th Century",
+    text:"كانت من أوائل النساء المقبولات في عضوية Pharmaceutical Society.",
+    content:`
+        <h4>المعنى المهني</h4>
+        <p>
+        يمثل قبول النساء في المؤسسات المهنية جزءًا من تاريخ
+        اتساع الوصول إلى التعليم والممارسة الصيدلانية.
+        </p>
+    `
+},
+
+{
+    symbol:"F",
+    name:"Alexander Fleming",
+    era:"20th Century",
+    text:"ارتبط اسمه باكتشاف البنسلين، الذي أصبح لاحقًا أساسًا لثورة المضادات الحيوية.",
+    content:`
+        <h4>الأهمية</h4>
+        <p>
+        يمثل البنسلين مثالًا واضحًا على أن اكتشاف مادة فعالة
+        لا يكفي وحده؛ إذ احتاج تحويلها إلى علاج متاح إلى
+        تطوير علمي وصناعي كبير.
+        </p>
+    `
+}
+
+];
+
+
+/* =========================================================
+   PHARMACOPOEIA
+========================================================= */
+
+const pharmacopoeiaData = [
+
+{
+    year:"1498",
+    title:"Florence",
+    text:"دستور دوائي رسمي ارتبط بمدينة فلورنسا ويُعد في بعض الدراسات أول Pharmacopoeia رسمية أوروبية بالمعنى الحديث."
+},
+
+{
+    year:"1546",
+    title:"Nuremberg",
+    text:"Dispensatorium في نورمبرغ يمثل محطة رئيسية مبكرة في تنظيم وصف وتحضير المستحضرات الدوائية."
+},
+
+{
+    year:"1618",
+    title:"London",
+    text:"Pharmacopoeia Londinensis ساهم في توحيد المستحضرات الدوائية في إنجلترا."
+},
+
+{
+    year:"1820",
+    title:"USP",
+    text:"تأسست United States Pharmacopeia لوضع معايير رسمية لجودة الأدوية."
+},
+
+{
+    year:"1864",
+    title:"British Pharmacopoeia",
+    text:"بدأت BP في تقديم معايير رسمية للأدوية في بريطانيا."
+}
+
+];
+
+
+/* =========================================================
+   RENDER TIMELINE
+========================================================= */
+
+const timelineContainer =
+document.getElementById("timelineContainer");
+
+timelineData.forEach((item,index)=>{
+
+    const article=document.createElement("article");
+
+    article.className="timeline-item reveal";
+
+    article.innerHTML=`
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card"
+             onclick="openTimeline(${index})">
+
+            <div class="timeline-year">
+                ${item.year}
             </div>
 
-            <div class="grid gap-3">
-
-              ${item.points.map((point, index) => `
-                <div class="flex items-start gap-3 rounded-2xl border border-slate-800 bg-black/10 p-4">
-
-                  <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-cyan-400/15 bg-cyan-400/5 font-inter text-[10px] text-cyan-300">
-                    ${index + 1}
-                  </span>
-
-                  <p class="text-sm leading-7 text-slate-400">
-                    ${escapeHTML(point)}
-                  </p>
-
-                </div>
-              `).join("")}
-
+            <div class="timeline-title">
+                ${item.title}
             </div>
-          </div>
+
+            <div class="timeline-short">
+                ${item.short}
+            </div>
+
+            <div class="timeline-tag">
+                ${item.tag}
+            </div>
 
         </div>
-      `;
+    `;
 
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+    timelineContainer.appendChild(article);
 
-      document.getElementById("modal-close")?.focus();
+});
+
+
+/* =========================================================
+   RENDER PEOPLE
+========================================================= */
+
+const peopleContainer=
+document.getElementById("peopleContainer");
+
+peopleData.forEach((person,index)=>{
+
+    const card=document.createElement("div");
+
+    card.className="person reveal";
+
+    card.onclick=()=>openPerson(index);
+
+    card.innerHTML=`
+
+        <div class="person-symbol">
+            ${person.symbol}
+        </div>
+
+        <h3>${person.name}</h3>
+
+        <small>${person.era}</small>
+
+        <p>${person.text}</p>
+    `;
+
+    peopleContainer.appendChild(card);
+
+});
+
+
+/* =========================================================
+   RENDER PHARMACOPOEIA
+========================================================= */
+
+const pharmaContainer=
+document.getElementById("pharmaContainer");
+
+pharmacopoeiaData.forEach(item=>{
+
+    const row=document.createElement("div");
+
+    row.className="pharma-line";
+
+    row.innerHTML=`
+
+        <div class="pharma-year">
+            ${item.year}
+        </div>
+
+        <div>
+            <h4>${item.title}</h4>
+            <p>${item.text}</p>
+        </div>
+
+    `;
+
+    pharmaContainer.appendChild(row);
+
+});
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+const modal=document.getElementById("modal");
+const modalYear=document.getElementById("modalYear");
+const modalTitle=document.getElementById("modalTitle");
+const modalContent=document.getElementById("modalContent");
+
+function openTimeline(index){
+
+    const item=timelineData[index];
+
+    modalYear.textContent=item.year;
+    modalTitle.textContent=item.title;
+    modalContent.innerHTML=item.content;
+
+    modal.classList.add("active");
+    document.body.classList.add("modal-open");
+}
+
+function openPerson(index){
+
+    const item=peopleData[index];
+
+    modalYear.textContent=item.era;
+    modalTitle.textContent=item.name;
+    modalContent.innerHTML=item.content;
+
+    modal.classList.add("active");
+    document.body.classList.add("modal-open");
+}
+
+function closeModal(){
+
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+}
+
+modal.addEventListener("click",e=>{
+
+    if(e.target===modal){
+        closeModal();
     }
 
-    function closeEraModal() {
-      const modal = document.getElementById("era-modal");
+});
 
-      if (!modal) return;
 
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
+/* =========================================================
+   PRESENTATION
+========================================================= */
 
-    /* =========================================================
-       REVEAL
-    ========================================================= */
+const presentation=
+document.getElementById("presentation");
 
-    let revealObserver;
+const slidesContainer=
+document.getElementById("slides");
 
-    function setupReveal() {
-      const elements = $$(".reveal");
+const slidesData=[
 
-      if (!("IntersectionObserver" in window)) {
-        elements.forEach(el => el.classList.add("active"));
-        return;
-      }
+{
+    kicker:"PHARMACY∞ · ACADEMIC EDITION",
+    title:"تاريخ الصيدلة",
+    text:"من المواد الطبيعية والوصفات القديمة إلى Pharmacogenomics والذكاء الاصطناعي."
+},
 
-      if (!revealObserver) {
-        revealObserver = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.08,
-            rootMargin: "0px 0px -50px 0px"
-          }
+{
+    kicker:"01 · THE BEGINNING",
+    title:"كيف بدأت فكرة الدواء؟",
+    text:"بدأت من ملاحظة تأثير المواد الطبيعية، ثم تحولت المعرفة من خبرة متوارثة إلى نصوص ووصفات."
+},
+
+{
+    kicker:"02 · ANCIENT EGYPT",
+    title:"مصر القديمة",
+    text:"البرديات الطبية المصرية تقدم أدلة مبكرة على توثيق المواد والوصفات العلاجية وطرق التحضير."
+},
+
+{
+    kicker:"03 · DIOSCORIDES",
+    title:"De Materia Medica",
+    text:"في القرن الأول الميلادي أصبح وصف المواد الطبية أكثر تنظيمًا، وأصبح عمل Dioscorides مؤثرًا لقرون."
+},
+
+{
+    kicker:"04 · GALEN",
+    title:"Galenic Tradition",
+    text:"لم يكن تاريخ الدواء مجرد اكتشاف مواد؛ بل أصبح تحضير المستحضر نفسه جزءًا من المعرفة الطبية."
+},
+
+{
+    kicker:"05 · ISLAMIC GOLDEN AGE",
+    title:"العصر الذهبي",
+    text:"الترجمة والتأليف والتقطير والاستخلاص وتحضير المستحضرات ساهمت في تطور المعرفة الطبية والدوائية."
+},
+
+{
+    kicker:"06 · PHARMACOPOEIA",
+    title:"من الوصفة إلى المعيار",
+    text:"ظهور الدساتير الدوائية الرسمية نقل الجودة من الخبرة الفردية إلى مواصفات مكتوبة."
+},
+
+{
+    kicker:"07 · PROFESSIONALIZATION",
+    title:"الصيدلة تصبح مهنة",
+    text:"القرن التاسع عشر شهد تطور التعليم والتسجيل والتنظيم المهني للصيادلة."
+},
+
+{
+    kicker:"08 · INDUSTRIAL PHARMACY",
+    title:"الدواء يصبح صناعة",
+    text:"أصبح التصنيع واسع النطاق وضبط الجودة والثبات والجرعة جزءًا من رحلة الدواء."
+},
+
+{
+    kicker:"09 · ANTIBIOTICS",
+    title:"ثورة المضادات الحيوية",
+    text:"أصبحت المضادات الحيوية مثالًا على قدرة العلم والصناعة على تحويل اكتشاف مخبري إلى علاج واسع الاستخدام."
+},
+
+{
+    kicker:"10 · CLINICAL PHARMACY",
+    title:"من الدواء إلى المريض",
+    text:"أصبح الصيدلي مشاركًا في تقييم العلاج الدوائي ومتابعة استخدامه والمساهمة في رعاية المريض."
+},
+
+{
+    kicker:"11 · FUTURE",
+    title:"Precision Pharmacy",
+    text:"الجينوم والبيانات والـAI تفتح مرحلة جديدة في اكتشاف الأدوية واختيار العلاج ودعم القرار."
+}
+
+];
+
+slidesData.forEach((slide,index)=>{
+
+    const div=document.createElement("div");
+
+    div.className=
+        "slide " +
+        (index===0 ? "active" : "");
+
+    div.innerHTML=`
+
+        <div class="slide-inner">
+
+            <div class="slide-kicker">
+                ${slide.kicker}
+            </div>
+
+            <h2>
+                ${slide.title}
+            </h2>
+
+            <p>
+                ${slide.text}
+            </p>
+
+        </div>
+    `;
+
+    slidesContainer.appendChild(div);
+
+});
+
+let currentSlide=0;
+
+document.getElementById("slideTotal")
+    .textContent=slidesData.length;
+
+function updateSlide(){
+
+    const slides=
+        document.querySelectorAll(".slide");
+
+    slides.forEach((slide,index)=>{
+
+        slide.classList.toggle(
+            "active",
+            index===currentSlide
         );
-      }
 
-      elements.forEach(el => {
-        if (!el.classList.contains("active")) {
-          revealObserver.observe(el);
-        }
-      });
+    });
+
+    document.getElementById("slideNumber")
+        .textContent=currentSlide+1;
+}
+
+function startPresentation(){
+
+    presentation.classList.add("active");
+    document.body.classList.add("modal-open");
+
+    currentSlide=0;
+    updateSlide();
+}
+
+function closePresentation(){
+
+    presentation.classList.remove("active");
+    document.body.classList.remove("modal-open");
+}
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide>=slidesData.length){
+        currentSlide=0;
     }
 
-    /* =========================================================
-       SCROLL
-    ========================================================= */
+    updateSlide();
+}
 
-    function setupScroll() {
-      const progress = document.getElementById("scroll-progress");
+function previousSlide(){
 
-      if (!progress) return;
+    currentSlide--;
 
-      const update = () => {
-        const scrollTop = window.scrollY;
-        const docHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-
-        const percentage =
-          docHeight > 0
-            ? (scrollTop / docHeight) * 100
-            : 0;
-
-        progress.style.width = `${percentage}%`;
-      };
-
-      window.addEventListener("scroll", update, {
-        passive: true
-      });
-
-      update();
+    if(currentSlide<0){
+        currentSlide=slidesData.length-1;
     }
 
-    /* =========================================================
-       PARTICLES
-    ========================================================= */
+    updateSlide();
+}
 
-    function initParticles() {
-      const canvas = document.getElementById("particles");
 
-      if (!canvas) return;
+/* =========================================================
+   KEYBOARD CONTROLS
+========================================================= */
 
-      const ctx = canvas.getContext("2d");
+document.addEventListener("keydown",e=>{
 
-      if (!ctx) return;
+    if(presentation.classList.contains("active")){
 
-      const reducedMotion =
-        window.matchMedia &&
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      if (reducedMotion) return;
-
-      let width = 0;
-      let height = 0;
-
-      const particles = [];
-
-      function resize() {
-        width = canvas.width = window.innerWidth * devicePixelRatio;
-        height = canvas.height = window.innerHeight * devicePixelRatio;
-
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
-
-        ctx.setTransform(
-          devicePixelRatio,
-          0,
-          0,
-          devicePixelRatio,
-          0,
-          0
-        );
-      }
-
-      function createParticles() {
-        particles.length = 0;
-
-        const count = Math.min(
-          90,
-          Math.max(35, Math.floor(window.innerWidth / 16))
-        );
-
-        for (let i = 0; i < count; i++) {
-          particles.push({
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            r: Math.random() * 1.5 + .35,
-            vx: (Math.random() - .5) * .18,
-            vy: (Math.random() - .5) * .18,
-            a: Math.random() * .35 + .08
-          });
-        }
-      }
-
-      function draw() {
-        ctx.clearRect(
-          0,
-          0,
-          window.innerWidth,
-          window.innerHeight
-        );
-
-        for (const p of particles) {
-          p.x += p.vx;
-          p.y += p.vy;
-
-          if (p.x < -10) p.x = window.innerWidth + 10;
-          if (p.x > window.innerWidth + 10) p.x = -10;
-
-          if (p.y < -10) p.y = window.innerHeight + 10;
-          if (p.y > window.innerHeight + 10) p.y = -10;
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(34,211,238,${p.a})`;
-          ctx.fill();
-        }
-
-        requestAnimationFrame(draw);
-      }
-
-      resize();
-      createParticles();
-      draw();
-
-      window.addEventListener("resize", () => {
-        resize();
-        createParticles();
-      });
-    }
-
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
-
-    function setupMobileMenu() {
-      const button = document.getElementById("mobile-menu-btn");
-      const menu = document.getElementById("mobile-menu");
-
-      if (!button || !menu) return;
-
-      button.addEventListener("click", () => {
-        menu.classList.toggle("open");
-
-        button.setAttribute(
-          "aria-expanded",
-          menu.classList.contains("open")
-        );
-      });
-
-      menu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          menu.classList.remove("open");
-          button.setAttribute("aria-expanded", "false");
-        });
-      });
-
-      document.addEventListener("click", event => {
-        if (
-          menu.classList.contains("open") &&
-          !menu.contains(event.target) &&
-          !button.contains(event.target)
-        ) {
-          menu.classList.remove("open");
-          button.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
-
-    /* =========================================================
-       PRESENTATION
-    ========================================================= */
-
-    let currentSlide = 0;
-
-    const presentation = {
-      get slides() {
-        return $$(".presentation-slide");
-      },
-
-      get total() {
-        return this.slides.length;
-      }
-    };
-
-    function updateSlide(index) {
-      const slides = presentation.slides;
-
-      if (!slides.length) return;
-
-      if (index < 0) {
-        index = slides.length - 1;
-      }
-
-      if (index >= slides.length) {
-        index = 0;
-      }
-
-      currentSlide = index;
-
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === currentSlide);
-      });
-
-      const indicator = document.getElementById("slide-indicator");
-
-      if (indicator) {
-        indicator.textContent =
-          `Slide ${currentSlide + 1} of ${slides.length}`;
-      }
-    }
-
-    function nextSlide() {
-      updateSlide(currentSlide + 1);
-    }
-
-    function previousSlide() {
-      updateSlide(currentSlide - 1);
-    }
-
-    async function openPresentation() {
-      const app = document.getElementById("presentation");
-
-      if (!app) return;
-
-      currentSlide = 0;
-      updateSlide(0);
-
-      app.classList.add("open");
-      app.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-
-      try {
-        if (app.requestFullscreen) {
-          await app.requestFullscreen();
-        }
-      } catch (error) {
-        /* Fullscreen may be blocked by the browser. */
-      }
-    }
-
-    async function closePresentation() {
-      const app = document.getElementById("presentation");
-
-      if (!app) return;
-
-      app.classList.remove("open");
-      app.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-
-      try {
-        if (document.fullscreenElement) {
-          await document.exitFullscreen();
-        }
-      } catch (error) {
-        /* Ignore fullscreen errors. */
-      }
-    }
-
-    function setupPresentation() {
-      const presentationBtn =
-        document.getElementById("presentation-btn");
-
-      const heroPresentation =
-        document.getElementById("hero-presentation");
-
-      const closeBtn =
-        document.getElementById("presentation-close");
-
-      const nextBtn =
-        document.getElementById("slide-next");
-
-      const prevBtn =
-        document.getElementById("slide-prev");
-
-      presentationBtn?.addEventListener(
-        "click",
-        openPresentation
-      );
-
-      heroPresentation?.addEventListener(
-        "click",
-        openPresentation
-      );
-
-      closeBtn?.addEventListener(
-        "click",
-        closePresentation
-      );
-
-      nextBtn?.addEventListener(
-        "click",
-        nextSlide
-      );
-
-      prevBtn?.addEventListener(
-        "click",
-        previousSlide
-      );
-    }
-
-    /* =========================================================
-       KEYBOARD
-    ========================================================= */
-
-    function setupKeyboard() {
-      document.addEventListener("keydown", event => {
-
-        const presentationOpen =
-          document
-            .getElementById("presentation")
-            ?.classList.contains("open");
-
-        const modalOpen =
-          document
-            .getElementById("era-modal")
-            ?.classList.contains("open");
-
-        if (presentationOpen) {
-
-          if (event.key === "ArrowLeft") {
+        if(e.key==="ArrowRight"){
             nextSlide();
-          }
+        }
 
-          if (event.key === "ArrowRight") {
+        if(e.key==="ArrowLeft"){
             previousSlide();
-          }
+        }
 
-          if (event.key === "Escape") {
+        if(e.key==="Escape"){
             closePresentation();
-          }
-
-          return;
         }
-
-        if (modalOpen && event.key === "Escape") {
-          closeEraModal();
-        }
-      });
     }
 
-    /* =========================================================
-       MODAL EVENTS
-    ========================================================= */
+    if(modal.classList.contains("active")
+       && e.key==="Escape"){
 
-    function setupModal() {
-      const modal = document.getElementById("era-modal");
-      const close = document.getElementById("modal-close");
-
-      close?.addEventListener(
-        "click",
-        closeEraModal
-      );
-
-      modal?.addEventListener("click", event => {
-        if (event.target === modal) {
-          closeEraModal();
-        }
-      });
+        closeModal();
     }
 
-    /* =========================================================
-       INITIALIZE
-    ========================================================= */
+});
 
-    function initializeApp() {
-      renderTimeline();
-      setupReveal();
-      setupScroll();
-      setupMobileMenu();
-      setupPresentation();
-      setupKeyboard();
-      setupModal();
-      initParticles();
-      startLoader();
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+window.addEventListener("scroll",()=>{
+
+    const scrollTop=
+        window.scrollY;
+
+    const height=
+        document.documentElement.scrollHeight
+        - window.innerHeight;
+
+    const percent=
+        height>0
+        ? (scrollTop/height)*100
+        : 0;
+
+    document.getElementById("progress")
+        .style.width=percent+"%";
+
+});
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+const observer=
+new IntersectionObserver(
+    entries=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    },
+    {
+        threshold:.08
     }
+);
 
-    if (document.readyState === "loading") {
-      document.addEventListener(
-        "DOMContentLoaded",
-        initializeApp,
-        { once: true }
-      );
-    } else {
-      initializeApp();
+document.querySelectorAll(".reveal")
+.forEach(el=>observer.observe(el));
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMobile(){
+
+    const links=
+        document.querySelector(".nav-links");
+
+    if(links.style.display==="flex"){
+
+        links.style.display="none";
+
+    }else{
+
+        links.style.display="flex";
+
+        links.style.position="absolute";
+        links.style.top="76px";
+        links.style.right="0";
+        links.style.left="0";
+        links.style.padding="20px";
+        links.style.background="rgba(5,8,13,.96)";
+        links.style.flexDirection="column";
+        links.style.borderBottom="1px solid rgba(255,255,255,.08)";
     }
+}
 
-    window.openEraModal = openEraModal;
-    window.closeEraModal = closeEraModal;
-    window.nextSlide = nextSlide;
-    window.previousSlide = previousSlide;
-    window.openPresentation = openPresentation;
-    window.closePresentation = closePresentation;
 
-  </script>
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        document.querySelectorAll(".hero .reveal")
+        .forEach(el=>el.classList.add("visible"));
+
+    },200);
+
+});
+
+</script>
 
 </body>
 </html>
